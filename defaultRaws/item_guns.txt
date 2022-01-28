@@ -1,0 +1,49 @@
+item_weapon
+
+[OBJECT:ITEM]
+
+[ITEM_WEAPON:ITEM_WEAPON_RIFLE]
+	[NAME:rifle:rifles]
+	[SIZE:800]
+	[RANGED:CROSSBOW:BULLET]
+	[SHOOT_FORCE:30000]
+	[SHOOT_MAXVEL:30000]
+	[TWO_HANDED:0]
+	[MINIMUM_SIZE:15000]
+	[MATERIAL_SIZE:4]
+	[SKILL:HAMMER]
+	[ATTACK:BLUNT:10000:4000:bash:bashes:NO_SUB:1250]
+		[ATTACK_PREPARE_AND_RECOVER:3:3]
+	[GUN] hacky, puts errors in the error log but that gets filled with garbage anyway. could use non-[] tags and parse the files myself but...
+	[INACCURACY:0]  Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
+	[FIRE_TIME:40] TEMP: Manual guns, skill, etc
+
+[ITEM_AMMO:ITEM_AMMO_BULLET_CASING]
+	[NAME:bullet casing:bullet casing]
+	[CLASS:BULLET]
+	[SIZE:60]
+	[GUN_AMMO]
+	[GUN_AMMO_SHELL]
+	[INACCURACY:0] In radians
+
+[ITEM_AMMO:ITEM_AMMO_SHOTGUN_SHELL]
+	[NAME:shotgun shell:shotgun shells]
+	[CLASS:BULLET]
+	[SIZE:100]
+	[GUN_AMMO]
+	[GUN_AMMO_SHELL]
+	[INACCURACY:0.06]
+
+[ITEM_AMMO:ITEM_AMMO_BULLET]
+	[NAME:bullet:bullets]
+	[SIZE:40]
+	[CLASS:NONE]
+	[ATTACK:EDGE:1:100000:poke:pokes:NO_SUB:100000]
+	[ATTACK_PREPARE_AND_RECOVER:3:3]
+
+[ITEM_AMMO:ITEM_AMMO_PELLET]
+	[NAME:pellet:pellets]
+	[SIZE:10]
+	[CLASS:NONE]
+	[ATTACK:BLUNT:1:100:poke:pokes:NO_SUB:10000]
+		[ATTACK_PREPARE_AND_RECOVER:3:3]
