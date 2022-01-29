@@ -1,0 +1,7 @@
+# guns mod
+## idk i havent decided on a name yet
+
+to install:
+copy/move the root folder to scripts/
+copy/move customRawData.lua (the custom raw utility) to hack/lua (but i intend to PR this into dfhack at some point)
+copy/move defaultRaws/* to raw/objects/
