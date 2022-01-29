@@ -1,13 +1,15 @@
 item_weapon
 
+TODO: balance, fine tune. why the hell do bullets just bruise? shouldn't there be way more stuck-ins? is lead just ineffective for bullets in this game?
+
 [OBJECT:ITEM]
 
-[ITEM_WEAPON:ITEM_WEAPON_RIFLE]
-	[NAME:rifle:rifles]
-	[SIZE:800]
+[ITEM_WEAPON:ITEM_WEAPON_SNIPER_RIFLE]
+	[NAME:sniper rifle:sniper rifles]
+	[SIZE:900]
 	[RANGED:CROSSBOW:BULLET]
-	[SHOOT_FORCE:30000]
-	[SHOOT_MAXVEL:30000]
+	[SHOOT_FORCE:50000]
+	[SHOOT_MAXVEL:50000]
 	[TWO_HANDED:0]
 	[MINIMUM_SIZE:15000]
 	[MATERIAL_SIZE:4]
@@ -15,8 +17,56 @@ item_weapon
 	[ATTACK:BLUNT:10000:4000:bash:bashes:NO_SUB:1250]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[GUN] hacky, puts errors in the error log but that gets filled with garbage anyway. could use non-[] tags and parse the files myself but...
-	[INACCURACY:0]  Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
-	[FIRE_TIME:40] TEMP: Manual guns, skill, etc
+	[INACCURACY:0] Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
+	[FIRE_TIME:50] TEMP: Manual guns, skill, etc
+
+[ITEM_WEAPON:ITEM_WEAPON_MACHINE_GUN]
+	[NAME:machine gun:machine guns]
+	[SIZE:1150]
+	[RANGED:CROSSBOW:BULLET]
+	[SHOOT_FORCE:37500]
+	[SHOOT_MAXVEL:37500]
+	[TWO_HANDED:0]
+	[MINIMUM_SIZE:20000]
+	[MATERIAL_SIZE:5]
+	[SKILL:HAMMER]
+	[ATTACK:BLUNT:12500:4250:bash:bashes:NO_SUB:1500]
+		[ATTACK_PREPARE_AND_RECOVER:3:3]
+	[GUN]
+	[INACCURACY:0.1]
+	[FIRE_TIME:1]
+
+[ITEM_WEAPON:ITEM_WEAPON_PUMP_SHOTGUN]
+	[NAME:pump-action shotgun:pump-action shotguns]
+	[SIZE:650]
+	[RANGED:CROSSBOW:SHOTSHELL]
+	[SHOOT_FORCE:25000]
+	[SHOOT_MAXVEL:25000]
+	[TWO_HANDED:0]
+	[MINIMUM_SIZE:14000]
+	[MATERIAL_SIZE:3]
+	[SKILL:HAMMER]
+	[ATTACK:BLUNT:9000:3750:bash:bashes:NO_SUB:1000]
+		[ATTACK_PREPARE_AND_RECOVER:3:3]
+	[GUN]
+	[INACCURACY:0.05]
+	[FIRE_TIME:35]
+
+[ITEM_WEAPON:ITEM_WEAPON_SAWN_SHOTGUN]
+	[NAME:sawn-off shotgun:sawn-off shotguns]
+	[SIZE:375]
+	[RANGED:CROSSBOW:SHOTSHELL]
+	[SHOOT_FORCE:20000]
+	[SHOOT_MAXVEL:20000]
+	[TWO_HANDED:0]
+	[MINIMUM_SIZE:12500]
+	[MATERIAL_SIZE:2]
+	[SKILL:HAMMER]
+	[ATTACK:BLUNT:8000:3250:bash:bashes:NO_SUB:1000]
+		[ATTACK_PREPARE_AND_RECOVER:3:3]
+	[GUN]
+	[INACCURACY:0.25]
+	[FIRE_TIME:35]
 
 [ITEM_AMMO:ITEM_AMMO_BULLET_CASING]
 	[NAME:bullet casing:bullet casing]
@@ -28,7 +78,7 @@ item_weapon
 
 [ITEM_AMMO:ITEM_AMMO_SHOTGUN_SHELL]
 	[NAME:shotgun shell:shotgun shells]
-	[CLASS:BULLET]
+	[CLASS:SHOTSHELL]
 	[SIZE:100]
 	[GUN_AMMO]
 	[GUN_AMMO_SHELL]
