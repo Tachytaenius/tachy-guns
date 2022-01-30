@@ -23,7 +23,7 @@ local function gunProjectileManager(projectile)
 	end
 	
 	local gun = df.item.find(projectile.bow_id)
-	if gun._type == df.item_weaponst then
+	if gun and gun._type == df.item_weaponst then
 		if not customRawData(gun.subtype, "GUN") then
 			return
 		end
@@ -60,7 +60,6 @@ local function gunProjectileManager(projectile)
 	local function handleOutputProjectile(projectile)
 		perturbDirection(projectileInaccuracy, projectile.origin_pos, projectile.target_pos)
 		projectile.fall_threshold = projectileRange
-		projectile.flags.piercing = true
 		-- if projectile.flags.parabolic then
 		-- non-parabolic projecctiles don't actually have a velocity, just when they fall down
 	end

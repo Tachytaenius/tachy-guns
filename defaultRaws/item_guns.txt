@@ -17,7 +17,7 @@ TODO: balance, fine tune. why the hell do bullets just bruise? shouldn't there b
 	[ATTACK:BLUNT:8000:3250:bash:bashes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[GUN]
-	[INACCURACY:0.1]  Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
+	[INACCURACY:0.05]  Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
 	[RANGE:5] in tiles, added to bullet range.
 	[FIRE_TIME:10] TEMP: Manual guns, skill, etc
 
