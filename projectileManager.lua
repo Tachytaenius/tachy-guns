@@ -37,34 +37,38 @@ local function gunProjectileManager(projectile)
 		end
 	end
 	
-	local function perturbDirection(angle, opos, tpos)
+	local function perturbDirection(spread, opos, tpos)
 		if tpos.x==opos.x and tpos.y==opos.y then return end
 		local dirX, dirY = tpos.x-opos.x, tpos.y-opos.y
-		local currentAngle = math.atan(dirY, dirX)
-		local newAngle = currentAngle + angle
-		dirX, dirY = math.cos(newAngle), math.sin(newAngle)
+		local angle = math.atan(dirY, dirX)
+		angle = angle + (math.random() - 0.5) * spread
+		dirX, dirY = math.cos(angle), math.sin(angle)
 		tpos.x, tpos.y = opos.x+math.floor(dirX*vectorLength), opos.y+math.floor(dirY*vectorLength)
-	end
-	local function perturbDirectionRandom(spread, opos, tpos)
-		 perturbDirection((math.random() - 0.5) * spread, opos, tpos)
 	end
 	
 	local gunDirectionSpread = 0 -- not having a scope, maybe? but i don't see why that should make the user less accurate than a crossbow without a scope. maybe for firing on auto for too long
+	perturbDirection(gunDirectionSpread, projectile.origin_pos, projectile.target_pos)
+	
 	local ammoInaccuracy = customRawData(projectile.item.subtype, "INACCURACY") or 0
 	local gunInaccuracy = customRawData(gun.subtype, "INACCURACY") or 0
 	local projectileInaccuracy = ammoInaccuracy + gunInaccuracy
-	local mainProjectileIsShell = customRawData(projectile.item.subtype, "GUN_AMMO_SHELL")
-	if mainProjectileIsShell then
-		perturbDirectionRandom(gunDirectionSpread, projectile.origin_pos, projectile.target_pos)
-	else -- Make sure the INACCURACY tag works on ammo that isn't a shell
-		-- but also do only one perturbation for both the ammo and gunDirectionSpread
-		-- but since perturbing twice by spreads a and b is not equivalent to perturbing once by a + b
-		-- manually make the angle from two random calls and perturb with that
-		local angle = (math.random()-0.5)*gunDirectionSpread + (math.random()-0.5)*projectileInaccuracy
-		perturbDirection(angle, projectile.origin_pos, projectile.target_pos)
+	local gunRange = customRawData(projectile.item.subtype, "RANGE") or 20
+	local ammoRange = customRawData(projectile.item.subtype, "RANGE") or 20
+	local projectileRange = gunRange + ammoRange
+	local mainProjectileIsShell = customRawData(projectile.item.subtype, "AMMO_SHELL")
+	
+	local function handleOutputProjectile(projectile)
+		perturbDirection(projectileInaccuracy, projectile.origin_pos, projectile.target_pos)
+		projectile.fall_threshold = projectileRange
+		projectile.flags.piercing = true
+		-- if projectile.flags.parabolic then
+		-- non-parabolic projecctiles don't actually have a velocity, just when they fall down
 	end
 	
-	if mainProjectileIsShell then
+	if not mainProjectileIsShell then
+		-- shorter one first
+		handleOutputProjectile(projectile)
+	else
 		local subProjectileItems = {}
 		local containedItems = dfhack.items.getContainedItems(projectile.item)
 		
@@ -85,6 +89,8 @@ local function gunProjectileManager(projectile)
 			subProjectile.cur_pos = utils.clone(projectile.cur_pos)
 			subProjectile.prev_pos = utils.clone(projectile.prev_pos)
 			subProjectile.fall_threshold = projectile.fall_threshold
+			subProjectile.fall_counter = projectile.fall_counter
+			subProjectile.fall_delay = projectile.fall_delay
 			subProjectile.min_hit_distance = projectile.min_hit_distance
 			subProjectile.min_ground_distance = projectile.min_ground_distance
 			subProjectile.bow_id = projectile.bow_id
@@ -93,7 +99,7 @@ local function gunProjectileManager(projectile)
 			subProjectile.hit_rating = projectile.hit_rating
 			subProjectile.unk_v40_1 = projectile.unk_v40_1
 			
-			perturbDirectionRandom(projectileInaccuracy, subProjectile.origin_pos, subProjectile.target_pos)
+			handleOutputProjectile(subProjectile)
 		end
 		
 		--[[
