@@ -2,6 +2,8 @@ inorganic_guns
 
 [OBJECT:INORGANIC]
 
+TODO: more material properties of gunpowder.
+
 [INORGANIC:GUNPOWDER]
 	[USE_MATERIAL_TEMPLATE:STONE_TEMPLATE]
 	[STATE_COLOR:ALL:BLACK]

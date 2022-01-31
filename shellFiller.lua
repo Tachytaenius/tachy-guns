@@ -2,7 +2,7 @@ local customRawData = require("customRawData") -- a function
 
 -- This is an onReactionComplete event listener
 local function shellFiller(reaction, reaction_product, unit, input_items, input_reagents, output_items, call_native)
-	if not customRawData(reaction.code, "SHELL_FILLING_REACTION") then
+	if not customRawData(reaction, "SHELL_FILLING_REACTION") then
 		return
 	end
 	
@@ -22,10 +22,18 @@ local function shellFiller(reaction, reaction_product, unit, input_items, input_
 		totalPellets = 0
 		for i = 0, #input_items - 1 do
 			local input = input_items[i]
+			-- NOTE: If projectiles no longer have to be ammo, then add use a custom raw tag
 			if input._type == df.item_ammost then -- if pellet._type ~= df.item_ammost then continue end >:(
 				if customRawData(input.subtype, "GUN_AMMO_SHELL") then
 					assert(not shell)
 					shell = input
+					
+					-- Change subtype to fireable ammunition
+					local newSubtypeName customRawData(shell.subtype, "CONVERT_TO_FIREABLE", true)
+					local newSubtype = dfhack.items.getSubtypeDef(df.item_type.AMMO, newSubtypeName)
+					shell.subtype = newSubtype
+					shell:calculateWeight()
+					
 					if shell.stack_size > 1 then
 						shell:splitStack(shell.stack_size - 1, true)
 					end
@@ -46,8 +54,13 @@ local function shellFiller(reaction, reaction_product, unit, input_items, input_
 	for i = 0, #input_items - 1 do
 		local pellet = input_items[i]
 		if pellet._type == df.item_ammost and not customRawData(pellet.subtype, "GUN_AMMO_SHELL") then
-			while #pellet.specific_refs > 0 do
-				pellet.specific_refs:erase(0)
+			while #pellet.specific_refs < i do
+				local ref = pellet.specific_refs[i]
+				if ref.type == df.specific_ref_type.JOB then
+					pellet.specific_refs:erase(i)
+				else
+					i = i + 1
+				end
 			end
 			
 			local buildingId
@@ -73,3 +86,5 @@ local function shellFiller(reaction, reaction_product, unit, input_items, input_
 		end
 	end
 end
+
+return shellFiller

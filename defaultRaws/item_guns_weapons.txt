@@ -1,6 +1,6 @@
-item_weapon
+item_guns_weapons
 
-TODO: balance, fine tune. why the hell do bullets just bruise? shouldn't there be way more stuck-ins? is lead just ineffective for bullets in this game?
+TODO: balance, fine tune.
 
 [OBJECT:ITEM]
 
@@ -8,8 +8,8 @@ TODO: balance, fine tune. why the hell do bullets just bruise? shouldn't there b
 	[NAME:pistol:pistols]
 	[SIZE:250]
 	[RANGED:CROSSBOW:SMALL_BULLET]
-	[SHOOT_FORCE:15000]
-	[SHOOT_MAXVEL:15000]
+	[SHOOT_FORCE:150000]
+	[SHOOT_MAXVEL:150000]
 	[TWO_HANDED:15000]
 	[MINIMUM_SIZE:10000]
 	[MATERIAL_SIZE:1]
@@ -25,8 +25,8 @@ TODO: balance, fine tune. why the hell do bullets just bruise? shouldn't there b
 	[NAME:sniper rifle:sniper rifles]
 	[SIZE:900]
 	[RANGED:CROSSBOW:LARGE_BULLET]
-	[SHOOT_FORCE:40000]
-	[SHOOT_MAXVEL:40000]
+	[SHOOT_FORCE:400000]
+	[SHOOT_MAXVEL:400000]
 	[TWO_HANDED:0]
 	[MINIMUM_SIZE:15000]
 	[MATERIAL_SIZE:4]
@@ -40,10 +40,10 @@ TODO: balance, fine tune. why the hell do bullets just bruise? shouldn't there b
 
 [ITEM_WEAPON:ITEM_WEAPON_MACHINE_GUN]
 	[NAME:machine gun:machine guns]
-	[SIZE:1150]
+	[SIZE:1150] this is a machine gun, not an assault rifle
 	[RANGED:CROSSBOW:MEDIUM_BULLET]
-	[SHOOT_FORCE:37500]
-	[SHOOT_MAXVEL:37500]
+	[SHOOT_FORCE:375000]
+	[SHOOT_MAXVEL:375000]
 	[TWO_HANDED:60000]
 	[MINIMUM_SIZE:45000]
 	[MATERIAL_SIZE:5]
@@ -59,8 +59,8 @@ TODO: balance, fine tune. why the hell do bullets just bruise? shouldn't there b
 	[NAME:pump-action shotgun:pump-action shotguns]
 	[SIZE:650]
 	[RANGED:CROSSBOW:SHOTSHELL]
-	[SHOOT_FORCE:25000]
-	[SHOOT_MAXVEL:25000]
+	[SHOOT_FORCE:250000]
+	[SHOOT_MAXVEL:250000]
 	[TWO_HANDED:0]
 	[MINIMUM_SIZE:14000]
 	[MATERIAL_SIZE:3]
@@ -76,8 +76,8 @@ TODO: balance, fine tune. why the hell do bullets just bruise? shouldn't there b
 	[NAME:sawn-off shotgun:sawn-off shotguns]
 	[SIZE:375]
 	[RANGED:CROSSBOW:SHOTSHELL]
-	[SHOOT_FORCE:20000]
-	[SHOOT_MAXVEL:20000]
+	[SHOOT_FORCE:200000]
+	[SHOOT_MAXVEL:200000]
 	[TWO_HANDED:20000]
 	[MINIMUM_SIZE:12500]
 	[MATERIAL_SIZE:2]
@@ -88,67 +88,3 @@ TODO: balance, fine tune. why the hell do bullets just bruise? shouldn't there b
 	[INACCURACY:0.3]
 	[RANGE:0] remember, added to projectile's
 	[FIRE_TIME:35]
-
-[ITEM_AMMO:ITEM_AMMO_SMALL_BULLET_CASING]
-	[NAME:small bullet casing:small bullet casing]
-	[CLASS:SMALL_BULLET]
-	[SIZE:30]
-	[GUN_AMMO]
-	[AMMO_SHELL]
-	[RANGE:50]
-	[INACCURACY:0.02] In radians
-
-[ITEM_AMMO:ITEM_AMMO_MEDIUM_BULLET_CASING]
-	[NAME:medium bullet casing:medium bullet casing]
-	[CLASS:MEDIUM_BULLET]
-	[SIZE:40]
-	[GUN_AMMO]
-	[AMMO_SHELL]
-	[RANGE:60]
-	[INACCURACY:0.01] In radians
-
-[ITEM_AMMO:ITEM_AMMO_LARGE_BULLET_CASING]
-	[NAME:large bullet casing:large bullet casing]
-	[CLASS:LARGE_BULLET]
-	[SIZE:50]
-	[GUN_AMMO]
-	[AMMO_SHELL]
-	[RANGE:70]
-	[INACCURACY:0]
-
-[ITEM_AMMO:ITEM_AMMO_SHOTGUN_SHELL]
-	[NAME:shotgun shell:shotgun shells]
-	[CLASS:SHOTSHELL]
-	[SIZE:60]
-	[GUN_AMMO]
-	[AMMO_SHELL]
-	[INACCURACY:0.06]
-	[RANGE:40]
-
-[ITEM_AMMO:ITEM_AMMO_SMALL_BULLET]
-	[NAME:small bullet:small bullets]
-	[SIZE:20]
-	[CLASS:NONE]
-	[ATTACK:EDGE:1:100000:poke:pokes:NO_SUB:100000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-
-[ITEM_AMMO:ITEM_AMMO_MEDIUM_BULLET]
-	[NAME:medium bullet:medium bullets]
-	[SIZE:30]
-	[CLASS:NONE]
-	[ATTACK:EDGE:1:100000:poke:pokes:NO_SUB:100000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-
-[ITEM_AMMO:ITEM_AMMO_LARGE_BULLET]
-	[NAME:large bullet:large bullets]
-	[SIZE:40]
-	[CLASS:NONE]
-	[ATTACK:EDGE:2:100000:poke:pokes:NO_SUB:100000]
-	[ATTACK_PREPARE_AND_RECOVER:3:3]
-
-[ITEM_AMMO:ITEM_AMMO_PELLET]
-	[NAME:pellet:pellets]
-	[SIZE:10]
-	[CLASS:NONE]
-	[ATTACK:BLUNT:1:100:poke:pokes:NO_SUB:10000]
-		[ATTACK_PREPARE_AND_RECOVER:3:3]
