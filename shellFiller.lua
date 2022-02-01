@@ -29,9 +29,14 @@ local function shellFiller(reaction, reaction_product, unit, input_items, input_
 					shell = input
 					
 					-- Change subtype to fireable ammunition
-					local newSubtypeName customRawData(shell.subtype, "CONVERT_TO_FIREABLE", true)
-					local newSubtype = dfhack.items.getSubtypeDef(df.item_type.AMMO, newSubtypeName)
-					shell.subtype = newSubtype
+					local newSubtypeName = customRawData(shell.subtype, "CONVERT_TO_FIREABLE", true)
+					local defs = df.global.world.raws.itemdefs.ammo
+					for i = 0, #defs - 1 do
+						local itemDef = defs[i]
+						if itemDef.id == newSubtypeName then
+							shell:setSubtype(i)
+						end
+					end
 					shell:calculateWeight()
 					
 					if shell.stack_size > 1 then

@@ -8,10 +8,10 @@ local utils = require("utils")
 
 local customRawData = require("customRawData") -- a function
 
-local dropCasingsAsItems = true -- (damaged) items or broken projectiles? TODO: settings manager
+local dropCasingsAsItems = false -- (damaged) items or broken projectiles? TODO: settings manager
+local perturbedVectorLength = 5000 -- Due to integer-only target locations
 
 local gravity = 4900 -- game's own value
-local vectorLength = 100 -- Due to integer-only target locations
 
 -- this is an onProjItemCheckMovement event listener
 local function gunProjectileManager(projectile)
@@ -39,18 +39,10 @@ local function gunProjectileManager(projectile)
 		end
 	end
 	
-	local function perturbDirection(spread, opos, tpos)
-		if tpos.x==opos.x and tpos.y==opos.y then return end
-		local dirX, dirY = tpos.x-opos.x, tpos.y-opos.y
-		local angle = math.atan(dirY, dirX)
-		angle = angle + (math.random() - 0.5) * spread
-		dirX, dirY = math.cos(angle), math.sin(angle)
-		tpos.x, tpos.y = opos.x+math.floor(dirX*vectorLength), opos.y+math.floor(dirY*vectorLength)
-	end
-	
 	local gunDirectionSpread = 0 -- TODO: not having a scope, maybe? but i don't see why that should make the user less accurate than a crossbow without a scope. maybe for firing on auto for too long. Scope could increase hit_rating while firing on auto or other not-in-common-with-crossbow accuracy-reducing effects are here
-	local wearInaccuracy = 0.05 * projectile.item.wear -- this penalty is applied to the pre-projectile spread because damaged cartridges increasing total shotgun spread could be useful. but there is no point in doing two perturbDirection calls without even needing to refactor, so this is added to the main gun pointing direction spread
-	perturbDirection(gunDirectionSpread + wearInaccuracy, projectile.origin_pos, projectile.target_pos)
+	local gunDirectionAngle = (math.random() - 0.5) * gunDirectionSpread
+	
+	local mainProjectileWear = projectile.item.wear
 	
 	local ammoInaccuracy = customRawData(projectile.item.subtype, "INACCURACY") or 0
 	local gunInaccuracy = customRawData(gun.subtype, "INACCURACY") or 0
@@ -61,10 +53,31 @@ local function gunProjectileManager(projectile)
 	local mainProjectileIsShell = customRawData(projectile.item.subtype, "AMMO_SHELL")
 	
 	local function handleOutputProjectile(projectile)
-		perturbDirection(projectileInaccuracy, projectile.origin_pos, projectile.target_pos)
+		local projectileAngle = (math.random() - 0.5) * projectileInaccuracy
+		local perturbationAngle = gunDirectionAngle + projectileAngle
+		
+		-- Perturb projectile direction
+		local opos, tpos = projectile.origin_pos, projectile.target_pos
+		if not (tpos.x==opos.x and tpos.y==opos.y) then -- no angle for (0,0)
+			-- Get vector of length perturbedVectorLength facing in direction tpos-opos
+			local x, y, z = tpos.x-opos.x, tpos.y-opos.y, tpos.z-opos.z
+			local mag = math.sqrt(x^2+y^2+z^2)
+			x, y, z = x * perturbedVectorLength / mag, y * perturbedVectorLength / mag, z * perturbedVectorLength / mag
+			-- Handle x y angle change
+			local angle = math.atan(y, x) + perturbationAngle
+			x, y = math.cos(angle) * perturbedVectorLength, math.sin(angle) * perturbedVectorLength
+			-- Rewrite vector
+			tpos.x, tpos.y, tpos.z = math.floor(x) + opos.x, math.floor(y) + opos.y, math.floor(z) + opos.z
+		end
+		
+		local wear = mainProjectileWear
+		if mainProjectileIsShell then
+			wear = wear + projectile.item.wear -- else wear is wear as we're dealing with the same projectile as above
+		end
+		projectileRange = projectileRange / ((wear / 2) + 1) -- divison by two lessens the effect, but the addition by one is necessary because wear starts at 0
+		projectile.hit_rating = projectile.hit_rating / ((wear / 4) + 1)
 		projectile.fall_threshold = projectileRange
 		-- if projectile.flags.parabolic then
-		-- non-parabolic projecctiles don't actually have a velocity, just when they fall down
 	end
 	
 	if not mainProjectileIsShell then
