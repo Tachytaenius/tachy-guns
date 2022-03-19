@@ -8,3 +8,5 @@ eventful.onProjItemCheckMovement.gunModProjectileManager = dofile("hack/scripts/
 eventful.onReactionComplete.gunModShellFiller = dofile("hack/scripts/gunMod/shellFiller.lua")
 eventful.onItemCreated.gunModItemCreationManager = dofile("hack/scripts/gunMod/itemCreationManager.lua")
 eventful.onItemContaminateWound.gunModStuckInDamage = dofile("hack/scripts/gunMod/stuckInDamage.lua")
+
+print("Gun mod started!")

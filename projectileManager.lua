@@ -29,6 +29,8 @@ local function gunProjectileManager(projectile)
 		if not customRawData(gun.subtype, "GUN") then
 			return
 		end
+	else
+		return
 	end
 	
 	firer.counters.think_counter = customRawData(gun.subtype, "FIRE_TIME")
