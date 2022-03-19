@@ -4,9 +4,9 @@
 -- NOTE: Adding the reactions doesn't seem to add anything undesirable like the shell filling dummy products to the civilisation's resources, which is good, but is all this certain?
 
 local eventful = require("plugins.eventful")
-eventful.onProjItemCheckMovement.gunModProjectileManager = dofile("hack/scripts/gunMod/projectileManager.lua")
-eventful.onReactionComplete.gunModShellFiller = dofile("hack/scripts/gunMod/shellFiller.lua")
-eventful.onItemCreated.gunModItemCreationManager = dofile("hack/scripts/gunMod/itemCreationManager.lua")
-eventful.onItemContaminateWound.gunModStuckInDamage = dofile("hack/scripts/gunMod/stuckInDamage.lua")
+eventful.onProjItemCheckMovement.gunModProjectileManager = dfhack.run_script("gunMod/projectileManager")
+eventful.onReactionComplete.gunModShellFiller = dfhack.run_script("gunMod/shellFiller")
+eventful.onItemCreated.gunModItemCreationManager = dfhack.run_script("gunMod/itemCreationManager")
+eventful.onItemContaminateWound.gunModStuckInDamage = dfhack.run_script("gunMod/stuckInDamage")
 
 print("Gun mod started!")
