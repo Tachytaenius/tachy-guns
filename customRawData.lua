@@ -1,12 +1,12 @@
 --[[
 Custom raw data manager
-by Tachytaenius
+by Tachytaenius (wolfboyft)
 
 The first argument to customRawData is one of DF's internal structs for the things defined by raws
 For example, dfhack.gui.getSelectedItem().subtype
 The second is the name of the tag
 All the arguments after that are booleans denoting whether each argument is a string.
-(Absence, of course, impies false (and will cause a tonumber call))
+(Absence, of course, impies false (causing a tonumber call))
 
 It will return true for tags with no arguments
 For tags with one or more arguments, it will return each argument (replacing the first true), number or string as requested
@@ -35,13 +35,15 @@ Yes, custom raw tags do quietly print errors into the error log but the error lo
 
 local eventful = require("plugins.eventful")
 
+local rawStringsFieldNames -- Defined after the main function for file clarity (not state)
+
 local customRaws = {}
 eventful.onUnload.clearExtractedCustomRawData = function()
 	customRaws = {}
 end
 
 local function customRawData(typeDefinition, tag, ...)
-	-- TODO/if needed: more advanced raw constructs
+	-- TODO: more advanced raw constructs
 	
 	-- Have we got a table for this item subtype/reaction/whatever?
 	local customRawTable = customRaws[typeDefinition]
@@ -61,7 +63,7 @@ local function customRawData(typeDefinition, tag, ...)
 	end
 	
 	-- Get data anew
-	local rawStrings = typeDefinition.raw_strings -- TODO: make this depend on typeDefinition._type as needed
+	local rawStrings = typeDefinition[rawStringsFieldNames[typeDefinition._type]]
 	for _, v in ipairs(rawStrings) do
 		local noBrackets = v.value:sub(2, -2)
 		local iter = noBrackets:gmatch("[^:]*")
@@ -85,5 +87,31 @@ local function customRawData(typeDefinition, tag, ...)
 	end
 	return false
 end
+
+rawStringsFieldNames = {
+	inorganic_raw = "str",
+	plant_raw = "raws",
+	creature_raw = "raws",
+	itemdef_weaponst = "raw_strings",
+	itemdef_trapcompst = "raw_strings",
+	itemdef_toyst = "raw_strings",
+	itemdef_toolst = "raw_strings",
+	itemdef_instrumentst = "raw_strings",
+	itemdef_armorst = "raw_strings",
+	itemdef_ammost = "raw_strings",
+	itemdef_siegeammost = "raw_strings",
+	itemdef_glovesst = "raw_strings",
+	itemdef_shoesst = "raw_strings",
+	itemdef_shieldsst = "raw_strings",
+	itemdef_helmsst = "raw_strings",
+	itemdef_pantsst = "raw_strings",
+	itemdef_foodst = "raw_strings",
+	entity_raw = "raws",
+	language_word = "str",
+	language_symbol = "str",
+	language_translation = "str",
+	reaction = "raw_strings",
+	interaction = "str"
+}
 
 return customRawData
