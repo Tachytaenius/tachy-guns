@@ -27,6 +27,7 @@ gunpowder bars have a starting size of 100 and are used up per round manufacture
 	[REAGENT:gunpowder:20:BAR:NONE:INORGANIC:GUNPOWDER]
 	[PRODUCT:100:1:BOULDER:NONE:NONE:NONE]
 		dummy product
+		can't just have probability of 0 or else onReactionComplete won't fire
 
 [REACTION:FILL_MEDIUM_BULLET_CASING]
 	[NAME:fill medium bullet casing]
@@ -39,7 +40,7 @@ gunpowder bars have a starting size of 100 and are used up per round manufacture
 		[EMPTY]
 		[PRESERVE_REAGENT]
 	[REAGENT:gunpowder:40:BAR:NONE:INORGANIC:GUNPOWDER]
-	[PRODUCT:100:15:BOULDER:NONE:NONE:NONE]
+	[PRODUCT:100:1:BOULDER:NONE:NONE:NONE]
 		dummy product
 
 [REACTION:FILL_LARGE_BULLET_CASING]
@@ -67,5 +68,5 @@ gunpowder bars have a starting size of 100 and are used up per round manufacture
 		[EMPTY]
 		[PRESERVE_REAGENT]
 	[REAGENT:gunpowder:40:BAR:NONE:INORGANIC:GUNPOWDER]
-	[PRODUCT:100:15:BOULDER:NONE:NONE:NONE]
+	[PRODUCT:100:1:BOULDER:NONE:NONE:NONE]
 		dummy product
