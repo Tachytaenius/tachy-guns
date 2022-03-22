@@ -1,1 +1,1 @@
-dfhack.run_command("gunMod/init")
+dfhack.run_command("gunMod/main enable")

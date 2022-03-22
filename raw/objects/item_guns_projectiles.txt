@@ -8,7 +8,7 @@ item_guns_projectiles
 	[CLASS:NONE]
 	[ATTACK:EDGE:1:100000:poke:pokes:NO_SUB:10000]
 	[ATTACK_PREPARE_AND_RECOVER:3:3]
-	[STUCKIN_DAMAGE:10] cause extra havoc when lodged firmly in a wound
+	[STUCKIN_DAMAGE_MULTIPLIER:10] cause extra havoc when lodged firmly in a wound
 
 [ITEM_AMMO:ITEM_AMMO_MEDIUM_BULLET]
 	[NAME:medium bullet:medium bullets]
@@ -16,7 +16,7 @@ item_guns_projectiles
 	[CLASS:NONE]
 	[ATTACK:EDGE:1:20000:poke:pokes:NO_SUB:20000]
 	[ATTACK_PREPARE_AND_RECOVER:3:3]
-	[STUCKIN_DAMAGE:30]
+	[STUCKIN_DAMAGE_MULTIPLIER:30]
 
 [ITEM_AMMO:ITEM_AMMO_LARGE_BULLET]
 	[NAME:large bullet:large bullets]
@@ -24,7 +24,7 @@ item_guns_projectiles
 	[CLASS:NONE]
 	[ATTACK:EDGE:1:300000:poke:pokes:NO_SUB:30000]
 	[ATTACK_PREPARE_AND_RECOVER:3:3]
-	[STUCKIN_DAMAGE:100]
+	[STUCKIN_DAMAGE_MULTIPLIER:100]
 
 [ITEM_AMMO:ITEM_AMMO_PELLET]
 	[NAME:pellet:pellets]
@@ -32,4 +32,4 @@ item_guns_projectiles
 	[CLASS:NONE]
 	[ATTACK:EDGE:1:5000:poke:pokes:NO_SUB:5000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
-	[STUCKIN_DAMAGE:5]
+	[STUCKIN_DAMAGE_MULTIPLIER:5]

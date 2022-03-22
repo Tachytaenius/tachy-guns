@@ -3,11 +3,10 @@
 
 to install:
 * copy or move the root folder (containing this file) to one of your df(hack) installation's scripts folders (likely just hack/scripts/, but separating the standard library from scripts you install is recommended! check dfhack-config/script-paths.txt)
-* copy or move customRawData.lua (the custom raw utility) to your df(hack) installation's hack/lua/ (but i intend to PR this into dfhack at some point)
 * merge raw/ with your df(hack) installation's raw/. the file in raw/init.d/ is responsible for launching the script and is part of the mod's non-content functional stuff. the files in raw/objects/ can be customised. ofc, feel free to experiment with the mod's non-content anyway
 * addToEntity.txt contains raw text that you paste into the entity definition for the entity you want to be able to use guns, so don't forget that
 
-Behaviour around the content added by the gun mod may break if the script is not on.
+Behaviour around the content added by the gun mod may break if the script is not on. It will leave a message in the console when activated.
 
 you can add the reactions etc to your civs but the mod isn't really ready and NPC behaviour is not handled (you can give them a gun with ammo in the arena, i just mean stuff like not showing up to battle with empty shells or whatever idk. (probably could implement something to change generated inventories accordingly). i havent tested any of that yet.) i don't feel the guns are perfectly fine-tuned properly yet but they work and *are* lethal.
 

@@ -1,8 +1,8 @@
-local customRawData = require("customRawData")
+local customRawTags = require("custom-raw-tags")
 
 -- This is an onReactionComplete event listener
 local function shellFiller(reaction, reaction_product, unit, input_items, input_reagents, output_items, call_native)
-	if not customRawData.getTag(reaction, "SHELL_FILLING_REACTION") then
+	if not customRawTags.getTag(reaction, "SHELL_FILLING_REACTION") then
 		return
 	end
 	
@@ -31,12 +31,12 @@ local function shellFiller(reaction, reaction_product, unit, input_items, input_
 			local input = input_items[i]
 			-- NOTE: If projectiles no longer have to be ammo, then add use a custom raw tag
 			if input._type == df.item_ammost then -- if pellet._type ~= df.item_ammost then continue end >:(
-				if customRawData.getTag(input.subtype, "AMMO_SHELL") then
+				if customRawTags.getTag(input.subtype, "AMMO_SHELL") then
 					assert(not shell)
 					shell = input
 					
 					-- Change subtype to fireable ammunition
-					local newSubtypeName = customRawData.getTag(shell.subtype, "CONVERT_TO_FIREABLE", true)
+					local newSubtypeName = customRawTags.getTag(shell.subtype, "CONVERT_TO_FIREABLE", true)
 					local defs = df.global.world.raws.itemdefs.ammo
 					for i = 0, #defs - 1 do
 						local itemDef = defs[i]
@@ -66,7 +66,7 @@ local function shellFiller(reaction, reaction_product, unit, input_items, input_
 	-- Move projectiles into shell
 	for i = 0, #input_items - 1 do
 		local pellet = input_items[i]
-		if pellet._type == df.item_ammost and not customRawData.getTag(pellet.subtype, "AMMO_SHELL") then
+		if pellet._type == df.item_ammost and not customRawTags.getTag(pellet.subtype, "AMMO_SHELL") then
 			-- No specific refs (all prevent moveToContainer)
 			local j = 0
 			while #pellet.specific_refs < j do

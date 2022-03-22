@@ -2,7 +2,7 @@ reaction_guns_gunpowder
 
 [OBJECT:REACTION]
 
-gunpowder bars have a starting size of 100 and are used up per round manufactured
+gunpowder bars have a starting size of 100 and are used up incrementally per round manufactured
 
 [REACTION:MAKE_GUNPOWDER]
 	[NAME:make gunpowder]
@@ -11,7 +11,7 @@ gunpowder bars have a starting size of 100 and are used up per round manufacture
 	[FUEL]
 	[REAGENT:saltpetre:8:BOULDER:NO_SUBTYPE:INORGANIC:SALTPETER]
 	[REAGENT:sulphur:1:BOULDER:NO_SUBTYPE:INORGANIC:BRIMSTONE]
-	[PRODUCT:100:1:BAR:NONE:INORGANIC:GUNPOWDER]
+	[PRODUCT:100:10:BAR:NONE:INORGANIC:GUNPOWDER]
 		[PRODUCT_DIMENSION:100]
 
 [REACTION:FILL_SMALL_BULLET_CASING]
