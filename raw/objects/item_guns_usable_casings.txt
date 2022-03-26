@@ -36,7 +36,7 @@ item_guns_usable_casings
 	[NAME:fireable shotgun shell:fireable shotgun shells]
 	[CLASS:SHOTSHELL]
 	[CONVERT_TO_UNFIREABLE:ITEM_AMMO_SHOTGUN_SHELL]
-	[SIZE:64]
+	[SIZE:44]
 	[GUN_AMMO]
 	[AMMO_SHELL]
 	[INACCURACY:0.06]

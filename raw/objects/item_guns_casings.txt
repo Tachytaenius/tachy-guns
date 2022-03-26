@@ -27,5 +27,5 @@ item_guns_casings
 	[NAME:shotgun shell:shotgun shells]
 	[CLASS:NONE]
 	[CONVERT_TO_FIREABLE:ITEM_AMMO_FIREABLE_SHOTGUN_SHELL]
-	[SIZE:60]
+	[SIZE:40]
 	[AMMO_SHELL]
