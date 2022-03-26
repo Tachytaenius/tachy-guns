@@ -3,7 +3,7 @@ item_guns_usable_casings
 [OBJECT:ITEM]
 
 [ITEM_AMMO:ITEM_AMMO_SMALL_FIREABLE_BULLET_CASING]
-	[NAME:fireable small bullet casing:fireable small bullet casing]
+	[NAME:fireable small bullet casing:fireable small bullet casings]
 	[CLASS:SMALL_BULLET]
 	[CONVERT_TO_UNFIREABLE:ITEM_AMMO_SMALL_BULLET_CASING]
 	[SIZE:32]
@@ -13,7 +13,7 @@ item_guns_usable_casings
 	[INACCURACY:0] In radians
 
 [ITEM_AMMO:ITEM_AMMO_MEDIUM_FIREABLE_BULLET_CASING]
-	[NAME:fireable medium bullet casing:fireable medium bullet casing]
+	[NAME:fireable medium bullet casing:fireable medium bullet casings]
 	[CLASS:MEDIUM_BULLET]
 	[CONVERT_TO_UNFIREABLE:ITEM_AMMO_MEDIUM_BULLET_CASING]
 	[SIZE:44]
@@ -23,7 +23,7 @@ item_guns_usable_casings
 	[INACCURACY:0] In radians
 
 [ITEM_AMMO:ITEM_AMMO_LARGE_FIREABLE_BULLET_CASING]
-	[NAME:fireable large bullet casing:fireable large bullet casing]
+	[NAME:fireable large bullet casing:fireable large bullet casings]
 	[CLASS:LARGE_BULLET]
 	[CONVERT_TO_UNFIREABLE:ITEM_AMMO_LARGE_BULLET_CASING]
 	[SIZE:56]
