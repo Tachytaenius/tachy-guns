@@ -6,7 +6,7 @@
 
 local utils = require("utils")
 
-local customRawTags = require("custom-raw-tags")
+local customRawTokens = require("custom-raw-tokens")
 
 local dropCasingsAsItems = false -- (damaged) items or broken projectiles? TODO: settings manager
 local perturbedVectorLength = 5000 -- Due to integer-only target locations
@@ -26,17 +26,17 @@ local function gunProjectileManager(projectile)
 	
 	local gun = df.item.find(projectile.bow_id)
 	if gun and gun._type == df.item_weaponst then
-		if not customRawTags.getTag(gun.subtype, "GUN") then
+		if not customRawTokens.getToken(gun.subtype, "GUN") then
 			return
 		end
 	else
 		return
 	end
 	
-	firer.counters.think_counter = tonumber(customRawTags.getTag(gun.subtype, "FIRE_TIME"))
+	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_TIME"))
 	
 	if projectile.item._type == df.item_ammost then
-		if not customRawTags.getTag(projectile.item.subtype, "GUN_AMMO") then
+		if not customRawTokens.getToken(projectile.item.subtype, "GUN_AMMO") then
 			return
 		end
 	end
@@ -46,13 +46,13 @@ local function gunProjectileManager(projectile)
 	
 	local mainProjectileWear = projectile.item.wear
 	
-	local ammoInaccuracy = tonumber(customRawTags.getTag(projectile.item.subtype, "INACCURACY")) or 0
-	local gunInaccuracy = tonumber(customRawTags.getTag(gun.subtype, "INACCURACY")) or 0
+	local ammoInaccuracy = tonumber(customRawTokens.getToken(projectile.item.subtype, "INACCURACY")) or 0
+	local gunInaccuracy = tonumber(customRawTokens.getToken(gun.subtype, "INACCURACY")) or 0
 	local projectileInaccuracy = ammoInaccuracy + gunInaccuracy
-	local gunRange = tonumber(customRawTags.getTag(projectile.item.subtype, "RANGE") or 20)
-	local ammoRange = tonumber(customRawTags.getTag(projectile.item.subtype, "RANGE") or 20)
+	local gunRange = tonumber(customRawTokens.getToken(projectile.item.subtype, "RANGE") or 20)
+	local ammoRange = tonumber(customRawTokens.getToken(projectile.item.subtype, "RANGE") or 20)
 	local projectileRange = gunRange + ammoRange
-	local mainProjectileIsShell = customRawTags.getTag(projectile.item.subtype, "AMMO_SHELL")
+	local mainProjectileIsShell = customRawTokens.getToken(projectile.item.subtype, "AMMO_SHELL")
 	
 	local function handleOutputProjectile(projectile)
 		local projectileAngle = (math.random() - 0.5) * projectileInaccuracy
@@ -120,8 +120,8 @@ local function gunProjectileManager(projectile)
 		end
 		
 		-- Handle proper spent shell behaviour
-		local newSubtypeName = customRawTags.getTag(projectile.item.subtype, "CONVERT_TO_UNFIREABLE", true)
-		local deltaWear = tonumber(customRawTags.getTag(projectile.item.subtype, "FIRE_WEAR")) or 806400 -- 806400 is one step
+		local newSubtypeName = customRawTokens.getToken(projectile.item.subtype, "CONVERT_TO_UNFIREABLE", true)
+		local deltaWear = tonumber(customRawTokens.getToken(projectile.item.subtype, "FIRE_WEAR")) or 806400 -- 806400 is one step
 		local defs = df.global.world.raws.itemdefs.ammo
 		for i = 0, #defs - 1 do
 			local itemDef = defs[i]
