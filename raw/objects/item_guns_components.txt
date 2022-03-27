@@ -4,7 +4,7 @@ item_guns_components
 
 small barrels
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_SMALL_SHORT]
-	[NAME:barrel:barrels]
+	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:short small]
 	[DESCRIPTION:A short firearm barrel with a small diameter.]
 	[TILE:'-']
@@ -14,7 +14,7 @@ small barrels
 	[METAL_MAT]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_SMALL_MEDIUM]
-	[NAME:barrel:barrels]
+	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:medium-length small]
 	[DESCRIPTION:A firearm barrel with a small diameter.]
 	[TILE:'|']
@@ -24,7 +24,7 @@ small barrels
 	[METAL_MAT]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_SMALL_LONG]
-	[NAME:barrel:barrels]
+	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:long small]
 	[DESCRIPTION:A long firearm barrel with a small diameter.]
 	[TILE:'|']
@@ -35,7 +35,7 @@ small barrels
 
 medium barrels
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_MEDIUM_SHORT]
-	[NAME:barrel:barrels]
+	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:short medium-diameter]
 	[DESCRIPTION:A short firearm barrel with a medium diameter.]
 	[TILE:'-']
@@ -45,7 +45,7 @@ medium barrels
 	[METAL_MAT]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_MEDIUM_MEDIUM]
-	[NAME:barrel:barrels]
+	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:medium-length medium-diameter]
 	[DESCRIPTION:A firearm barrel with a medium diameter.]
 	[TILE:'|']
@@ -55,7 +55,7 @@ medium barrels
 	[METAL_MAT]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_MEDIUM_LONG]
-	[NAME:barrel:barrels]
+	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:long medium-diameter]
 	[DESCRIPTION:A long firearm barrel with a medium diameter.]
 	[TILE:'|']
@@ -66,7 +66,7 @@ medium barrels
 
 large barrels
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_LARGE_SHORT]
-	[NAME:barrel:barrels]
+	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:short large]
 	[DESCRIPTION:A short firearm barrel with a large diameter.]
 	[TILE:'-']
@@ -76,7 +76,7 @@ large barrels
 	[METAL_MAT]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_LARGE_MEDIUM]
-	[NAME:barrel:barrels]
+	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:medium-length large]
 	[DESCRIPTION:A firearm barrel with a large diameter.]
 	[TILE:'|']
@@ -86,7 +86,7 @@ large barrels
 	[METAL_MAT]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_LARGE_LONG]
-	[NAME:barrel:barrels]
+	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:long large]
 	[DESCRIPTION:A long firearm barrel with a large diameter.]
 	[TILE:'|']
