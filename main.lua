@@ -22,6 +22,12 @@ if args[1] == "enable" then
 	end
 	eventful.enableEvent(eventful.eventType.JOB_COMPLETED, 0)
 	
+	-- Code for applying handle material to guns
+	local handleMaterialTransfer = dfhack.run_script("gunMod/handleMaterialTransfer")
+	eventful.onReactionComplete[eventfulKey] = function(...)
+		handleMaterialTransfer(...)
+	end
+	
 	local itemCreationManager = dfhack.run_script("gunMod/itemCreationManager")
 	eventful.onItemCreated[eventfulKey] = function(...)
 		itemCreationManager(...)
@@ -37,6 +43,7 @@ if args[1] == "enable" then
 elseif args[1] == "disable" then
 	eventful.onProjItemCheckMovement[eventfulKey] = nil
 	eventful.onJobCompleted[eventfulKey] = nil
+	eventful.onReactionComplete[eventfulKey] = nil
 	eventful.onItemCreated[eventfulKey] = nil
 	eventful.onItemContaminateWound[eventfulKey] = nil
 	print("Gun mod disabled. Behaviour may break.")
