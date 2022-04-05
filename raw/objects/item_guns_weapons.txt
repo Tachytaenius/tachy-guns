@@ -20,7 +20,7 @@ TODO: balance, fine tune.
 	[INACCURACY:0] Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
 	[RANGE:5] in tiles, added to bullet range.
 	[FIRE_TIME:10] TEMP: Manual guns, skill, etc
-	[VALUE:100]
+	(VALUE:100)
 
 [ITEM_WEAPON:ITEM_WEAPON_SNIPER_RIFLE]
 	[NAME:sniper rifle:sniper rifles]
@@ -38,7 +38,7 @@ TODO: balance, fine tune.
 	[INACCURACY:0]
 	[RANGE:100]
 	[FIRE_TIME:50]
-	[VALUE:250]
+	(VALUE:250)
 
 [ITEM_WEAPON:ITEM_WEAPON_MACHINE_GUN]
 	[NAME:machine gun:machine guns]
@@ -56,7 +56,7 @@ TODO: balance, fine tune.
 	[INACCURACY:0.01]
 	[RANGE:10]
 	[FIRE_TIME:1]
-	[VALUE:325]
+	(VALUE:325)
 
 [ITEM_WEAPON:ITEM_WEAPON_PUMP_SHOTGUN]
 	[NAME:pump-action shotgun:pump-action shotguns]
@@ -74,7 +74,7 @@ TODO: balance, fine tune.
 	[INACCURACY:0.05]
 	[RANGE:10]
 	[FIRE_TIME:35]
-	[VALUE:150]
+	(VALUE:150)
 
 [ITEM_WEAPON:ITEM_WEAPON_DOUBLE_SHOTGUN]
 	[NAME:double-barrel shotgun:double-barrel shotguns]
@@ -92,7 +92,7 @@ TODO: balance, fine tune.
 	[INACCURACY:0.15]
 	[RANGE:5]
 	[FIRE_TIME:35]
-	[VALUE:160]
+	(VALUE:160)
 
 [ITEM_WEAPON:ITEM_WEAPON_SAWN_SHOTGUN]
 	[NAME:sawn-off shotgun:sawn-off shotguns]
@@ -110,4 +110,4 @@ TODO: balance, fine tune.
 	[INACCURACY:0.3]
 	[RANGE:0] remember, added to projectile's
 	[FIRE_TIME:35]
-	[VALUE:125]
+	(VALUE:125)

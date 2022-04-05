@@ -11,7 +11,7 @@ item_guns_usable_casings
 	[AMMO_SHELL]
 	[RANGE:50]
 	[INACCURACY:0] In radians
-	[VALUE:3]
+	(VALUE:3)
 
 [ITEM_AMMO:ITEM_AMMO_BULLET_CASING_MEDIUM_FIREABLE]
 	[NAME:fireable medium bullet casing:fireable medium bullet casings]
@@ -22,7 +22,7 @@ item_guns_usable_casings
 	[AMMO_SHELL]
 	[RANGE:60]
 	[INACCURACY:0]
-	[VALUE:4]
+	(VALUE:4)
 
 [ITEM_AMMO:ITEM_AMMO_BULLET_CASING_LARGE_FIREABLE]
 	[NAME:fireable large bullet casing:fireable large bullet casings]
@@ -33,7 +33,7 @@ item_guns_usable_casings
 	[AMMO_SHELL]
 	[RANGE:70]
 	[INACCURACY:0]
-	[VALUE:5]
+	(VALUE:5)
 
 [ITEM_AMMO:ITEM_AMMO_SHOTGUN_SHELL_FIREABLE]
 	[NAME:fireable shotgun shell:fireable shotgun shells]
@@ -44,4 +44,4 @@ item_guns_usable_casings
 	[AMMO_SHELL]
 	[INACCURACY:0.06]
 	[RANGE:40]
-	[VALUE:3]
+	(VALUE:3)

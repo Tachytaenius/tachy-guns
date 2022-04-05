@@ -4,11 +4,15 @@
 -- NOTE: Adding the reactions doesn't seem to add anything undesirable like the shell filling dummy products to the civilisation's resources, which is good, but is all this certain?
 
 local eventful = require("plugins.eventful")
+local customRawTokens = require("custom-raw-tokens")
 
 local eventfulKey = "gunMod"
 local args = {...}
 
 if args[1] == "enable" then
+	-- Register custom raw tokens to suppress errors
+	customRawTokens.registerValidTokens({"CONVERT_TO_FIREABLE", "CONVERT_TO_UNFIREABLE", "AMMO_SHELL", "STUCKIN_DAMAGE_MULTIPLIER", "RANGE", "INACCURACY", "GUN", "FIRE_TIME", "SHELL_FILLING_REACTION", "TRANSFER_HANDLE_MATERIAL_TO_PRODUCT_IMPROVEMENT", "GUN_AMMO"})
+	
 	-- Proper casing firing behaviour
 	local projectileManager = dfhack.run_script("gunMod/projectileManager")
 	eventful.onProjItemCheckMovement[eventfulKey] = function(...)
@@ -28,6 +32,7 @@ if args[1] == "enable" then
 		handleMaterialTransfer(...)
 	end
 	
+	-- TODO
 	local itemCreationManager = dfhack.run_script("gunMod/itemCreationManager")
 	eventful.onItemCreated[eventfulKey] = function(...)
 		itemCreationManager(...)
