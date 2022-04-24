@@ -48,6 +48,8 @@ elseif args[1] == "disable" then
 	eventful.onItemCreated[eventfulKey] = nil
 	eventful.onItemContaminateWound[eventfulKey] = nil
 	print("Gun mod disabled. Behaviour may break.")
+elseif not args[1] then
+	dfhack.printerr("No argument given to gunMod/main")
 else
 	dfhack.printerr("Unknown argument \"" .. args[1] .. "\" to gunMod/main")
 end
