@@ -139,6 +139,7 @@ local function gunProjectileManager(projectile)
 			projectile.origin_pos.x = -30000
 			projectile.cur_pos.x = -30000
 			projectile.flags.to_be_deleted = true
+			projectile.item.flags.garbage_collect = true
 		else
 			local tpos, opos = projectile.target_pos, projectile.origin_pos
 			tpos.x,tpos.y,tpos.z=opos.x,opos.y,opos.z
