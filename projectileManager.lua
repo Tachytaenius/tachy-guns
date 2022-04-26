@@ -1,6 +1,5 @@
 -- TODO: Record rationale for perturbations and inaccuracy quantities
 -- TODO: Clean up code to make projectile/subProjectile uses consistent and disctinctions clearer
--- TODO: Are there less stuck-ins than there should be? Is this just a job for tweaking the raws?
 
 -- NOTE: Enabling piercing on projectiles will cause them to destroy trees. So I've opted to not do that.
 
