@@ -37,6 +37,7 @@ local function shellFiller(job)
 	disconnect_clutter(shellStack)
 	if shellStack.stack_size > 1 then
 		shellStack = shellStack:splitStack(1, true)
+		shellStack:categorize(true)
 	end
 	
 	local newSubtypeName = customRawTokens.getToken(shellStack, "CONVERT_TO_FIREABLE")
@@ -65,7 +66,9 @@ local function shellFiller(job)
 						table.insert(projectileStacksToMove, stack)
 						next = false
 					else
-						table.insert(projectileStacksToMove, stack:splitStack(amountToTake, true))
+						newStack = stack:splitStack(amountToTake, true)
+						newStack:categorize(true)
+						table.insert(projectileStacksToMove, newStack)
 					end
 					amountAcquired = amountAcquired + amountToTake
 				end
