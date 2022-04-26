@@ -91,7 +91,9 @@ local function gunProjectileManager(projectile)
 		-- Split sub-projectile stacks
 		for _, containedItem in ipairs(containedItems) do
 			while containedItem.stack_size > 1 do
-				subProjectileItems[#subProjectileItems+1] = containedItem:splitStack(1, true)
+				newStack = containedItem:splitStack(1, true)
+				newStack:categorize(true)
+				subProjectileItems[#subProjectileItems+1] = newStack
 			end
 			subProjectileItems[#subProjectileItems+1] = containedItem
 		end
