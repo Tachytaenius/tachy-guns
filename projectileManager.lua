@@ -43,6 +43,7 @@ local function gunProjectileManager(projectile)
 	
 	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_TIME"))
 	
+	-- TODO: Exhaustion multiplier
 	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_XP_GAIN")) or defaultFireExperienceGain
 	local amount = fireExperienceGain - defaultFireExperienceGain
 	local valueString = tostring(amount)
