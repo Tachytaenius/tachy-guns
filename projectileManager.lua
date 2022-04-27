@@ -10,11 +10,20 @@ local customRawTokens = require("custom-raw-tokens")
 local dropCasingsAsItems = false -- (damaged) items or broken projectiles? TODO: settings manager
 local perturbedVectorLength = 5000 -- Due to integer-only target locations
 
-local gravity = 4900 -- game's own value
+-- game's own values
+local gravity = 4900
+-- local defaultFireExhaustion = 20 -- depends on attributes
+local defaultFireExperienceGain = 30
+
+local skipFlagKey = 31
 
 -- this is an onProjItemCheckMovement event listener
 local function gunProjectileManager(projectile)
 	if projectile.distance_flown > 0 then
+		return
+	end
+	
+	if projectile.flags[skipFlagKey] then
 		return
 	end
 	
@@ -33,6 +42,18 @@ local function gunProjectileManager(projectile)
 	end
 	
 	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_TIME"))
+	
+	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_XP_GAIN")) or defaultFireExperienceGain
+	local amount = fireExperienceGain - defaultFireExperienceGain
+	local valueString = tostring(amount)
+	if amount < 0 then
+		valueString	= "\\" .. valueString
+	end
+	dfhack.run_script("modtools/skill-change", "-mode", "add", "-skill", "RANGED_COMBAT", "-granularity", "experience", "-unit", tostring(firer.id), "-value", valueString)
+	local weaponSkill = df.job_skill[gun.subtype.skill_ranged]
+	if weaponSkill then
+		dfhack.run_script("modtools/skill-change", "-skill", weaponSkill, "-granularity", "experience", "-unit", tostring(firer.id), "-value", valueString)
+	end
 	
 	if projectile.item._type == df.item_ammost then
 		if not customRawTokens.getToken(projectile.item.subtype, "GUN_AMMO") then
@@ -101,6 +122,7 @@ local function gunProjectileManager(projectile)
 		-- Handle sub-projectiles
 		for _, subProjectileItem in ipairs(subProjectileItems) do
 			local subProjectile = dfhack.items.makeProjectile(subProjectileItem)
+			subProjectile.flags[skipFlagKey] = true
 			subProjectile.firer = projectile.firer
 			subProjectile.origin_pos = utils.clone(projectile.origin_pos)
 			subProjectile.target_pos = utils.clone(projectile.target_pos)
@@ -116,7 +138,6 @@ local function gunProjectileManager(projectile)
 			subProjectile.unk22 = projectile.unk22
 			subProjectile.hit_rating = projectile.hit_rating
 			subProjectile.unk_v40_1 = projectile.unk_v40_1
-			
 			handleOutputProjectile(subProjectile)
 		end
 		

@@ -1,6 +1,6 @@
 item_guns_weapons
 
-TODO: balance, fine tune.
+NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier and a < 30 fire experience gain
 
 [OBJECT:ITEM]
 
@@ -19,7 +19,10 @@ TODO: balance, fine tune.
 	[GUN]
 	[INACCURACY:0] Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
 	[RANGE:5] in tiles, added to bullet range.
-	[FIRE_TIME:10] TEMP: Manual guns, skill, etc
+	[GUN_ACTION:SEMI_AUTOMATIC]
+	[FIRE_TIME:10]
+	[FIRE_EXHAUSTION_MULTIPLIER:0.5]
+	[FIRE_EXPERIENCE_GAIN:20]
 	(VALUE:100)
 
 [ITEM_WEAPON:ITEM_WEAPON_SNIPER_RIFLE]
@@ -37,6 +40,7 @@ TODO: balance, fine tune.
 	[GUN]
 	[INACCURACY:0]
 	[RANGE:100]
+	[GUN_ACTION:MANUAL]
 	[FIRE_TIME:50]
 	(VALUE:250)
 
@@ -55,7 +59,10 @@ TODO: balance, fine tune.
 	[GUN]
 	[INACCURACY:0.01]
 	[RANGE:10]
+	[GUN_ACTION:AUTOMATIC]
 	[FIRE_TIME:1]
+	[FIRE_EXHAUSTION_MULTIPLIER:0.1]
+	[FIRE_EXPERIENCE_GAIN:2]
 	(VALUE:325)
 
 [ITEM_WEAPON:ITEM_WEAPON_PUMP_SHOTGUN]
@@ -73,6 +80,7 @@ TODO: balance, fine tune.
 	[GUN]
 	[INACCURACY:0.05]
 	[RANGE:10]
+	[GUN_ACTION:MANUAL]
 	[FIRE_TIME:35]
 	(VALUE:150)
 
@@ -91,6 +99,7 @@ TODO: balance, fine tune.
 	[GUN]
 	[INACCURACY:0.15]
 	[RANGE:5]
+	[GUN_ACTION:MANUAL]
 	[FIRE_TIME:35]
 	(VALUE:160)
 
@@ -109,5 +118,6 @@ TODO: balance, fine tune.
 	[GUN]
 	[INACCURACY:0.3]
 	[RANGE:0] remember, added to projectile's
+	[GUN_ACTION:MANUAL]
 	[FIRE_TIME:35]
 	(VALUE:125)
