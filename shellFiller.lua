@@ -1,11 +1,9 @@
 local customRawTokens = require("custom-raw-tokens")
-local repeatUtil = require("repeat-util")
 
 local disconnect_clutter
 
 -- This is an onJobCompleted event listener
 local function shellFiller(job)
-	assert(job.completion_timer == 0, job.completion_timer)
 	if not job.reaction_name then return end
 	if job.reaction_name == "" then return end
 	if job.job_type ~= df.job_type.CustomReaction then return end
