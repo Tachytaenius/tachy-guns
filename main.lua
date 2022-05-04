@@ -16,8 +16,11 @@ if args[1] == "enable" then
 	
 	-- Code for filling casings
 	local shellFiller = dfhack.run_script("gunMod/shellFiller")
+	-- Making sawn-off shotguns
+	local typeTransform = dfhack.run_script("gunMod/typeTransform")
 	eventful.onJobCompleted[eventfulKey] = function(...)
 		shellFiller(...)
+		typeTransform(...)
 	end
 	eventful.enableEvent(eventful.eventType.JOB_COMPLETED, 0)
 	
