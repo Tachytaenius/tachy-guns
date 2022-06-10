@@ -4,18 +4,9 @@
 -- NOTE: Enabling piercing on projectiles will cause them to destroy trees. So I've opted to not do that.
 
 local utils = require("utils")
-
 local customRawTokens = require("custom-raw-tokens")
 
-local dropCasingsAsItems = false -- (damaged) items or broken projectiles? TODO: settings manager
-local perturbedVectorLength = 2000 -- Due to integer-only target locations
-
--- game's own values
-local gravity = 4900
--- local defaultFireExhaustion = 20 -- depends on attributes
-local defaultFireExperienceGain = 30
-
-local skipFlagKey = 31
+local consts = dfhack.run_script("gunMod/consts")
 
 local function getSubtypeItemDefByName(subtypeName)
 	local defs = df.global.world.raws.itemdefs.all
@@ -38,7 +29,7 @@ local function gunProjectileManager(projectile)
 		return
 	end
 	
-	if projectile.flags[skipFlagKey] then
+	if projectile.flags[consts.skipProcessingProjectileFlagKey] then
 		return
 	end
 	
@@ -59,8 +50,8 @@ local function gunProjectileManager(projectile)
 	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_TIME")) or firer.counters.think_counter
 	
 	-- TODO: Exhaustion multiplier
-	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_XP_GAIN")) or defaultFireExperienceGain
-	local amount = fireExperienceGain - defaultFireExperienceGain
+	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_XP_GAIN")) or consts.defaultFireExperienceGain
+	local amount = fireExperienceGain - consts.defaultFireExperienceGain
 	local valueString = tostring(amount)
 	if amount < 0 then
 		valueString	= "\\" .. valueString
@@ -93,7 +84,17 @@ local function gunProjectileManager(projectile)
 	if mainProjectileIsShell then
 		-- Hack into old projecitles-as-contained-items behaviour and add projectiles as contained items
 		local containedProjectileSubtypeName, containedProjectileCount = customRawTokens.getToken(projectile.item.subtype, "CONTAINED_PROJECTILE")
-		local containedProjectile = dfhack.items.createItem(df.item_type.AMMO, getSubtypeItemDefByName(containedProjectileSubtypeName).subtype, projectile.item.mat_type, projectile.item.mat_index, firer)
+		local mat_type, mat_index = projectile.item.mat_type, projectile.item.mat_index
+		-- try to find improvement representing contained projectile's material
+		for _, improvement in ipairs(projectile.item.improvements) do
+			if improvement._type == df.itemimprovement_itemspecificst then
+				if improvement.type == consts.ammoMaterialItemSpecificImprovementType then
+					mat_type, mat_index = improvement.mat_type, improvement.mat_index
+					break
+				end
+			end
+		end
+		local containedProjectile = dfhack.items.createItem(df.item_type.AMMO, getSubtypeItemDefByName(containedProjectileSubtypeName).subtype, mat_type, mat_index, firer)
 		-- containedProjectile isn't actually returned from dfhack.items.createItem??
 		containedProjectile = df.global.world.items.all[#df.global.world.items.all-1]
 		containedProjectile.stack_size = containedProjectileCount
@@ -112,10 +113,10 @@ local function gunProjectileManager(projectile)
 			-- Get vector of length perturbedVectorLength facing in direction tpos-opos
 			local x, y, z = tpos.x-opos.x, tpos.y-opos.y, tpos.z-opos.z
 			local mag = math.sqrt(x^2+y^2+z^2)
-			x, y, z = x * perturbedVectorLength / mag, y * perturbedVectorLength / mag, z * perturbedVectorLength / mag
+			x, y, z = x * consts.perturbedVectorLength / mag, y * consts.perturbedVectorLength / mag, z * consts.perturbedVectorLength / mag
 			-- Handle x y angle change
 			local angle = math.atan(y, x) + perturbationAngle
-			x, y = math.cos(angle) * perturbedVectorLength, math.sin(angle) * perturbedVectorLength
+			x, y = math.cos(angle) * consts.perturbedVectorLength, math.sin(angle) * consts.perturbedVectorLength
 			-- Rewrite vector
 			tpos.x, tpos.y, tpos.z = math.floor(x) + opos.x, math.floor(y) + opos.y, math.floor(z) + opos.z
 		end
@@ -150,7 +151,7 @@ local function gunProjectileManager(projectile)
 		-- Handle sub-projectiles
 		for _, subProjectileItem in ipairs(subProjectileItems) do
 			local subProjectile = dfhack.items.makeProjectile(subProjectileItem)
-			subProjectile.flags[skipFlagKey] = true
+			subProjectile.flags[consts.skipProcessingProjectileFlagKey] = true
 			subProjectile.firer = projectile.firer
 			subProjectile.origin_pos = utils.clone(projectile.origin_pos)
 			subProjectile.target_pos = utils.clone(projectile.target_pos)
@@ -189,7 +190,7 @@ local function gunProjectileManager(projectile)
 			projectile.unk_v40_1 = -1
 			projectile.firer = nil
 			projectile.bow_id = -1
-			projectile.flags.no_impact_destroy = dropCasingsAsItems
+			projectile.flags.no_impact_destroy = consts.dropCasingsAsItems
 		end
 	end
 end

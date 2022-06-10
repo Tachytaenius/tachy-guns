@@ -1,6 +1,8 @@
 local customRawTokens = require("custom-raw-tokens")
 local persistTable = require("persist-table")
 
+local consts = dfhack.run_script("gunMod/consts")
+
 -- This is an onJobCompleted event listener
 local function storeProjectileMaterial(job)
 	if not job.reaction_name then return end
@@ -37,11 +39,11 @@ local function storeProjectileMaterial(job)
 	
 	local projectile = getReagentItem(projectileReagentName)
 	local casing = getReagentItem(casingReagentName)
-	casing.improvements:insert("#", {
-		new = true,
-		mat_type = projectile.mat_type,
-		mat_index = projectile.mat_index
-	})
+	local improvement = df.itemimprovement_itemspecificst:new()
+	improvement.type = consts.ammoMaterialItemSpecificImprovementType
+	improvement.mat_type = projectile.mat_type
+	improvement.mat_index = projectile.mat_index
+	casing.improvements:insert("#", improvement)
 end
 
 return storeProjectileMaterial

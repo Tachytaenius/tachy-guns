@@ -41,8 +41,7 @@ local function deleteReagents(job)
 		for i = 1, select("#", ...) do
 			local item, reagent = getReagentAndItsItem(select(i, ...))
 			assert(item.stack_size >= reagent.quantity)
-			-- disconnect_clutter(item)
-			dfhack.items.remove(item)
+			disconnect_clutter(item)
 		end
 	end)(customRawTokens.getToken(reaction, "DELETE_REAGENTS"))
 end

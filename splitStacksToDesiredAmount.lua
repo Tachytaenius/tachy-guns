@@ -41,9 +41,11 @@ local function splitStacksToDesiredAmount(job)
 		for i = 1, select("#", ...) do
 			local item, reagent = getReagentAndItsItem(select(i, ...))
 			assert(item.stack_size >= reagent.quantity)
-			-- disconnect_clutter(item)
-			local newStack = item:splitStack(item.stack_size - reagent.quantity, true)
-			newStack:categorize(true)
+			if item.stack_size ~= reagent.quantity then
+				-- disconnect_clutter(item)
+				local newStack = item:splitStack(item.stack_size - reagent.quantity, true)
+				newStack:categorize(true)
+			end
 		end
 	end)(customRawTokens.getToken(reaction, "SPLIT_STACKS_TO_DESIRED_AMOUNT"))
 end
