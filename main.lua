@@ -1,7 +1,5 @@
 -- TODO: come up with name for mod (and change key for event listeners)
 
--- NOTE: Currently projectileManager and shellFiller change item subtypes of ammo casings according to the [CONVERT_TO_(UN)FIREABLE:...] token and also checks against segfaults in shellFiller by checking if job_item_refs are of type AMMO. If projectiles and non-fireable casings change item type from ammo to tool, that code will have to change
-
 local eventful = require("plugins.eventful")
 
 local eventfulKey = "gunMod"
@@ -14,13 +12,19 @@ if args[1] == "enable" then
 		projectileManager(...)
 	end
 	
-	-- Code for filling casings
-	local shellFiller = dfhack.run_script("gunMod/shellFiller")
+	-- When you only need x of a stack of y for a reaction, split it down to x
+	local splitStacksToDesiredAmount = dfhack.run_script("gunMod/splitStacksToDesiredAmount")
 	-- Making sawn-off shotguns
 	local typeTransform = dfhack.run_script("gunMod/typeTransform")
+	-- Storing projectile material
+	local storeProjectileMaterial = dfhack.run_script("gunMod/storeProjectileMaterial")
+	-- Delayed deletion
+	local deleteReagents = dfhack.run_script("gunMod/deleteReagents")
 	eventful.onJobCompleted[eventfulKey] = function(...)
-		shellFiller(...)
+		splitStacksToDesiredAmount(...)
 		typeTransform(...)
+		storeProjectileMaterial(...)
+		deleteReagents(...)
 	end
 	eventful.enableEvent(eventful.eventType.JOB_COMPLETED, 0)
 	
@@ -28,12 +32,6 @@ if args[1] == "enable" then
 	local handleMaterialTransfer = dfhack.run_script("gunMod/handleMaterialTransfer")
 	eventful.onReactionComplete[eventfulKey] = function(...)
 		handleMaterialTransfer(...)
-	end
-	
-	-- TODO
-	local itemCreationManager = dfhack.run_script("gunMod/itemCreationManager")
-	eventful.onItemCreated[eventfulKey] = function(...)
-		itemCreationManager(...)
 	end
 	
 	-- Cause extra havoc when a bullet is lodged firmly in a wound
@@ -47,7 +45,6 @@ elseif args[1] == "disable" then
 	eventful.onProjItemCheckMovement[eventfulKey] = nil
 	eventful.onJobCompleted[eventfulKey] = nil
 	eventful.onReactionComplete[eventfulKey] = nil
-	eventful.onItemCreated[eventfulKey] = nil
 	eventful.onItemContaminateWound[eventfulKey] = nil
 	print("Gun mod disabled. Behaviour may break.")
 elseif not args[1] then

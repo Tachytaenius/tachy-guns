@@ -8,7 +8,7 @@ local utils = require("utils")
 local customRawTokens = require("custom-raw-tokens")
 
 local dropCasingsAsItems = false -- (damaged) items or broken projectiles? TODO: settings manager
-local perturbedVectorLength = 5000 -- Due to integer-only target locations
+local perturbedVectorLength = 2000 -- Due to integer-only target locations
 
 -- game's own values
 local gravity = 4900
@@ -16,6 +16,21 @@ local gravity = 4900
 local defaultFireExperienceGain = 30
 
 local skipFlagKey = 31
+
+local function getSubtypeItemDefByName(subtypeName)
+	local defs = df.global.world.raws.itemdefs.all
+	for i, itemDef in ipairs(defs) do
+		if itemDef.id == subtypeName then
+			return itemDef
+		end
+	end
+end
+
+local function changeSubtype(item, newSubtypeName)
+	local itemDef = getSubtypeItemDefByName(newSubtypeName)
+	item:setSubtype(itemDef.subtype)
+	item:calculateWeight()
+end
 
 -- this is an onProjItemCheckMovement event listener
 local function gunProjectileManager(projectile)
@@ -41,7 +56,7 @@ local function gunProjectileManager(projectile)
 		return
 	end
 	
-	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_TIME"))
+	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_TIME")) or firer.counters.think_counter
 	
 	-- TODO: Exhaustion multiplier
 	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_XP_GAIN")) or defaultFireExperienceGain
@@ -73,7 +88,19 @@ local function gunProjectileManager(projectile)
 	local gunRange = tonumber(customRawTokens.getToken(projectile.item.subtype, "RANGE") or 20)
 	local ammoRange = tonumber(customRawTokens.getToken(projectile.item.subtype, "RANGE") or 20)
 	local projectileRange = gunRange + ammoRange
-	local mainProjectileIsShell = customRawTokens.getToken(projectile.item.subtype, "AMMO_SHELL")
+	local mainProjectileIsShell = customRawTokens.getToken(projectile.item.subtype, "CONTAINED_PROJECTILE")
+	
+	if mainProjectileIsShell then
+		-- Hack into old projecitles-as-contained-items behaviour and add projectiles as contained items
+		local containedProjectileSubtypeName, containedProjectileCount = customRawTokens.getToken(projectile.item.subtype, "CONTAINED_PROJECTILE")
+		local containedProjectile = dfhack.items.createItem(df.item_type.AMMO, getSubtypeItemDefByName(containedProjectileSubtypeName).subtype, projectile.item.mat_type, projectile.item.mat_index, firer)
+		-- containedProjectile isn't actually returned from dfhack.items.createItem??
+		containedProjectile = df.global.world.items.all[#df.global.world.items.all-1]
+		containedProjectile.stack_size = containedProjectileCount
+		containedProjectile:calculateWeight()
+		containedProjectile.maker, containedProjectile.maker_race = projectile.item.maker, projectile.item.maker_race
+		assert(dfhack.items.moveToContainer(containedProjectile, projectile.item))
+	end
 	
 	local function handleOutputProjectile(projectile)
 		local projectileAngle = (math.random() - 0.5) * projectileInaccuracy
@@ -144,15 +171,8 @@ local function gunProjectileManager(projectile)
 		
 		-- Handle proper spent shell behaviour
 		local newSubtypeName = customRawTokens.getToken(projectile.item.subtype, "CONVERT_TO_UNFIREABLE", true)
+		changeSubtype(projectile.item, newSubtypeName)
 		local deltaWear = tonumber(customRawTokens.getToken(projectile.item.subtype, "FIRE_WEAR")) or 806400 -- 806400 is one step
-		local defs = df.global.world.raws.itemdefs.ammo
-		for i = 0, #defs - 1 do
-			local itemDef = defs[i]
-			if itemDef.id == newSubtypeName then
-				projectile.item:setSubtype(i)
-			end
-		end
-		projectile.item:calculateWeight()
 		projectile.item:addWear(deltaWear, false, false)
 		local destroyItem = projectile.item:checkWearDestroy(false, false)
 		-- Cases where the following two behaviours break down have yet to be seen

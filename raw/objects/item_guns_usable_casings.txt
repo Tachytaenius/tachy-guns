@@ -3,34 +3,34 @@ item_guns_usable_casings
 [OBJECT:ITEM]
 
 [ITEM_AMMO:ITEM_AMMO_BULLET_CASING_SMALL_FIREABLE]
-	[NAME:fireable small bullet casing:fireable small bullet casings]
+	[NAME:fireable small round:fireable small rounds]
 	[CLASS:SMALL_BULLET]
 	[CONVERT_TO_UNFIREABLE:ITEM_AMMO_BULLET_CASING_SMALL]
-	[SIZE:32]
+	[CONTAINED_PROJECTILE:ITEM_AMMO_BULLET_SMALL:1]
+	[SIZE:52] 20 (bullet) + 30 (casing) + 2 (gunpowder)
 	[GUN_AMMO]
-	[AMMO_SHELL]
 	[RANGE:50]
 	[INACCURACY:0] In radians
 	(VALUE:3)
 
 [ITEM_AMMO:ITEM_AMMO_BULLET_CASING_MEDIUM_FIREABLE]
-	[NAME:fireable medium bullet casing:fireable medium bullet casings]
+	[NAME:fireable medium round:fireable medium rounds]
 	[CLASS:MEDIUM_BULLET]
 	[CONVERT_TO_UNFIREABLE:ITEM_AMMO_BULLET_CASING_MEDIUM]
-	[SIZE:44]
+	[CONTAINED_PROJECTILE:ITEM_AMMO_BULLET_MEDIUM:1]
+	[SIZE:74] 40 + 30 + 4
 	[GUN_AMMO]
-	[AMMO_SHELL]
 	[RANGE:60]
 	[INACCURACY:0]
 	(VALUE:4)
 
 [ITEM_AMMO:ITEM_AMMO_BULLET_CASING_LARGE_FIREABLE]
-	[NAME:fireable large bullet casing:fireable large bullet casings]
+	[NAME:fireable large round:fireable large rounds]
 	[CLASS:LARGE_BULLET]
 	[CONVERT_TO_UNFIREABLE:ITEM_AMMO_BULLET_CASING_LARGE]
-	[SIZE:56]
+	[CONTAINED_PROJECTILE:ITEM_AMMO_BULLET_LARGE:1]
+	[SIZE:96] 50 + 40 + 6
 	[GUN_AMMO]
-	[AMMO_SHELL]
 	[RANGE:70]
 	[INACCURACY:0]
 	(VALUE:5)
@@ -39,9 +39,9 @@ item_guns_usable_casings
 	[NAME:fireable shotgun shell:fireable shotgun shells]
 	[CLASS:SHOTSHELL]
 	[CONVERT_TO_UNFIREABLE:ITEM_AMMO_SHOTGUN_SHELL]
-	[SIZE:44]
+	[CONTAINED_PROJECTILE:ITEM_AMMO_PELLET:20]
+	[SIZE:64] 40 + 1 * 20 + 4
 	[GUN_AMMO]
-	[AMMO_SHELL]
 	[INACCURACY:0.06]
 	[RANGE:40]
 	(VALUE:3)

@@ -35,7 +35,7 @@ local function typeTransform(job)
 			break
 		end
 	end
-	assert(reagentIndex, "Could not get reagent index")
+	assert(reagentIndex, "Could not get reagent index for reagent " .. reagentName)
 	for _, jobItemRef in ipairs(job.items) do
 		if job.job_items[jobItemRef.job_item_idx].reagent_index == reagentIndex then
 			local itemToTransform = jobItemRef.item
@@ -43,7 +43,7 @@ local function typeTransform(job)
 			return
 		end
 	end
-	error("Could not find the appropriate input item")
+	error("Could not find the appropriate input item for reagent " .. reagentName)
 end
 
 return typeTransform

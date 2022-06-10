@@ -28,7 +28,7 @@ item_guns_projectiles
 
 [ITEM_AMMO:ITEM_AMMO_PELLET]
 	[NAME:pellet:pellets]
-	[SIZE:10]
+	[SIZE:1]
 	[CLASS:NONE]
 	[ATTACK:EDGE:1:5000:poke:pokes:NO_SUB:5000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]

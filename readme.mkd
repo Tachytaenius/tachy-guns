@@ -8,7 +8,7 @@ to install:
 
 Behaviour around the content added by the gun mod may break if the script is not on. It will leave a message in the console when activated.
 
-you can add the reactions etc to your civs but the mod isn't really ready and NPC behaviour is not handled (you can give them a gun with ammo in the arena, i just mean stuff like not showing up to battle with empty shells or whatever idk. (probably could implement something to change generated inventories accordingly). i havent tested any of that yet.) i don't feel the guns are perfectly fine-tuned properly yet but they work and *are* lethal.
+i don't feel the guns are perfectly fine-tuned properly yet but they work and *are* lethal.
 
 note: lead doesn't work very well for bullets due to DF's own internal mechanics.
 note: guns and ammo with a low quality rating won't be very effective (mostly bruising) but i suppose that's okay because amateur gunsmiths or whatever
