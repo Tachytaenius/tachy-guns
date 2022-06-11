@@ -12,26 +12,20 @@ if args[1] == "enable" then
 		projectileManager(...)
 	end
 	
-	-- When you only need x of a stack of y for a reaction, split it down to x
-	local splitStacksToDesiredAmount = dfhack.run_script("gunMod/splitStacksToDesiredAmount")
 	-- Making sawn-off shotguns
 	local typeTransform = dfhack.run_script("gunMod/typeTransform")
-	-- Storing projectile material
-	local storeProjectileMaterial = dfhack.run_script("gunMod/storeProjectileMaterial")
-	-- Delayed deletion
-	local deleteReagents = dfhack.run_script("gunMod/deleteReagents")
 	eventful.onJobCompleted[eventfulKey] = function(...)
-		splitStacksToDesiredAmount(...)
 		typeTransform(...)
-		storeProjectileMaterial(...)
-		deleteReagents(...)
 	end
 	eventful.enableEvent(eventful.eventType.JOB_COMPLETED, 0)
 	
 	-- Code for applying handle material to guns
 	local handleMaterialTransfer = dfhack.run_script("gunMod/handleMaterialTransfer")
+	-- Storing projectile material from projectile bar in ammo product as an improvement
+	local storeProjectileMaterial = dfhack.run_script("gunMod/storeProjectileMaterial")
 	eventful.onReactionComplete[eventfulKey] = function(...)
 		handleMaterialTransfer(...)
+		storeProjectileMaterial(...)
 	end
 	
 	-- Cause extra havoc when a bullet is lodged firmly in a wound

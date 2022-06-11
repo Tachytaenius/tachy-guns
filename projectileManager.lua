@@ -23,6 +23,18 @@ local function changeSubtype(item, newSubtypeName)
 	item:calculateWeight()
 end
 
+local function updateSharpness(item)
+	-- TODO: Get all behaviour
+	local hasEdgedAttack = false
+	for _, attack in ipairs(item.subtype.attacks) do
+		if attack.edged then
+			hasEdgedAttack = true
+			break
+		end
+	end
+	item.sharpness = hasEdgedAttack and 5000 + item.quality * 1000 or 0
+end
+
 -- this is an onProjItemCheckMovement event listener
 local function gunProjectileManager(projectile)
 	if projectile.distance_flown > 0 then
@@ -100,7 +112,14 @@ local function gunProjectileManager(projectile)
 		containedProjectile.stack_size = containedProjectileCount
 		containedProjectile:calculateWeight()
 		containedProjectile.maker, containedProjectile.maker_race = projectile.item.maker, projectile.item.maker_race
-		assert(dfhack.items.moveToContainer(containedProjectile, projectile.item))
+		containedProjectile.quality, containedProjectile.skill_rating = projectile.item.quality, projectile.item.skill_rating
+		containedProjectile.flags.foreign = projectile.item.flags.foreign
+		containedProjectile.flags.trader = projectile.item.flags.trader
+		containedProjectile.flags.trader = projectile.item.flags.trader
+		containedProjectile.flags.forbid = projectile.item.flags.forbid
+		containedProjectile.flags.forbid = projectile.item.flags.forbid
+		updateSharpness(containedProjectile)
+		assert(dfhack.items.moveToContainer(containedProjectile, projectile.item), "Failed to move projectile into shell.")
 	end
 	
 	local function handleOutputProjectile(projectile)

@@ -1,4 +1,4 @@
-inorganic_guns
+inorganic_guns_gunpowder
 
 [OBJECT:INORGANIC]
 

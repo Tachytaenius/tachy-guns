@@ -13,7 +13,7 @@ local function handleMaterialTransfer(reaction, reactionProduct, unit, inputItem
 			local new = df.itemimprovement_itemspecificst:new()
 			new.mat_type, new.mat_index = item.mat_type, item.mat_index
 			-- new.maker = outputItems[0].maker -- not a typical improvement
-			new.type = df.itemimprovement_specific_type.HANDLE 
+			new.type = df.itemimprovement_specific_type.HANDLE
 			outputItems[product - 1].improvements:insert("#", new)
 			-- break -- multiple handles, multiple "the handle is made from"s
 		end

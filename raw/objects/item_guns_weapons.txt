@@ -20,7 +20,7 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 	[INACCURACY:0] Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
 	[RANGE:5] in tiles, added to bullet range.
 	[GUN_ACTION:SEMI_AUTOMATIC]
-	[FIRE_TIME:10]
+	[FIRE_TIME:20]
 	[FIRE_EXHAUSTION_MULTIPLIER:0.5]
 	[FIRE_EXPERIENCE_GAIN:20]
 	(VALUE:100)
