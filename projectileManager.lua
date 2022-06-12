@@ -86,10 +86,11 @@ local function gunProjectileManager(projectile)
 		local containedProjectileSubtypeName, containedProjectileCount = customRawTokens.getToken(projectile.item.subtype, "CONTAINED_PROJECTILE")
 		local mat_type, mat_index = projectile.item.mat_type, projectile.item.mat_index
 		-- try to find improvement representing contained projectile's material
-		for _, improvement in ipairs(projectile.item.improvements) do
+		for i, improvement in ipairs(projectile.item.improvements) do
 			if improvement._type == df.itemimprovement_itemspecificst then
 				if improvement.type == consts.ammoMaterialItemSpecificImprovementType then
 					mat_type, mat_index = improvement.mat_type, improvement.mat_index
+					projectile.item.improvements:erase(i)
 					break
 				end
 			end
