@@ -181,20 +181,20 @@ local function gunProjectileManager(projectile)
 		-- Handle proper spent shell behaviour
 		local newSubtypeName = customRawTokens.getToken(projectile.item.subtype, "CONVERT_TO_UNFIREABLE", true)
 		changeSubtype(projectile.item, newSubtypeName)
-		local deltaWear = tonumber(customRawTokens.getToken(projectile.item.subtype, "FIRE_WEAR")) or 806400 -- 806400 is one step
+		local deltaWear = tonumber(customRawTokens.getToken(projectile.item.subtype, "FIRE_WEAR")) or consts.itemWearStep
 		projectile.item:addWear(deltaWear, false, false)
 		local destroyItem = projectile.item:checkWearDestroy(false, false)
 		-- Cases where the following two behaviours break down have yet to be seen
 		if destroyItem then
 			-- Destroy the shell (no trace)
-			projectile.target_pos.x = -30000 -- , -30000, -30000
-			projectile.origin_pos.x = -30000
-			projectile.cur_pos.x = -30000
+			projectile.target_pos.x = consts.invalidCoord
+			projectile.origin_pos.x = consts.invalidCoord
+			projectile.cur_pos.x = consts.invalidCoord
 			projectile.flags.to_be_deleted = true
 			projectile.item.flags.garbage_collect = true
 		else
 			local tpos, opos = projectile.target_pos, projectile.origin_pos
-			tpos.x,tpos.y,tpos.z=opos.x,opos.y,opos.z
+			tpos.x, tpos.y, tpos.z = opos.x, opos.y, opos.z
 			projectile.unk_v40_1 = -1
 			projectile.firer = nil
 			projectile.bow_id = -1
