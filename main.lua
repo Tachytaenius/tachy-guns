@@ -1,11 +1,16 @@
 -- TODO: come up with name for mod (and change key for event listeners)
 
 local eventful = require("plugins.eventful")
+local repeatUtil = require("repeat-util")
 
 local eventfulKey = "gunMod"
 local args = {...}
 
 if args[1] == "enable" then	
+	-- Record unit exhaustion from previous tick to roll back for exhaustion multiplier. This is in multiple hooks and has multiple functions
+	local exhaustionRecord = dfhack.reqscript("gunMod/exhaustionRecord")
+	exhaustionRecord.onLoad()
+	
 	-- Proper casing firing behaviour
 	local projectileManager = dfhack.run_script("gunMod/projectileManager")
 	eventful.onProjItemCheckMovement[eventfulKey] = function(...)
@@ -34,12 +39,23 @@ if args[1] == "enable" then
 		stuckInDamage(...)
 	end
 	
+	eventful.enableEvent(eventful.eventType.NEW_UNIT_ACTIVE, 1)
+	eventful.onUnitNewActive[eventfulKey] = function(...)
+		-- exhaustionRecord.onUnitNewActive(...)
+	end
+	
+	repeatUtil.scheduleEvery(eventfulKey, 1, "ticks", function()
+		exhaustionRecord.onTick()
+	end)
+	
 	print("Gun mod enabled!")
 elseif args[1] == "disable" then
 	eventful.onProjItemCheckMovement[eventfulKey] = nil
 	eventful.onJobCompleted[eventfulKey] = nil
 	eventful.onReactionComplete[eventfulKey] = nil
 	eventful.onItemContaminateWound[eventfulKey] = nil
+	eventful.onUnitNewActive[eventfulKey] = nil
+	repeatUtil.cancel(eventfulKey)
 	print("Gun mod disabled. Behaviour may break.")
 elseif not args[1] then
 	dfhack.printerr("No argument given to gunMod/main")
