@@ -5,7 +5,7 @@ local eventful = require("plugins.eventful")
 local eventfulKey = "gunMod"
 local args = {...}
 
-if args[1] == "enable" then	
+if args[1] == "enable" then
 	-- Proper casing firing behaviour
 	local projectileManager = dfhack.run_script("gunMod/projectileManager")
 	eventful.onProjItemCheckMovement[eventfulKey] = function(...)
