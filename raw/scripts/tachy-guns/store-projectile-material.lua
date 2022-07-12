@@ -1,6 +1,6 @@
 local customRawTokens = require("custom-raw-tokens")
 
-local consts = dfhack.run_script("gunMod/consts")
+local consts = dfhack.run_script("tachy-guns/consts")
 
 -- This is an onReactionComplete event listener
 local function storeProjectileMaterial(reaction, reactionProduct, unit, inputItems, inputReagents, outputItems)

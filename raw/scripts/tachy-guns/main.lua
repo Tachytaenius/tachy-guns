@@ -2,34 +2,34 @@
 
 local eventful = require("plugins.eventful")
 
-local modId = "gunMod"
+local modId = "tachy-guns"
 local args = {...}
 
 if args[1] == "enable" then
 	-- Proper casing firing behaviour
-	local projectileManager = dfhack.run_script("gunMod/projectileManager")
+	local projectileManager = dfhack.run_script("tachy-guns/projectile-manager")
 	eventful.onProjItemCheckMovement[modId] = function(...)
 		projectileManager(...)
 	end
 	
 	-- Making sawn-off shotguns
-	local typeTransform = dfhack.run_script("gunMod/typeTransform")
+	local typeTransform = dfhack.run_script("tachy-guns/type-transform")
 	eventful.onJobCompleted[modId] = function(...)
 		typeTransform(...)
 	end
 	eventful.enableEvent(eventful.eventType.JOB_COMPLETED, 0)
 	
 	-- Code for applying handle material to guns
-	local handleMaterialTransfer = dfhack.run_script("gunMod/handleMaterialTransfer")
+	local handleMaterialTransfer = dfhack.run_script("tachy-guns/handle-material-transfer")
 	-- Storing projectile material from projectile bar in ammo product as an improvement
-	local storeProjectileMaterial = dfhack.run_script("gunMod/storeProjectileMaterial")
+	local storeProjectileMaterial = dfhack.run_script("tachy-guns/store-projectile-material")
 	eventful.onReactionComplete[modId] = function(...)
 		handleMaterialTransfer(...)
 		storeProjectileMaterial(...)
 	end
 	
 	-- Cause extra havoc when a bullet is lodged firmly in a wound
-	local stuckInDamage = dfhack.run_script("gunMod/stuckInDamage")
+	local stuckInDamage = dfhack.run_script("tachy-guns/stuck-in-damage")
 	eventful.onItemContaminateWound[modId] = function(...)
 		stuckInDamage(...)
 	end
@@ -42,7 +42,7 @@ elseif args[1] == "disable" then
 	eventful.onItemContaminateWound[modId] = nil
 	print("Gun mod disabled. Behaviour may break.")
 elseif not args[1] then
-	dfhack.printerr("No argument given to gunMod/main")
+	dfhack.printerr("No argument given to tachy-guns/main")
 else
-	dfhack.printerr("Unknown argument \"" .. args[1] .. "\" to gunMod/main")
+	dfhack.printerr("Unknown argument \"" .. args[1] .. "\" to tachy-guns/main")
 end

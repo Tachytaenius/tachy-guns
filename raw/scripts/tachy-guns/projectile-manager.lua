@@ -6,7 +6,7 @@
 local utils = require("utils")
 local customRawTokens = require("custom-raw-tokens")
 
-local consts = dfhack.run_script("gunMod/consts")
+local consts = dfhack.run_script("tachy-guns/consts")
 
 local function getSubtypeItemDefByName(subtypeName)
 	local defs = df.global.world.raws.itemdefs.all
