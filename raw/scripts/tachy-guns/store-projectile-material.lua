@@ -4,9 +4,9 @@ local consts = dfhack.run_script("tachy-guns/consts")
 
 -- This is an onReactionComplete event listener
 local function storeProjectileMaterial(reaction, reactionProduct, unit, inputItems, inputReagents, outputItems)
-	if not customRawTokens.getToken(reaction, "STORE_PROJECTILE_MATERIAL") then return end
+	if not customRawTokens.getToken(reaction, "TACHY_GUNS_STORE_PROJECTILE_MATERIAL") then return end
 	
-	local reagentName, productIndex = customRawTokens.getToken(reaction, "STORE_PROJECTILE_MATERIAL")
+	local reagentName, productIndex = customRawTokens.getToken(reaction, "TACHY_GUNS_STORE_PROJECTILE_MATERIAL")
 	productIndex = tonumber(productIndex) or 1
 	
 	for i, reagent in ipairs(inputReagents) do

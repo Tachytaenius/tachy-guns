@@ -16,13 +16,13 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 	[SKILL:HAMMER]
 	[ATTACK:BLUNT:8000:3250:bash:bashes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
-	[GUN]
-	[INACCURACY:0] Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
-	[RANGE:5] in tiles, added to bullet range.
-	[GUN_ACTION:SEMI_AUTOMATIC]
-	[FIRE_TIME:20]
-	[FIRE_EXHAUSTION_MULTIPLIER:0.5]
-	[FIRE_EXPERIENCE_GAIN:20]
+	[TACHY_GUNS_GUN]
+	[TACHY_GUNS_INACCURACY:0] Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
+	[TACHY_GUNS_RANGE:5] in tiles, added to bullet range.
+	[TACHY_GUNS_GUN_ACTION:SEMI_AUTOMATIC]
+	[TACHY_GUNS_FIRE_TIME:20]
+	[TACHY_GUNS_FIRE_EXHAUSTION_MULTIPLIER:0.5]
+	[TACHY_GUNS_FIRE_EXPERIENCE_GAIN:20]
 	(VALUE:100)
 
 [ITEM_WEAPON:ITEM_WEAPON_SNIPER_RIFLE]
@@ -37,11 +37,11 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 	[SKILL:HAMMER]
 	[ATTACK:BLUNT:10000:4000:bash:bashes:NO_SUB:1250]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
-	[GUN]
-	[INACCURACY:0]
-	[RANGE:100]
-	[GUN_ACTION:MANUAL]
-	[FIRE_TIME:50]
+	[TACHY_GUNS_GUN]
+	[TACHY_GUNS_INACCURACY:0]
+	[TACHY_GUNS_RANGE:100]
+	[TACHY_GUNS_GUN_ACTION:MANUAL]
+	[TACHY_GUNS_FIRE_TIME:50]
 	(VALUE:250)
 
 [ITEM_WEAPON:ITEM_WEAPON_MACHINE_GUN]
@@ -56,13 +56,13 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 	[SKILL:HAMMER]
 	[ATTACK:BLUNT:12500:4250:bash:bashes:NO_SUB:1500]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
-	[GUN]
-	[INACCURACY:0.01]
-	[RANGE:10]
-	[GUN_ACTION:AUTOMATIC]
-	[FIRE_TIME:1]
-	[FIRE_EXHAUSTION_MULTIPLIER:0.1]
-	[FIRE_EXPERIENCE_GAIN:2]
+	[TACHY_GUNS_GUN]
+	[TACHY_GUNS_INACCURACY:0.01]
+	[TACHY_GUNS_RANGE:10]
+	[TACHY_GUNS_GUN_ACTION:AUTOMATIC]
+	[TACHY_GUNS_FIRE_TIME:1]
+	[TACHY_GUNS_FIRE_EXHAUSTION_MULTIPLIER:0.1]
+	[TACHY_GUNS_FIRE_EXPERIENCE_GAIN:2]
 	(VALUE:325)
 
 [ITEM_WEAPON:ITEM_WEAPON_PUMP_SHOTGUN]
@@ -77,11 +77,11 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 	[SKILL:HAMMER]
 	[ATTACK:BLUNT:9000:3750:bash:bashes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
-	[GUN]
-	[INACCURACY:0.05]
-	[RANGE:10]
-	[GUN_ACTION:MANUAL]
-	[FIRE_TIME:35]
+	[TACHY_GUNS_GUN]
+	[TACHY_GUNS_INACCURACY:0.05]
+	[TACHY_GUNS_RANGE:10]
+	[TACHY_GUNS_GUN_ACTION:MANUAL]
+	[TACHY_GUNS_FIRE_TIME:35]
 	(VALUE:150)
 
 [ITEM_WEAPON:ITEM_WEAPON_DOUBLE_SHOTGUN]
@@ -96,11 +96,11 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 	[SKILL:HAMMER]
 	[ATTACK:BLUNT:9000:3750:bash:bashes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
-	[GUN]
-	[INACCURACY:0.15]
-	[RANGE:5]
-	[GUN_ACTION:MANUAL]
-	[FIRE_TIME:35]
+	[TACHY_GUNS_GUN]
+	[TACHY_GUNS_INACCURACY:0.15]
+	[TACHY_GUNS_RANGE:5]
+	[TACHY_GUNS_GUN_ACTION:MANUAL]
+	[TACHY_GUNS_FIRE_TIME:35]
 	(VALUE:160)
 
 [ITEM_WEAPON:ITEM_WEAPON_SAWN_SHOTGUN]
@@ -115,9 +115,9 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 	[SKILL:HAMMER]
 	[ATTACK:BLUNT:8000:3250:bash:bashes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
-	[GUN]
-	[INACCURACY:0.3]
-	[RANGE:0] remember, added to projectile's
-	[GUN_ACTION:MANUAL]
-	[FIRE_TIME:35]
+	[TACHY_GUNS_GUN]
+	[TACHY_GUNS_INACCURACY:0.3]
+	[TACHY_GUNS_RANGE:0] remember, added to projectile's
+	[TACHY_GUNS_GUN_ACTION:MANUAL]
+	[TACHY_GUNS_FIRE_TIME:35]
 	(VALUE:125)

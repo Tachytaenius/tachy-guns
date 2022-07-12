@@ -40,17 +40,17 @@ local function gunProjectileManager(projectile)
 	
 	local gun = df.item.find(projectile.bow_id)
 	if gun and gun._type == df.item_weaponst then
-		if not customRawTokens.getToken(gun.subtype, "GUN") then
+		if not customRawTokens.getToken(gun.subtype, "TACHY_GUNS_GUN") then
 			return
 		end
 	else
 		return
 	end
 	
-	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_TIME")) or firer.counters.think_counter
+	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_TIME")) or firer.counters.think_counter
 	
 	-- TODO: Exhaustion multiplier
-	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "FIRE_XP_GAIN")) or consts.defaultFireExperienceGain
+	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_XP_GAIN")) or consts.defaultFireExperienceGain
 	local amount = fireExperienceGain - consts.defaultFireExperienceGain
 	local valueString = tostring(amount)
 	if amount < 0 then
@@ -63,7 +63,7 @@ local function gunProjectileManager(projectile)
 	end
 	
 	if projectile.item._type == df.item_ammost then
-		if not customRawTokens.getToken(projectile.item.subtype, "GUN_AMMO") then
+		if not customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_GUN_AMMO") then
 			return
 		end
 	end
@@ -73,17 +73,17 @@ local function gunProjectileManager(projectile)
 	
 	local mainProjectileWear = projectile.item.wear
 	
-	local ammoInaccuracy = tonumber(customRawTokens.getToken(projectile.item.subtype, "INACCURACY")) or 0
-	local gunInaccuracy = tonumber(customRawTokens.getToken(gun.subtype, "INACCURACY")) or 0
+	local ammoInaccuracy = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_INACCURACY")) or 0
+	local gunInaccuracy = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_INACCURACY")) or 0
 	local projectileInaccuracy = ammoInaccuracy + gunInaccuracy
-	local gunRange = tonumber(customRawTokens.getToken(projectile.item.subtype, "RANGE") or 20)
-	local ammoRange = tonumber(customRawTokens.getToken(projectile.item.subtype, "RANGE") or 20)
+	local gunRange = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_RANGE") or 20)
+	local ammoRange = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_RANGE") or 20)
 	local projectileRange = gunRange + ammoRange
-	local mainProjectileIsShell = customRawTokens.getToken(projectile.item.subtype, "CONTAINED_PROJECTILE")
+	local mainProjectileIsShell = customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_CONTAINED_PROJECTILE")
 	
 	if mainProjectileIsShell then
 		-- Hack into old projecitles-as-contained-items behaviour and add projectiles as contained items
-		local containedProjectileSubtypeName, containedProjectileCount = customRawTokens.getToken(projectile.item.subtype, "CONTAINED_PROJECTILE")
+		local containedProjectileSubtypeName, containedProjectileCount = customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_CONTAINED_PROJECTILE")
 		local mat_type, mat_index = projectile.item.mat_type, projectile.item.mat_index
 		-- try to find improvement representing contained projectile's material
 		for i, improvement in ipairs(projectile.item.improvements) do
@@ -179,9 +179,9 @@ local function gunProjectileManager(projectile)
 		end
 		
 		-- Handle proper spent shell behaviour
-		local newSubtypeName = customRawTokens.getToken(projectile.item.subtype, "CONVERT_TO_UNFIREABLE", true)
+		local newSubtypeName = customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_CONVERT_TO_UNFIREABLE", true)
 		changeSubtype(projectile.item, newSubtypeName)
-		local deltaWear = tonumber(customRawTokens.getToken(projectile.item.subtype, "FIRE_WEAR")) or consts.itemWearStep
+		local deltaWear = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_FIRE_WEAR")) or consts.itemWearStep
 		projectile.item:addWear(deltaWear, false, false)
 		local destroyItem = projectile.item:checkWearDestroy(false, false)
 		-- Cases where the following two behaviours break down have yet to be seen

@@ -34,13 +34,13 @@ if args[1] == "enable" then
 		stuckInDamage(...)
 	end
 	
-	print("Gun mod enabled!")
+	print("Tachy Guns enabled!")
 elseif args[1] == "disable" then
 	eventful.onProjItemCheckMovement[modId] = nil
 	eventful.onJobCompleted[modId] = nil
 	eventful.onReactionComplete[modId] = nil
 	eventful.onItemContaminateWound[modId] = nil
-	print("Gun mod disabled. Behaviour may break.")
+	print("Tachy Guns disabled. Behaviour may break.")
 elseif not args[1] then
 	dfhack.printerr("No argument given to tachy-guns/main")
 else
