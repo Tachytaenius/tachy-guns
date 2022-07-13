@@ -1,5 +1,4 @@
-# guns mod
-## idk i havent decided on a name yet
+# Tachy Guns
 
 to install:
 * merge raw/ with your df(hack) installation's raw/. the files in raw/init.d/ and raw/scripts/ are the mod's non-content functional stuff. the files in raw/objects/ can be customised. ofc, feel free to experiment with the mod's non-content anyway
