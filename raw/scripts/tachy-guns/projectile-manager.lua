@@ -1,6 +1,10 @@
 --@ module = true
 
--- TODO: Record rationale for perturbations and inaccuracy quantities
+-- Explanation of perturbations and inaccuracy quantities:
+-- First, we get the angle perturbation of the direction of the gun itself (gunDirectionAngle) from an innacuracy value (gunDirectionSpread), which is TODO but would be based on things like firing on auto for too long.
+-- Then, relative to that, we get the angle perturbation of the projectile(s) (projectileAngle) based on projectileInaccuracy, which is the sum of gunInaccuracy (wider barrels or whatever) and projectileInaccuracy (how loose the projectiles are in the casing or whatever).
+-- Then we apply the sum of the two perturbations (perturbationAngle) to the target position of the fired projectile(s).
+
 -- TODO: Clean up code to make projectile/subProjectile uses consistent and disctinctions clearer
 
 -- NOTE: Enabling piercing on projectiles will cause them to destroy trees. So I've opted to not do that.

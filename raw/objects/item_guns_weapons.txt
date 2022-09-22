@@ -17,7 +17,7 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 	[ATTACK:BLUNT:8000:3250:bash:bashes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[TACHY_GUNS_GUN]
-	[TACHY_GUNS_INACCURACY:0] Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I should add another attribute (maybe do some renaming) and have perturbDirection used twice in the lua file. ...I hope you have word wrap on lol
+	[TACHY_GUNS_INACCURACY:0] Added to shell spread. NOTE: Per projectile! Increasing this increases the size of shotgun spread so not appropriate for making guns that are hard to *aim* accurately. For that I would add another attribute that affects gunDirectionSpread instead of gunInaccuracy as this token does (and maybe do some renaming). ...I hope you have word wrap on lol
 	[TACHY_GUNS_RANGE:5] in tiles, added to bullet range.
 	[TACHY_GUNS_GUN_ACTION:SEMI_AUTOMATIC]
 	[TACHY_GUNS_FIRE_TIME:20]
