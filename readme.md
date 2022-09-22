@@ -5,7 +5,7 @@ To install:
 	The files in `raw/init.d/` and `raw/scripts/` are the mod's non-content functional stuff.
 	The files in `raw/objects/` can be customised.
 	Of course, feel free to experiment with the mod's non-content anyway.
-- `addToEntity.txt` contains raw text that you paste into the entity definition for the entity you want to be able to use guns, so don't forget that.
+- `add-to-entity.txt` contains raw text that you paste into the entity definition for the entity you want to be able to use guns, so don't forget that.
 
 Behaviour around the content added by the gun mod may break if the script is not on. It will leave a message in the console ("Tachy Guns enabled!") when activated.
 
