@@ -94,6 +94,24 @@ function onProjItemCheckMovement(projectile)
 		return
 	end
 	
+	-- Create smoke
+	local smokeAmount = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_SMOKE_AMOUNT")) or 0
+	if smokeAmount > 0 then
+		local flowPosition = df.coord:new()
+		do
+			local opos, tpos = projectile.origin_pos, projectile.target_pos
+			local x, y, z = tpos.x-opos.x, tpos.y-opos.y, tpos.z-opos.z
+			local mag = math.sqrt(x^2+y^2+z^2)
+			if mag > 0 then
+				x, y, z = x * consts.smokeEffectDistanceFromFirer / mag, y * consts.smokeEffectDistanceFromFirer / mag, z * consts.smokeEffectDistanceFromFirer / mag
+				flowPosition.x, flowPosition.y, flowPosition.z = math.floor(x+0.5) + opos.x, math.floor(y+0.5) + opos.y, math.floor(z+0.5) + opos.z
+			else
+				flowPosition = opos
+			end
+		end
+		dfhack.maps.spawnFlow(flowPosition, df.flow_type.Smoke, 0, 0, smokeAmount)
+	end
+	
 	-- Get various variables
 	
 	local gunDirectionSpread = 0 -- TODO: not having a scope, maybe? but i don't see why that should make the user less accurate than a crossbow without a scope. maybe for firing on auto for too long. Scope could increase hit_rating while firing on auto or other not-in-common-with-crossbow accuracy-reducing effects are here
