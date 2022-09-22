@@ -41,10 +41,10 @@ function onProjItemCheckMovement(projectile)
 		return
 	end
 	
-	-- Error if there is no firer to work on
+	-- Abort if there is no firer to work on
 	local firer = projectile.firer
 	if not projectile.firer then
-		error("Why does this projectile not have a firer?")
+		return
 	end
 	
 	-- Abort if weapon is not controlled by this mod
