@@ -1,9 +1,10 @@
+--@ module = true
+
 local customRawTokens = require("custom-raw-tokens")
 
-local consts = dfhack.run_script("tachy-guns/consts")
+local consts = dfhack.reqscript("tachy-guns/consts")
 
--- This is an onReactionComplete event listener
-local function storeProjectileMaterial(reaction, reactionProduct, unit, inputItems, inputReagents, outputItems)
+function onReactionComplete(reaction, reactionProduct, unit, inputItems, inputReagents, outputItems)
 	if not customRawTokens.getToken(reaction, "TACHY_GUNS_STORE_PROJECTILE_MATERIAL") then return end
 	
 	local reagentName, productIndex = customRawTokens.getToken(reaction, "TACHY_GUNS_STORE_PROJECTILE_MATERIAL")
@@ -23,5 +24,3 @@ local function storeProjectileMaterial(reaction, reactionProduct, unit, inputIte
 	end
 	error("Could not find reagent " .. reagentName)
 end
-
-return storeProjectileMaterial

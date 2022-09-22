@@ -1,7 +1,8 @@
+--@ module = true
+
 local customRawTokens = require("custom-raw-tokens")
 
--- This is an onReactionComplete event listener
-local function handleMaterialTransfer(reaction, reactionProduct, unit, inputItems, inputReagents, outputItems)
+function onReactionComplete(reaction, reactionProduct, unit, inputItems, inputReagents, outputItems)
 	if not customRawTokens.getToken(reaction, "TACHY_GUNS_TRANSFER_HANDLE_MATERIAL_TO_PRODUCT_IMPROVEMENT") then return end
 	
 	local product = tonumber(customRawTokens.getToken(reaction, "TACHY_GUNS_TRANSFER_HANDLE_MATERIAL_TO_PRODUCT_IMPROVEMENT")) or 1
@@ -19,5 +20,3 @@ local function handleMaterialTransfer(reaction, reactionProduct, unit, inputItem
 		end
 	end
 end
-
-return handleMaterialTransfer

@@ -1,3 +1,5 @@
+--@ module = true
+
 local customRawTokens = require("custom-raw-tokens")
 
 local function changeSubtype(item, newSubtypeName)
@@ -11,8 +13,7 @@ local function changeSubtype(item, newSubtypeName)
 	item:calculateWeight()
 end
 
--- This is an onJobCompleted event listener
-local function typeTransform(job)
+function onJobCompleted(job)
 	if not job.reaction_name then return end
 	if job.reaction_name == "" then return end
 	if job.job_type ~= df.job_type.CustomReaction then return end
@@ -45,5 +46,3 @@ local function typeTransform(job)
 	end
 	error("Could not find the appropriate input item for reagent " .. reagentName)
 end
-
-return typeTransform

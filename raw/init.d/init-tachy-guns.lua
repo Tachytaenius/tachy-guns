@@ -1,1 +1,1 @@
-dfhack.run_command("tachy-guns/main enable")
+dfhack.run_command("enable tachy-guns")

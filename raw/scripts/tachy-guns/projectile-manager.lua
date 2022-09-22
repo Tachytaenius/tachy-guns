@@ -1,3 +1,5 @@
+--@ module = true
+
 -- TODO: Record rationale for perturbations and inaccuracy quantities
 -- TODO: Clean up code to make projectile/subProjectile uses consistent and disctinctions clearer
 
@@ -6,7 +8,7 @@
 local utils = require("utils")
 local customRawTokens = require("custom-raw-tokens")
 
-local consts = dfhack.run_script("tachy-guns/consts")
+local consts = dfhack.reqscript("tachy-guns/consts")
 
 local function getSubtypeItemDefByName(subtypeName)
 	local defs = df.global.world.raws.itemdefs.all
@@ -23,8 +25,7 @@ local function changeSubtype(item, newSubtypeName)
 	item:calculateWeight()
 end
 
--- this is an onProjItemCheckMovement event listener
-local function gunProjectileManager(projectile)
+function onProjItemCheckMovement(projectile)
 	if projectile.distance_flown > 0 then
 		return
 	end
@@ -202,5 +203,3 @@ local function gunProjectileManager(projectile)
 		end
 	end
 end
-
-return gunProjectileManager
