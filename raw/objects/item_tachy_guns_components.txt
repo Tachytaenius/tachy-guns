@@ -1,4 +1,4 @@
-item_guns_components
+item_tachy_guns_components
 
 [OBJECT:ITEM]
 

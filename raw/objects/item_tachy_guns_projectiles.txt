@@ -1,4 +1,4 @@
-item_guns_projectiles
+item_tachy_guns_projectiles
 
 [OBJECT:ITEM]
 

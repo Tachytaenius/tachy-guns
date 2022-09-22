@@ -1,4 +1,4 @@
-reaction_guns_make_ammo
+reaction_tachy_guns_make_ammo
 
 [OBJECT:REACTION]
 
