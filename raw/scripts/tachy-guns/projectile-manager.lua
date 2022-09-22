@@ -31,19 +31,23 @@ local function changeSubtype(item, newSubtypeName)
 end
 
 function onProjItemCheckMovement(projectile)
+	-- Only work on this projectile if it was just fired
 	if projectile.distance_flown > 0 then
 		return
 	end
 	
+	-- Abort if the mod has explicitly stated not to work on this projectile
 	if projectile.flags[consts.skipProcessingProjectileFlagKey] then
 		return
 	end
 	
+	-- Error if there is no firer to work on
 	local firer = projectile.firer
 	if not projectile.firer then
-		return
+		error("Why does this projectile not have a firer?")
 	end
 	
+	-- Abort if weapon is not controlled by this mod
 	local gun = df.item.find(projectile.bow_id)
 	if gun and gun._type == df.item_weaponst then
 		if not customRawTokens.getToken(gun.subtype, "TACHY_GUNS_GUN") then
@@ -53,8 +57,10 @@ function onProjItemCheckMovement(projectile)
 		return
 	end
 	
+	-- Set fire time
 	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_TIME")) or firer.counters.think_counter
 	
+	-- Modify exhaustion gain
 	local previousExhaustion = exhaustionRecord.previousExhaustionTable[firer.id]
 	if previousExhaustion then
 		-- Please note that it uses a compromise system where the total exhaustion change per tick is multiplied down (or up), so it doesn't actually account specifically for exhaustion from firing (which depends on RNG (and attributes)) and would multiply a unit's exhaustion from running too if running while shooting
@@ -66,6 +72,7 @@ function onProjItemCheckMovement(projectile)
 		end
 	end
 	
+	-- Modify experience gain
 	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_XP_GAIN")) or consts.defaultFireExperienceGain
 	local amount = fireExperienceGain - consts.defaultFireExperienceGain
 	local valueString = tostring(amount)
@@ -78,11 +85,16 @@ function onProjItemCheckMovement(projectile)
 		dfhack.run_script("modtools/skill-change", "-skill", weaponSkill, "-granularity", "experience", "-unit", tostring(firer.id), "-value", valueString)
 	end
 	
+	-- Abort if the item fired is not Tachy Guns ammo
 	if projectile.item._type == df.item_ammost then
 		if not customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_GUN_AMMO") then
 			return
 		end
+	else
+		return
 	end
+	
+	-- Get various variables
 	
 	local gunDirectionSpread = 0 -- TODO: not having a scope, maybe? but i don't see why that should make the user less accurate than a crossbow without a scope. maybe for firing on auto for too long. Scope could increase hit_rating while firing on auto or other not-in-common-with-crossbow accuracy-reducing effects are here
 	local gunDirectionAngle = (math.random() - 0.5) * gunDirectionSpread
