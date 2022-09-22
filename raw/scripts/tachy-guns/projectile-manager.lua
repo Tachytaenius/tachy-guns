@@ -53,6 +53,7 @@ function onProjItemCheckMovement(projectile)
 	
 	local previousExhaustion = exhaustionRecord.previousExhaustionTable[firer.id]
 	if previousExhaustion then
+		-- Please note that it uses a compromise system where the total exhaustion change per tick is multiplied down (or up), so it doesn't actually account for exhaustion from firing (which depends on attributes) or anything and would multiply down a unit's exhaustion from running too if running while shooting
 		local deltaExhaustion = firer.counters2.exhaustion - previousExhaustion
 		if deltaExhaustion > 0 then
 			local newDeltaExhaustion = deltaExhaustion * (tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_EXHAUSTION_MULTIPLIER")) or 1)
