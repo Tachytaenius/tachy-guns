@@ -9,12 +9,14 @@ disable tachy-guns
 ]]
 
 local eventful = require("plugins.eventful")
+local repeatUtil = require("repeat-util")
 
 local projectileManager = dfhack.reqscript("tachy-guns/projectile-manager") -- Proper casing firing behaviour
 local typeTransform = dfhack.reqscript("tachy-guns/type-transform") -- Making sawn-off shotguns
 local handleMaterialTransfer = dfhack.reqscript("tachy-guns/handle-material-transfer") -- Code for applying handle material to guns
 local storeProjectileMaterial = dfhack.reqscript("tachy-guns/store-projectile-material") -- Storing projectile material from projectile bar in ammo product as an improvement
 local stuckInDamage = dfhack.reqscript("tachy-guns/stuck-in-damage") -- Cause extra havoc when a bullet is lodged firmly in a wound
+local exhaustionRecord = dfhack.reqscript("tachy-guns/exhaustion-record") -- Record unit exhaustion from previous tick to roll back for exhaustion multiplier
 
 enabled = enabled or false
 local modId = "tachy-guns"
@@ -27,6 +29,8 @@ if not dfhack_flags.enable then
 end
 
 if dfhack_flags.enable_state then
+	exhaustionRecord.onLoad()
+	
 	eventful.onProjItemCheckMovement[modId] = function(...)
 		projectileManager.onProjItemCheckMovement(...)
 	end
@@ -44,6 +48,10 @@ if dfhack_flags.enable_state then
 	eventful.onItemContaminateWound[modId] = function(...)
 		stuckInDamage.onItemContaminateWound(...)
 	end
+	
+	repeatUtil.scheduleEvery(modId .. " every tick", 1, "ticks", function()
+		exhaustionRecord.every1Tick()
+	end)
 	
 	print("Tachy Guns enabled!")
 	enabled = true

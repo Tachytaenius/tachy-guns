@@ -9,6 +9,7 @@ local utils = require("utils")
 local customRawTokens = require("custom-raw-tokens")
 
 local consts = dfhack.reqscript("tachy-guns/consts")
+local exhaustionRecord = dfhack.reqscript("tachy-guns/exhaustion-record")
 
 local function getSubtypeItemDefByName(subtypeName)
 	local defs = df.global.world.raws.itemdefs.all
@@ -50,7 +51,18 @@ function onProjItemCheckMovement(projectile)
 	
 	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_TIME")) or firer.counters.think_counter
 	
-	-- TODO: Exhaustion multiplier
+	local previousExhaustion = exhaustionRecord.exhaustionTable[firer.id]
+	if previousExhaustion then
+		local deltaExhaustion = firer.counters2.exhaustion - previousExhaustion
+		print("Original change in exhaustion: " .. deltaExhaustion)
+		deltaExhaustion = deltaExhaustion * (tonumber(customRawTokens.getToken(gun.subtype, "FIRE_EXHAUSTION_MULTIPLIER")) or 1)
+		print("New change in exhaustion: " .. deltaExhaustion)
+		print("Original exhaustion: " .. firer.counters2.exhaustion)
+		firer.counters2.exhaustion = previousExhaustion + math.floor(deltaExhaustion)
+		print("New exhaustion: " .. firer.counters2.exhaustion)
+		print("")
+	end
+	
 	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_XP_GAIN")) or consts.defaultFireExperienceGain
 	local amount = fireExperienceGain - consts.defaultFireExperienceGain
 	local valueString = tostring(amount)
