@@ -1,4 +1,4 @@
-item_tachy_guns_casings
+item_tachy_guns_modern_casings
 
 [OBJECT:ITEM]
 

@@ -1,4 +1,4 @@
-reaction_tachy_guns_gunpowder
+reaction_tachy_guns_modern_gunpowder
 
 [OBJECT:REACTION]
 

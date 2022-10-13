@@ -1,4 +1,4 @@
-reaction_tachy_guns_gunsmithing
+reaction_tachy_guns_modern_gunsmithing
 
 [OBJECT:REACTION]
 
