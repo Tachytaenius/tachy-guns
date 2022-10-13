@@ -30,29 +30,29 @@ end
 
 if dfhack_flags.enable_state then
 	exhaustionRecord.onLoad()
-	
+
 	eventful.onProjItemCheckMovement[modId] = function(...)
 		projectileManager.onProjItemCheckMovement(...)
 	end
-	
+
 	eventful.onJobCompleted[modId] = function(...)
 		typeTransform.onJobCompleted(...)
 	end
 	eventful.enableEvent(eventful.eventType.JOB_COMPLETED, 0)
-	
+
 	eventful.onReactionComplete[modId] = function(...)
 		handleMaterialTransfer.onReactionComplete(...)
 		storeProjectileMaterial.onReactionComplete(...)
 	end
-	
+
 	eventful.onItemContaminateWound[modId] = function(...)
 		stuckInDamage.onItemContaminateWound(...)
 	end
-	
+
 	repeatUtil.scheduleEvery(modId .. " every tick", 1, "ticks", function()
 		exhaustionRecord.every1Tick()
 	end)
-	
+
 	print("Tachy Guns enabled!")
 	enabled = true
 else
@@ -60,7 +60,7 @@ else
 	eventful.onJobCompleted[modId] = nil
 	eventful.onReactionComplete[modId] = nil
 	eventful.onItemContaminateWound[modId] = nil
-	
+
 	print("Tachy Guns disabled. Behaviour may break.")
 	enabled = false
 end

@@ -35,18 +35,18 @@ function onProjItemCheckMovement(projectile)
 	if projectile.distance_flown > 0 then
 		return
 	end
-	
+
 	-- Abort if the mod has explicitly stated not to work on this projectile
 	if projectile.flags[consts.skipProcessingProjectileFlagKey] then
 		return
 	end
-	
+
 	-- Abort if there is no firer to work on
 	local firer = projectile.firer
 	if not projectile.firer then
 		return
 	end
-	
+
 	-- Abort if weapon is not controlled by this mod
 	local gun = df.item.find(projectile.bow_id)
 	if gun and gun._type == df.item_weaponst then
@@ -56,10 +56,10 @@ function onProjItemCheckMovement(projectile)
 	else
 		return
 	end
-	
+
 	-- Set fire time
 	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_TIME")) or firer.counters.think_counter
-	
+
 	-- Modify exhaustion gain
 	local previousExhaustion = exhaustionRecord.previousExhaustionTable[firer.id]
 	if previousExhaustion then
@@ -71,7 +71,7 @@ function onProjItemCheckMovement(projectile)
 			exhaustionRecord.exhaustionTable[firer.id] = firer.counters2.exhaustion
 		end
 	end
-	
+
 	-- Modify experience gain
 	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_XP_GAIN")) or consts.defaultFireExperienceGain
 	local amount = fireExperienceGain - consts.defaultFireExperienceGain
@@ -84,7 +84,7 @@ function onProjItemCheckMovement(projectile)
 	if weaponSkill then
 		dfhack.run_script("modtools/skill-change", "-skill", weaponSkill, "-granularity", "experience", "-unit", tostring(firer.id), "-value", valueString)
 	end
-	
+
 	-- Abort if the item fired is not Tachy Guns ammo
 	if projectile.item._type == df.item_ammost then
 		if not customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_GUN_AMMO") then
@@ -93,7 +93,7 @@ function onProjItemCheckMovement(projectile)
 	else
 		return
 	end
-	
+
 	-- Create smoke
 	local smokeAmount = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_SMOKE_AMOUNT")) or 0
 	if smokeAmount > 0 then
@@ -111,14 +111,14 @@ function onProjItemCheckMovement(projectile)
 		end
 		dfhack.maps.spawnFlow(flowPosition, df.flow_type.Smoke, 0, 0, smokeAmount)
 	end
-	
+
 	-- Get various variables
-	
+
 	local gunDirectionSpread = 0 -- TODO: not having a scope, maybe? but i don't see why that should make the user less accurate than a crossbow without a scope. maybe for firing on auto for too long. Scope could increase hit_rating while firing on auto or other not-in-common-with-crossbow accuracy-reducing effects are here
 	local gunDirectionAngle = (math.random() - 0.5) * gunDirectionSpread
-	
+
 	local mainProjectileWear = projectile.item.wear
-	
+
 	local ammoInaccuracy = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_INACCURACY")) or 0
 	local gunInaccuracy = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_INACCURACY")) or 0
 	local projectileInaccuracy = ammoInaccuracy + gunInaccuracy
@@ -126,7 +126,7 @@ function onProjItemCheckMovement(projectile)
 	local ammoRange = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_RANGE") or 20)
 	local projectileRange = gunRange + ammoRange
 	local mainProjectileIsShell = customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_CONTAINED_PROJECTILE")
-	
+
 	if mainProjectileIsShell then
 		-- Hack into old projecitles-as-contained-items behaviour and add projectiles as contained items
 		local containedProjectileSubtypeName, containedProjectileCount = customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_CONTAINED_PROJECTILE")
@@ -156,11 +156,11 @@ function onProjItemCheckMovement(projectile)
 		containedProjectile:setSharpness(containedProjectile.quality, 0)
 		assert(dfhack.items.moveToContainer(containedProjectile, projectile.item), "Failed to move projectile into shell.")
 	end
-	
+
 	local function handleOutputProjectile(projectile)
 		local projectileAngle = (math.random() - 0.5) * projectileInaccuracy
 		local perturbationAngle = gunDirectionAngle + projectileAngle
-		
+
 		-- Perturb projectile direction
 		local opos, tpos = projectile.origin_pos, projectile.target_pos
 		if not (tpos.x==opos.x and tpos.y==opos.y) then -- no angle for (0,0)
@@ -174,7 +174,7 @@ function onProjItemCheckMovement(projectile)
 			-- Rewrite vector
 			tpos.x, tpos.y, tpos.z = math.floor(x) + opos.x, math.floor(y) + opos.y, math.floor(z) + opos.z
 		end
-		
+
 		local wear = mainProjectileWear
 		if mainProjectileIsShell then
 			wear = wear + projectile.item.wear -- else wear is wear as we're dealing with the same projectile as above
@@ -184,14 +184,14 @@ function onProjItemCheckMovement(projectile)
 		projectile.fall_threshold = projectileRange
 		-- if projectile.flags.parabolic then
 	end
-	
+
 	if not mainProjectileIsShell then
 		-- shorter one first
 		handleOutputProjectile(projectile)
 	else
 		local subProjectileItems = {}
 		local containedItems = dfhack.items.getContainedItems(projectile.item)
-		
+
 		-- Split sub-projectile stacks
 		for _, containedItem in ipairs(containedItems) do
 			while containedItem.stack_size > 1 do
@@ -201,7 +201,7 @@ function onProjItemCheckMovement(projectile)
 			end
 			subProjectileItems[#subProjectileItems+1] = containedItem
 		end
-		
+
 		-- Handle sub-projectiles
 		for _, subProjectileItem in ipairs(subProjectileItems) do
 			local subProjectile = dfhack.items.makeProjectile(subProjectileItem)
@@ -223,7 +223,7 @@ function onProjItemCheckMovement(projectile)
 			subProjectile.unk_v40_1 = projectile.unk_v40_1
 			handleOutputProjectile(subProjectile)
 		end
-		
+
 		-- Handle proper spent shell behaviour
 		local newSubtypeName = customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_CONVERT_TO_UNFIREABLE", true)
 		changeSubtype(projectile.item, newSubtypeName)

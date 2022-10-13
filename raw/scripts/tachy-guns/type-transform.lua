@@ -25,10 +25,10 @@ function onJobCompleted(job)
 		end
 	end
 	if not reaction then return end
-	
+
 	local reagentName, transformTo = customRawTokens.getToken(reaction, "TACHY_GUNS_ITEM_SUBTYPE_TRANSFORM")
 	if not reagentName then return end
-	
+
 	local reagentIndex
 	for i, reagent in ipairs(reaction.reagents) do
 		if reagent.code == reagentName then

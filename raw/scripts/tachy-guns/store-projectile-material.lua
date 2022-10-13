@@ -6,10 +6,10 @@ local consts = dfhack.reqscript("tachy-guns/consts")
 
 function onReactionComplete(reaction, reactionProduct, unit, inputItems, inputReagents, outputItems)
 	if not customRawTokens.getToken(reaction, "TACHY_GUNS_STORE_PROJECTILE_MATERIAL") then return end
-	
+
 	local reagentName, productIndex = customRawTokens.getToken(reaction, "TACHY_GUNS_STORE_PROJECTILE_MATERIAL")
 	productIndex = tonumber(productIndex) or 1
-	
+
 	for i, reagent in ipairs(inputReagents) do
 		if reagent.code == reagentName then
 			-- Found reagent
