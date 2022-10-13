@@ -78,7 +78,7 @@ make guns!
 		[PRESERVE_REAGENT]
 	[TACHY_GUNS_ITEM_SUBTYPE_TRANSFORM:shotgun:ITEM_WEAPON_SAWN_SHOTGUN]
 
-make receivers
+make manual receivers
 
 [REACTION:MAKE_GUN_RECEIVER_SMALL]
 	[NAME:make small receiver]
@@ -120,6 +120,7 @@ make receivers
 	[PRODUCT:100:1:TOOL:ITEM_TOOL_GUN_RECEIVER_LARGE:GET_MATERIAL_FROM_REAGENT:bar:NONE]
 
 make automatic receivers
+
 [REACTION:MAKE_GUN_RECEIVER_SMALL_AUTOMATIC]
 	[NAME:make small automatic receiver]
 	[BUILDING:METALSMITH:NONE]
