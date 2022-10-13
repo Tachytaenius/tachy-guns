@@ -10,6 +10,5 @@ To install:
 Behaviour around the content added by the gun mod may break if the script is not on. It will leave a message in the console ("Tachy Guns enabled!") when activated.
 
 Notes:
-- Lead doesn't work very well for bullets due to DF's own internal mechanics.
-- Guns and ammo with a low quality rating won't be very effective (mostly bruising) but i suppose that's okay because amateur gunsmiths or whatever.
-- I haven't re-tested the above claims recently.
+- Lead doesn't work very well for bullets (mostly bruising, though it is lethal) due to DF's own internal mechanics.
+
