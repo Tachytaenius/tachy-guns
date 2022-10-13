@@ -97,7 +97,7 @@ function onProjItemCheckMovement(projectile)
 	-- Create smoke
 	local smokeAmount = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_SMOKE_AMOUNT")) or 0
 	if smokeAmount > 0 then
-		local flowPosition = df.coord:new()
+		local flowPosition = {}
 		do
 			local opos, tpos = projectile.origin_pos, projectile.target_pos
 			local x, y, z = tpos.x-opos.x, tpos.y-opos.y, tpos.z-opos.z
@@ -106,7 +106,7 @@ function onProjItemCheckMovement(projectile)
 				x, y, z = x * consts.smokeEffectDistanceFromFirer / mag, y * consts.smokeEffectDistanceFromFirer / mag, z * consts.smokeEffectDistanceFromFirer / mag
 				flowPosition.x, flowPosition.y, flowPosition.z = math.floor(x+0.5) + opos.x, math.floor(y+0.5) + opos.y, math.floor(z+0.5) + opos.z
 			else
-				flowPosition = opos
+				flowPosition.x, flowPosition.y, flowPosition.z = opos.x, opos.y, opos.z
 			end
 		end
 		dfhack.maps.spawnFlow(flowPosition, df.flow_type.Smoke, 0, 0, smokeAmount)
