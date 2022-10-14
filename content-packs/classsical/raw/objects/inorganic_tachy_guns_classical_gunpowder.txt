@@ -1,4 +1,4 @@
-inorganic_tachy_guns_gunpowder
+inorganic_tachy_guns_classical_gunpowder
 
 [OBJECT:INORGANIC]
 
