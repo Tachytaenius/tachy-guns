@@ -3,6 +3,7 @@ item_tachy_guns_modern_components
 [OBJECT:ITEM]
 
 small barrels
+
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_SMALL_SHORT]
 	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:short small]
@@ -37,6 +38,7 @@ small barrels
 	[VALUE:40]
 
 medium barrels
+
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_MEDIUM_SHORT]
 	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:short medium-diameter]
@@ -71,6 +73,7 @@ medium barrels
 	[VALUE:45]
 
 large barrels
+
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_LARGE_SHORT]
 	[NAME:gun barrel:gun barrels]
 	[ADJECTIVE:short large]
@@ -104,7 +107,8 @@ large barrels
 	[METAL_MAT]
 	[VALUE:50]
 
-receivers
+manual receivers
+
 [ITEM_TOOL:ITEM_TOOL_GUN_RECEIVER_SMALL]
 	[NAME:receiver:receivers]
 	[ADJECTIVE:small]
@@ -139,6 +143,7 @@ receivers
 	[VALUE:60]
 
 automatic receivers
+
 [ITEM_TOOL:ITEM_TOOL_GUN_RECEIVER_SMALL_AUTOMATIC]
 	[NAME:automatic receiver:automatic receivers]
 	[ADJECTIVE:small]
