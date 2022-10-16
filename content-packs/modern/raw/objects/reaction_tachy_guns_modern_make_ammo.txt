@@ -4,7 +4,7 @@ reaction_tachy_guns_modern_make_ammo
 
 [REACTION:MAKE_SMALL_FIREABLE_ROUNDS]
 	[NAME:make small fireable rounds]
-	[BUILDING:METALSMITH:NONE]
+	[BUILDING:METALSMITH:NONE] TEMP
 	[SKILL:METALCRAFT]
 	[FUEL]
 	[REAGENT:casing bar:150:BAR:NONE:NONE:NONE]
@@ -18,7 +18,7 @@ reaction_tachy_guns_modern_make_ammo
 
 [REACTION:MAKE_MEDIUM_FIREABLE_ROUNDS]
 	[NAME:make medium fireable rounds]
-	[BUILDING:METALSMITH:NONE]
+	[BUILDING:METALSMITH:NONE] TEMP
 	[SKILL:METALCRAFT]
 	[FUEL]
 	[REAGENT:casing bar:150:BAR:NONE:NONE:NONE]
@@ -32,7 +32,7 @@ reaction_tachy_guns_modern_make_ammo
 
 [REACTION:MAKE_LARGE_FIREABLE_ROUNDS]
 	[NAME:make large fireable rounds]
-	[BUILDING:METALSMITH:NONE]
+	[BUILDING:METALSMITH:NONE] TEMP
 	[SKILL:METALCRAFT]
 	[FUEL]
 	[REAGENT:casing bar:150:BAR:NONE:NONE:NONE]
@@ -46,7 +46,7 @@ reaction_tachy_guns_modern_make_ammo
 
 [REACTION:MAKE_FIREABLE_SHOTGUN_SHELL]
 	[NAME:make fireable shotgun shell]
-	[BUILDING:METALSMITH:NONE]
+	[BUILDING:METALSMITH:NONE] TEMP
 	[SKILL:METALCRAFT]
 	[FUEL]
 	[REAGENT:shell bar:150:BAR:NONE:NONE:NONE]
