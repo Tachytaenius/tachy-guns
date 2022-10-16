@@ -3,9 +3,75 @@ inorganic_tachy_guns_modern_cordite_etc
 [OBJECT:INORGANIC]
 
 [INORGANIC:CORDITE]
-	[USE_MATERIAL_TEMPLATE:STONE_TEMPLATE]
 	[STATE_COLOR:ALL:BROWN]
 	[STATE_NAME_ADJ:ALL:cordite]
-	[DISPLAY_COLOR:0:4:1][TILE:'#']
+	[DISPLAY_COLOR:0:4:1]
 	[SOLID_DENSITY:2787] just... keeping it to the same as gunpowder for now
 	[MATERIAL_VALUE:25]
+
+[INORGANIC:NITROGLYCERIN]
+	[LIQUID_DENSITY:1600]
+	[SOLID_DENSITY:1600] same as liquid for now
+	[MELTING_POINT:10025]
+	[BOILING_POINT:10080]
+	[STATE_COLOR:ALL:CLEAR]
+	[DISPLAY_COLOR:0:7:1]
+	[MATERIAL_VALUE:15]
+	[STATE_NAME:ALL_SOLID:frozen nitroglycerin]
+	[STATE_ADJ:ALL_SOLID:frozen nitroglycerin]
+	[STATE_NAME:LIQUID:nitroglycerin]
+	[STATE_ADJ:LIQUID:nitroglycerin]
+	[STATE_NAME:GAS:boiling nitroglycerin]
+	[STATE_ADJ:GAS:boiling nitroglycerin]
+
+[INORGANIC:OIL_OF_VITRIOL] Sulphuric acid
+	[LIQUID_DENSITY:1830]
+	[SOLID_DENSITY:1830] same as liquid for now
+	[MELTING_POINT:10018]
+	[BOILING_POINT:20607]
+	[STATE_COLOR:ALL:CLEAR]
+	[DISPLAY_COLOR:0:7:1]
+	[MATERIAL_VALUE:10]
+	[STATE_NAME:ALL_SOLID:frozen oil of vitriol]
+	[STATE_ADJ:ALL_SOLID:frozen oil of vitriol]
+	[STATE_NAME:LIQUID:oil of vitriol]
+	[STATE_ADJ:LIQUID:oil of vitriol]
+	[STATE_NAME:GAS:boiling oil of vitriol]
+	[STATE_ADJ:GAS:boiling oil of vitriol]
+
+[INORGANIC:SPIRIT_OF_NITER] Nitric acid
+	[LIQUID_DENSITY:1510]
+	[SOLID_DENSITY:1510] same as liquid for now
+	[MELTING_POINT:9924]
+	[BOILING_POINT:10149]
+	[STATE_COLOR:ALL:CLEAR]
+	[DISPLAY_COLOR:0:7:1]
+	[MATERIAL_VALUE:10]
+	[STATE_NAME:ALL_SOLID:frozen spirit of niter]
+	[STATE_ADJ:ALL_SOLID:frozen spirit of niter]
+	[STATE_NAME:LIQUID:spirit of niter]
+	[STATE_ADJ:LIQUID:spirit of niter]
+	[STATE_NAME:GAS:boiling spirit of niter]
+	[STATE_ADJ:GAS:boiling spirit of niter]
+
+[INORGANIC:GLYCEROL]
+	[LIQUID_DENSITY:1261]
+	[SOLID_DENSITY:1261] same as liquid for now
+	[MELTING_POINT:10032]
+	[BOILING_POINT:10522]
+	[STATE_COLOR:ALL:CLEAR]
+	[DISPLAY_COLOR:0:7:1]
+	[MATERIAL_VALUE:10]
+	[STATE_NAME:ALL_SOLID:solid glycerol]
+	[STATE_ADJ:ALL_SOLID:solid glycerol]
+	[STATE_NAME:LIQUID:liquid glycerol]
+	[STATE_ADJ:LIQUID:liquid glycerol]
+	[STATE_NAME:GAS:boiling glycerol]
+	[STATE_ADJ:GAS:boiling glycerol]
+
+[INORGANIC:GUNCOTTON] Nitrocellulose
+	[STATE_COLOR:ALL:BUFF]
+	[STATE_NAME_ADJ:ALL:guncotton]
+	[DISPLAY_COLOR:0:7:1]
+	[SOLID_DENSITY:1750] just a guess, a couple hundred above cotton
+	[MATERIAL_VALUE:10]
