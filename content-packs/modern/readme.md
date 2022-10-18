@@ -31,7 +31,7 @@ Guncotton is made from a cotton plant, a vial of sulphuric acid, and a vial of n
 - Small
 - Medium
 - Large
-- Shotgun shell (uses medium components)
+- Shotgun shell (uses large components)
 
 ## Manufacturing Ammo
 
