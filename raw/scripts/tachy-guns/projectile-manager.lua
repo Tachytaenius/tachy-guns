@@ -114,7 +114,7 @@ function onProjItemCheckMovement(projectile)
 
 	-- Get various variables
 
-	local gunDirectionSpread = 0 -- TODO: not having a scope, maybe? but i don't see why that should make the user less accurate than a crossbow without a scope. maybe for firing on auto for too long. Scope could increase hit_rating while firing on auto or other not-in-common-with-crossbow accuracy-reducing effects are here
+	local gunDirectionSpread = 0
 	local gunDirectionAngle = (math.random() - 0.5) * gunDirectionSpread
 
 	local mainProjectileWear = projectile.item.wear
