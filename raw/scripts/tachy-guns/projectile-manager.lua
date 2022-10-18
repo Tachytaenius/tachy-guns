@@ -73,7 +73,7 @@ function onProjItemCheckMovement(projectile)
 	end
 
 	-- Modify experience gain
-	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_XP_GAIN")) or consts.defaultFireExperienceGain
+	local fireExperienceGain = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_EXPERIENCE_GAIN")) or consts.defaultFireExperienceGain
 	local amount = fireExperienceGain - consts.defaultFireExperienceGain
 	local valueString = tostring(amount)
 	if amount < 0 then
