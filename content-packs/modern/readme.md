@@ -26,7 +26,7 @@ Guncotton is made from a cotton plant, a vial of sulphuric acid, and a vial of n
 - Projectile
 - Fireable round (splits into casing and projectile upon being fired)
 
-## Ammo types
+## Gun component/ammo types
 
 - Small
 - Medium
