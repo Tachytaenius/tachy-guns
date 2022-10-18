@@ -1,8 +1,12 @@
 # Modern Content Pack
 
+## Dependencies
+
+Requires content pack "alchemy laboratory".
+
 ## Cordite
 
-All reactions in the production of cordite curremtly take place at a screw press (temporary).
+All reactions in the production of cordite take place at an alchemy laboratory.
 They use the alchemist labour.
 Sometimes reagents will be frozen at normal operating temperatures and the reaction won't be able to proceed, so consder doing work above magma.
 

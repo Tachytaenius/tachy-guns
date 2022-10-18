@@ -6,7 +6,7 @@ cordite bar items are used up like bars of soap
 
 [REACTION:MAKE_CORDITE]
 	[NAME:make cordite]
-	[BUILDING:SCREW_PRESS:NONE] TEMP
+	[BUILDING:ALCHEMY_LABORATORY:NONE]
 	[SKILL:ALCHEMY]
 	[REAGENT:nitroglycerin:150:LIQUID_MISC:NONE:INORGANIC:NITROGLYCERIN]
 	[REAGENT:nitroglycerin container:1:FLASK:NONE:NONE:NONE]
@@ -21,7 +21,7 @@ recommended to do these reactions above magma to keep reagents as LIQUID_MISC it
 
 [REACTION:MAKE_NITROGLYCERIN]
 	[NAME:make nitroglycerin]
-	[BUILDING:SCREW_PRESS:NONE] TEMP
+	[BUILDING:ALCHEMY_LABORATORY:NONE]
 	[SKILL:ALCHEMY]
 	[REAGENT:sulphuric acid:150:LIQUID_MISC:NONE:INORGANIC:OIL_OF_VITRIOL]
 	[REAGENT:sulphuric acid container:1:FLASK:NONE:NONE:NONE]
@@ -47,7 +47,7 @@ recommended to do these reactions above magma to keep reagents as LIQUID_MISC it
 
 [REACTION:MAKE_GUNCOTTON]
 	[NAME:make guncotton]
-	[BUILDING:SCREW_PRESS:NONE] TEMP
+	[BUILDING:ALCHEMY_LABORATORY:NONE]
 	[SKILL:ALCHEMY]
 	[REAGENT:sulphuric acid:150:LIQUID_MISC:NONE:INORGANIC:OIL_OF_VITRIOL]
 	[REAGENT:sulphuric acid container:1:FLASK:NONE:NONE:NONE]
@@ -67,7 +67,7 @@ recommended to do these reactions above magma to keep reagents as LIQUID_MISC it
 
 [REACTION:MAKE_OIL_OF_VITRIOL]
 	[NAME:make oil of vitriol]
-	[BUILDING:SCREW_PRESS:NONE] TEMP
+	[BUILDING:ALCHEMY_LABORATORY:NONE]
 	[SKILL:ALCHEMY]
 	[REAGENT:sulphur:1:BOULDER:NONE:INORGANIC:BRIMSTONE]
 	[REAGENT:container:1:FLASK:NONE:NONE:NONE]
@@ -80,7 +80,7 @@ recommended to do these reactions above magma to keep reagents as LIQUID_MISC it
 
 [REACTION:MAKE_SPIRIT_OF_NITER_SHALE]
 	[NAME:make spirit of niter with shale]
-	[BUILDING:SCREW_PRESS:NONE] TEMP
+	[BUILDING:ALCHEMY_LABORATORY:NONE]
 	[SKILL:ALCHEMY]
 	[REAGENT:shale:1:BOULDER:NONE:INORGANIC:SHALE] for alum
 	[REAGENT:sulphuric acid:150:LIQUID_MISC:NONE:INORGANIC:OIL_OF_VITRIOL]
@@ -95,7 +95,7 @@ recommended to do these reactions above magma to keep reagents as LIQUID_MISC it
 
 [REACTION:MAKE_SPIRIT_OF_NITER_SALTPETER]
 	[NAME:make spirit of niter with saltpeter]
-	[BUILDING:SCREW_PRESS:NONE] TEMP
+	[BUILDING:ALCHEMY_LABORATORY:NONE]
 	[SKILL:ALCHEMY]
 	[REAGENT:shale:1:BOULDER:NONE:INORGANIC:SALTPETER]
 	[REAGENT:sulphuric acid:150:LIQUID_MISC:NONE:INORGANIC:OIL_OF_VITRIOL]
@@ -110,7 +110,7 @@ recommended to do these reactions above magma to keep reagents as LIQUID_MISC it
 
 [REACTION:EXTRACT_GLYCEROL_SEEDS]
 	[NAME:extract glycerol from seeds]
-	[BUILDING:SCREW_PRESS:NONE] TEMP
+	[BUILDING:ALCHEMY_LABORATORY:NONE]
 	[SKILL:ALCHEMY]
 	[REAGENT:seeds:1:SEEDS:NONE:NONE:NONE]
 		[UNROTTEN]
@@ -125,7 +125,7 @@ recommended to do these reactions above magma to keep reagents as LIQUID_MISC it
 
 [REACTION:EXTRACT_GLYCEROL_PLANT]
 	[NAME:extract glycerol from plants]
-	[BUILDING:SCREW_PRESS:NONE] TEMP
+	[BUILDING:ALCHEMY_LABORATORY:NONE]
 	[SKILL:ALCHEMY]
 	[REAGENT:plant:1:PLANT:NONE:NONE:NONE]
 		[UNROTTEN]
