@@ -15,5 +15,4 @@ gunpowder powder items are used up like bars of soap
 		[BAG]
 		[PRESERVE_REAGENT]
 	[PRODUCT:100:1:POWDER_MISC:NONE:INORGANIC:GUNPOWDER]
-		[PRODUCT_DIMENSION:100]
 		[PRODUCT_TO_CONTAINER:container]
