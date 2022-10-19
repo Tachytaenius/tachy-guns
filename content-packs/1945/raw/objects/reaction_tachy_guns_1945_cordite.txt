@@ -17,8 +17,6 @@ cordite bar items are used up like bars of soap
 	[REAGENT:guncotton:150:LIQUID_MISC:NONE:INORGANIC:GUNCOTTON]
 	[PRODUCT:100:1:BAR:NONE:INORGANIC:CORDITE]
 
-recommended to do these reactions above magma to keep reagents as LIQUID_MISC items
-
 [REACTION:MAKE_NITROGLYCERIN]
 	[NAME:make nitroglycerin]
 	[BUILDING:ALCHEMY_LABORATORY:NONE]
