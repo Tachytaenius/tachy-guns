@@ -30,7 +30,7 @@ These are packs that only exist to give functionality to other packs that use th
 
 ## Notes
 
-- Behaviour around the content added by the gun mod may break if the script is not on.
+- Behaviour around the content added by the mod may break if the script is not on.
 	It will leave a message in the console ("Tachy Guns enabled!") when activated.
 - Lead doesn't work very well for projectiles (mostly bruising, though it is lethal) due to DF's own internal mechanics.
 - Black gunpowder is in its own content pack because it is used by both the 1400 and 1800 content packs.
