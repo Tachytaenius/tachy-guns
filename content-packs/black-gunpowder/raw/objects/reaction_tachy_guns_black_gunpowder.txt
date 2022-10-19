@@ -1,11 +1,11 @@
-reaction_tachy_guns_classical_gunpowder
+reaction_tachy_guns_black_powder_gunpowder
 
 [OBJECT:REACTION]
 
 gunpowder powder items are used up like bars of soap
 
-[REACTION:MAKE_GUNPOWDER]
-	[NAME:make gunpowder]
+[REACTION:MAKE_GUNPOWDER_BLACK]
+	[NAME:make black gunpowder]
 	[BUILDING:ALCHEMY_LABORATORY:NONE]
 	[SKILL:ALCHEMY]
 	[REAGENT:saltpeter:4:BOULDER:NONE:INORGANIC:SALTPETER]
@@ -15,5 +15,5 @@ gunpowder powder items are used up like bars of soap
 		[EMPTY]
 		[BAG]
 		[PRESERVE_REAGENT]
-	[PRODUCT:100:1:POWDER_MISC:NONE:INORGANIC:GUNPOWDER]
+	[PRODUCT:100:1:POWDER_MISC:NONE:INORGANIC:GUNPOWDER_BLACK]
 		[PRODUCT_TO_CONTAINER:container]

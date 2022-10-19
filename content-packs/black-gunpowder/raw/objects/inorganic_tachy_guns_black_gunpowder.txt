@@ -1,10 +1,10 @@
-inorganic_tachy_guns_classical_gunpowder
+inorganic_tachy_guns_black_gunpowder
 
 [OBJECT:INORGANIC]
 
-[INORGANIC:GUNPOWDER]
+[INORGANIC:GUNPOWDER_BLACK]
 	[STATE_COLOR:ALL:BLACK]
-	[STATE_NAME_ADJ:ALL:gunpowder]
+	[STATE_NAME_ADJ:ALL:black gunpowder]
 	[DISPLAY_COLOR:0:0:1]
 	[SOLID_DENSITY:2787]
 	[MATERIAL_VALUE:20]

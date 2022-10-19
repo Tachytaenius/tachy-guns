@@ -1,4 +1,4 @@
-item_tachy_guns_modern_weapons
+item_tachy_guns_1950_weapons
 
 NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier and a < 30 fire experience gain
 
@@ -28,7 +28,7 @@ Small bullets
 	(VALUE:100)
 
 [ITEM_WEAPON:ITEM_WEAPON_REVOLVER]
-	[NAME:revoler:revolvers]
+	[NAME:revolver:revolvers]
 	[SIZE:300]
 	[RANGED:CROSSBOW:SMALL_BULLET]
 	[SHOOT_FORCE:20000]

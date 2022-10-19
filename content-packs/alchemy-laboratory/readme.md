@@ -1,6 +1,6 @@
 # Alchemy Laboratory Content Pack
 
-Just used to make cordite and gunpowder in classical and modern.
+Used to craft propellants.
 
 ## Buildings
 

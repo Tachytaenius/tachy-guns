@@ -1,4 +1,4 @@
-inorganic_tachy_guns_modern_cordite_etc
+inorganic_tachy_guns_1950_cordite_etc
 
 [OBJECT:INORGANIC]
 
@@ -6,7 +6,7 @@ inorganic_tachy_guns_modern_cordite_etc
 	[STATE_COLOR:ALL:BROWN]
 	[STATE_NAME_ADJ:ALL:cordite]
 	[DISPLAY_COLOR:0:4:1]
-	[SOLID_DENSITY:2787] just... keeping it to the same as gunpowder for now
+	[SOLID_DENSITY:2787] keeping it to the same as black powder for now
 	[MATERIAL_VALUE:25]
 
 [INORGANIC:NITROGLYCERIN]

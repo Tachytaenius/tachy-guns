@@ -1,4 +1,4 @@
-# Modern Content Pack
+# 1950 Content Pack
 
 ## Dependencies
 
@@ -10,7 +10,7 @@ All reactions in the production of cordite take place at an alchemy laboratory.
 They use the alchemist labour.
 Sometimes reagents will be frozen at normal operating temperatures and the reaction won't be able to proceed, so consder doing work above magma.
 
-Cordite bars are the propellant for modern guns.
+Cordite bars are the propellant.
 It is produced with a dimension of 100 and is used up by ammo manufacturing reactions.
 It is made from a vial of nitroglycerin and a glob of guncotton.
 

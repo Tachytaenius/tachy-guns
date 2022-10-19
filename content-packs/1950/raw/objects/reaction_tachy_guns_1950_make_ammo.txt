@@ -1,4 +1,4 @@
-reaction_tachy_guns_modern_make_ammo
+reaction_tachy_guns_1950_make_ammo
 
 [OBJECT:REACTION]
 
@@ -44,8 +44,8 @@ reaction_tachy_guns_modern_make_ammo
 	[PRODUCT:100:3:AMMO:ITEM_AMMO_BULLET_CASING_LARGE_FIREABLE:GET_MATERIAL_FROM_REAGENT:casing bar:NONE]
 	[TACHY_GUNS_STORE_PROJECTILE_MATERIAL:bullet bar:1]
 
-[REACTION:MAKE_FIREABLE_SHOTGUN_SHELL]
-	[NAME:make fireable shotgun shell]
+[REACTION:MAKE_FIREABLE_SHOTGUN_SHELLS]
+	[NAME:make fireable shotgun shells]
 	[BUILDING:METALSMITH:NONE] TEMP
 	[SKILL:METALCRAFT]
 	[FUEL]
