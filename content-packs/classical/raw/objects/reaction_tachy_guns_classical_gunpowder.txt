@@ -10,6 +10,7 @@ gunpowder powder items are used up like bars of soap
 	[SKILL:ALCHEMY]
 	[REAGENT:saltpeter:4:BOULDER:NONE:INORGANIC:SALTPETER]
 	[REAGENT:sulphur:1:BOULDER:NONE:INORGANIC:BRIMSTONE]
+	[REAGENT:fuel:150:BAR:NONE:COAL:NO_MATGLOSS]
 	[REAGENT:container:1:BOX:NONE:NONE:NONE]
 		[EMPTY]
 		[BAG]
