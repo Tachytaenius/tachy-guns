@@ -18,7 +18,7 @@ They don't conflict, you can install them all if you want.
 - 1400: Recommended as it adheres to Dwarf Fortress' 1400 technology cutoff.
 	Adds some very old-timey weapons.
 - 1800: Good if you want some (perhaps) more familiar weaponry to play with, while still being something classical.
-- 1950: A collection of modern-ish guns.
+- 1945: A collection of modern-ish guns.
 	Uses a different propellant to 1800 and 1400.
 
 ### Dependency-Only Packs

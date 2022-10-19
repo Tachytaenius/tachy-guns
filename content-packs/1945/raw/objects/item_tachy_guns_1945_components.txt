@@ -1,4 +1,4 @@
-item_tachy_guns_1950_components
+item_tachy_guns_1945_components
 
 [OBJECT:ITEM]
 

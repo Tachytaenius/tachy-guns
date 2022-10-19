@@ -1,4 +1,4 @@
-inorganic_tachy_guns_1950_cordite_etc
+inorganic_tachy_guns_1945_cordite_etc
 
 [OBJECT:INORGANIC]
 

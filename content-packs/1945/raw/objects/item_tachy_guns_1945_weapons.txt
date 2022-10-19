@@ -1,4 +1,4 @@
-item_tachy_guns_1950_weapons
+item_tachy_guns_1945_weapons
 
 NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier and a < 30 fire experience gain
 
