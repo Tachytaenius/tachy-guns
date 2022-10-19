@@ -46,7 +46,6 @@ Small produces 9 and takes 10 dimension out of a cordite bar, medium 6/20, large
 
 Ammo is made from two metal bars, one for the casings and one for the projectiles.
 The casing bar material determines the material of the fireable round and the projecile bar's material is saved on the resultant stack.
-It is recommended to use `gui/workshop-job` or modify `df.global.world.manager_orders` using `gui/gm-editor` to set the desired materials for ammunition production.
 
 ## Guns
 
