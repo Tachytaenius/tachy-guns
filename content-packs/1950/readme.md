@@ -39,7 +39,7 @@ Guncotton is made from a cotton plant, a vial of sulphuric acid, and a vial of n
 
 ## Manufacturing Ammo
 
-All reactions currently take place at a metalsmith's forge (temporary).
+All ammo-manufacturing currently take place at a metalsmith's forge (temporary).
 They use the metalcraft labour.
 They require fuel to melt the metal bars.
 Small produces 9 and takes 10 dimension out of a cordite bar, medium 6/20, large 3/30, and shell 5/20.
