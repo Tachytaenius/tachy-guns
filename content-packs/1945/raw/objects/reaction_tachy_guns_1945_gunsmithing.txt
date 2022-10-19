@@ -3,7 +3,7 @@ reaction_tachy_guns_1945_gunsmithing
 [OBJECT:REACTION]
 
 Semi-auto use manual receivers
-An extra mechanism for semi-automatic or automatic when making the gun, doesn't have to be fire-safe
+An extra mechanism for semi-automatic or automatic when making the gun
 An extra mechanism when making automatic receivers
 
 make small bullet guns
