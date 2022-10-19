@@ -2,9 +2,7 @@ reaction_tachy_guns_1945_gunsmithing
 
 [OBJECT:REACTION]
 
-Semi-auto use manual receivers
-An extra mechanism for semi-automatic or automatic when making the gun
-An extra mechanism when making automatic receivers
+Check this pack's readme for patterns in what items are used in reagents and how many
 
 make small bullet guns
 

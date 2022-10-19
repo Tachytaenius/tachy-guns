@@ -62,6 +62,20 @@ You could either use `gui/gm-editor` to poke around and see if your job is on th
 - Medium-length large barrel
 - Long large barrel
 
+## Manufacturing Receivers
+
+This is all done at the metalsmith's forge using the metalcraft labour.
+
+Automatic receivers take two mechanisms, manual receivers take one.
+
+## Manufacturing Guns
+
+This is all done at the craftsman's workshop using the mechanic labour.
+
+Semi-automatic guns use manual receivers.
+Non-manual guns require an extra mechanism in their manufacture.
+Guns often need one to two plant (wood) blocks as handles.
+
 ## Guns
 
 - Pistol: small, semi-automatic
