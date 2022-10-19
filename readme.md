@@ -4,7 +4,7 @@
 
 - Merge `raw/` with your DF(Hack) installation's `raw/`.
 	This contains the scripts that actually give functionality to the content.
-- Pick a content pack from `content-packs/` and merge its `raw/` with your DF(Hack) installation's `raw/`.
+- Pick a content pack from below, find it in `content-packs/` and merge its `raw/` with your DF(Hack) installation's `raw/`.
 - In the content pack's directory, `add-to-entity.txt` contains raw text that you paste into the entity definition for the entity you want to be able to use guns, so don't forget that.
 - Check for any dependency content packs in the content pack's `readme.md` and install those too, recursively.
 
@@ -14,6 +14,7 @@
 
 These are pack you actually want to choose from and install.
 They don't conflict, you can install them all if you want.
+Make sure to read the readme for the one you choose.
 
 - 1400: Recommended as it adheres to Dwarf Fortress' 1400 technology cutoff.
 	Adds some very old-timey weapons.
