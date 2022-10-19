@@ -4,7 +4,7 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 
 [OBJECT:ITEM]
 
-Small bullets
+Guns using small bullets
 
 [ITEM_WEAPON:ITEM_WEAPON_PISTOL]
 	[NAME:pistol:pistols]
@@ -69,7 +69,7 @@ Small bullets
 	[TACHY_GUNS_FIRE_EXPERIENCE_GAIN:4]
 	(VALUE:150)
 
-Medium bullets
+Guns using medium bullets
 
 [ITEM_WEAPON:ITEM_WEAPON_ASSAULT_RIFLE]
 	[NAME:assault rifle:assault rifles]
@@ -113,7 +113,7 @@ Medium bullets
 	[TACHY_GUNS_FIRE_EXPERIENCE_GAIN:2]
 	(VALUE:325)
 
-Large bullets
+Guns using large bullets
 
 [ITEM_WEAPON:ITEM_WEAPON_SNIPER_RIFLE]
 	[NAME:sniper rifle:sniper rifles]
@@ -135,7 +135,7 @@ Large bullets
 	[TACHY_GUNS_FIRE_EXHAUSTION_MULTIPLIER:0.75]
 	(VALUE:250)
 
-Shotgun shells
+Guns using shotgun shells
 
 [ITEM_WEAPON:ITEM_WEAPON_PUMP_SHOTGUN]
 	[NAME:pump-action shotgun:pump-action shotguns]
