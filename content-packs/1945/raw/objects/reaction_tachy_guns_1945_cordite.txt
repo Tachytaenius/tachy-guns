@@ -2,8 +2,6 @@ reaction_tachy_guns_1945_cordite
 
 [OBJECT:REACTION]
 
-cordite bar items are used up like bars of soap
-
 [REACTION:MAKE_CORDITE]
 	[NAME:make cordite]
 	[BUILDING:ALCHEMY_LABORATORY:NONE]

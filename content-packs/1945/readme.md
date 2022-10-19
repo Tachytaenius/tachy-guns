@@ -11,7 +11,7 @@ They use the alchemist labour.
 Sometimes reagents will be frozen at normal operating temperatures and the reaction won't be able to proceed, so consder doing work above magma or some other temperature control method.
 
 Cordite bars are the propellant.
-It is produced with a dimension of 100 and is used up by ammo manufacturing reactions.
+Each bar is produced with a dimension of 150 and is used up like a bar of soap is by ammo manufacturing reactions.
 It is made from a vial of nitroglycerin and a glob of guncotton.
 
 Nitroglycerin is made from a vial of sulphuric acid (called oil of vitriol), a vial of nitric acid (called spirit of nitre), and a vial of glycerol.
