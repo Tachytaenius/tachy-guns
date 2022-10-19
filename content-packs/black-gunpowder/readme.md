@@ -4,4 +4,4 @@ Just implements black gunpowder.
 
 ## Dependencies
 
-Requires content pack "alchemy laboratory".
+- Alchemy laboratory

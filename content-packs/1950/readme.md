@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-Requires content pack "alchemy laboratory".
+- Alchemy laboratory
 
 ## Cordite
 
