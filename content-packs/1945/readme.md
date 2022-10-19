@@ -8,7 +8,7 @@
 
 All reactions in the production of cordite take place at an alchemy laboratory.
 They use the alchemist labour.
-Sometimes reagents will be frozen at normal operating temperatures and the reaction won't be able to proceed, so consder doing work above magma.
+Sometimes reagents will be frozen at normal operating temperatures and the reaction won't be able to proceed, so consder doing work above magma or some other temperature control method.
 
 Cordite bars are the propellant.
 It is produced with a dimension of 100 and is used up by ammo manufacturing reactions.
