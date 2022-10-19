@@ -1,4 +1,4 @@
-building_tachy_guns_alchemy_laboratory_lab
+building_tachy_guns_alchemy_laboratory
 
 [OBJECT:BUILDING]
 
