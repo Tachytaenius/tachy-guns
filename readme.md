@@ -37,3 +37,4 @@ These are packs that only exist to give functionality to other packs that use th
 - Lead doesn't work very well for projectiles (mostly bruising, though it is lethal) due to DF's own internal mechanics.
 - Black gunpowder is in its own content pack because it is used by both the 1400 and 1800 content packs.
 - It is recommended to use `gui/workshop-job` to set the desired materials for production.
+- Guns use the crossbow skill.
