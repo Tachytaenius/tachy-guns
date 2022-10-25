@@ -56,7 +56,21 @@ function onProjItemCheckMovement(projectile)
 	end
 
 	-- Set fire time
-	firer.counters.think_counter = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_TIME")) or firer.counters.think_counter
+	local fireTime = tonumber(customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_TIME"))
+	if fireTime then
+		local fireTimeType = customRawTokens.getToken(gun.subtype, "TACHY_GUNS_FIRE_TIME_TYPE") or "REPLACE"
+		if fireTimeType == "ADD" then
+			firer.counters.think_counter = firer.counters.think_counter + fireTime
+		elseif fireTimeType == "MULTIPLY" then
+			firer.counters.think_counter = firer.counters.think_counter * fireTime
+		elseif fireTimeType == "REPLACE" then
+			firer.counters.think_counter = fireTime
+		else
+			error("Tachy guns fire time type \"" .. fireTimeType .. "\" for gun type \"" .. gun.subtype.id .. "\" not recognised, must be \"ADD\", \"MULTIPLY\", or \"REPLACE\" (defaults to replace)")
+		end
+		-- Limit fire time to no less than 1
+		firer.counters.think_counter = math.max(1, firer.counters.think_counter)
+	end
 
 	-- Modify exhaustion gain
 	local previousExhaustion = exhaustionRecord.previousExhaustionTable[firer.id]
