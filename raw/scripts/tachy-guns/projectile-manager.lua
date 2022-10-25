@@ -66,7 +66,7 @@ function onProjItemCheckMovement(projectile)
 		elseif fireTimeType == "REPLACE" then
 			firer.counters.think_counter = fireTime
 		else
-			error("Tachy guns fire time type \"" .. fireTimeType .. "\" for gun type \"" .. gun.subtype.id .. "\" not recognised, must be \"ADD\", \"MULTIPLY\", or \"REPLACE\" (defaults to replace)")
+			error("Tachy guns fire time type \"" .. fireTimeType .. "\" for gun type \"" .. gun.subtype.id .. "\" not recognised, must be \"ADD\", \"MULTIPLY\", or \"REPLACE\" (defaults to \"REPLACE\")")
 		end
 		-- Limit fire time to no less than 1
 		firer.counters.think_counter = math.max(1, firer.counters.think_counter)
