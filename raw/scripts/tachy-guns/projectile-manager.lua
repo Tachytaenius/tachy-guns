@@ -237,7 +237,7 @@ function onProjItemCheckMovement(projectile)
 		end
 
 		-- Handle proper spent shell behaviour
-		local newSubtypeName = customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_CONVERT_TO_UNFIREABLE", true)
+		local newSubtypeName = customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_CONVERT_TO_UNFIREABLE")
 		changeSubtype(projectile.item, newSubtypeName)
 		local deltaWear = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_FIRE_WEAR")) or consts.itemWearStep
 		projectile.item:addWear(deltaWear, false, false)
