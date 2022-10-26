@@ -1,6 +1,6 @@
 --@ module = true
 
-ammoMaterialItemSpecificImprovementType = 2
+ammoMaterialItemSpecificImprovementType = 100
 dropCasingsAsItems = false -- (damaged) items or broken projectiles?
 perturbedVectorLength = 5000 -- Due to integer-only target locations
 skipProcessingProjectileFlagKey = 31
