@@ -173,18 +173,20 @@ function onProjItemCheckMovement(projectile)
 		local projectileAngle = (math.random() - 0.5) * projectileInaccuracy
 		local perturbationAngle = gunDirectionAngle + projectileAngle
 
-		-- Perturb projectile direction
-		local opos, tpos = projectile.origin_pos, projectile.target_pos
-		if not (tpos.x==opos.x and tpos.y==opos.y) then -- no angle for (0,0)
-			-- Get vector of length perturbedVectorLength facing in direction tpos-opos
-			local x, y, z = tpos.x-opos.x, tpos.y-opos.y, tpos.z-opos.z
-			local mag = math.sqrt(x^2+y^2+z^2)
-			x, y, z = x * consts.perturbedVectorLength / mag, y * consts.perturbedVectorLength / mag, z * consts.perturbedVectorLength / mag
-			-- Handle x y angle change
-			local angle = math.atan(y, x) + perturbationAngle
-			x, y = math.cos(angle) * consts.perturbedVectorLength, math.sin(angle) * consts.perturbedVectorLength
-			-- Rewrite vector
-			tpos.x, tpos.y, tpos.z = math.floor(x) + opos.x, math.floor(y) + opos.y, math.floor(z) + opos.z
+		if perturbationAngle ~= 0 then
+			-- Perturb projectile direction
+			local opos, tpos = projectile.origin_pos, projectile.target_pos
+			if not (tpos.x==opos.x and tpos.y==opos.y) then -- no angle for (0,0)
+				-- Get vector of length perturbedVectorLength facing in direction tpos-opos
+				local x, y, z = tpos.x-opos.x, tpos.y-opos.y, tpos.z-opos.z
+				local mag = math.sqrt(x^2+y^2+z^2)
+				x, y, z = x * consts.perturbedVectorLength / mag, y * consts.perturbedVectorLength / mag, z * consts.perturbedVectorLength / mag
+				-- Handle x y angle change
+				local angle = math.atan(y, x) + perturbationAngle
+				x, y = math.cos(angle) * consts.perturbedVectorLength, math.sin(angle) * consts.perturbedVectorLength
+				-- Rewrite vector
+				tpos.x, tpos.y, tpos.z = math.floor(x) + opos.x, math.floor(y) + opos.y, math.floor(z) + opos.z
+			end
 		end
 
 		local wear = mainProjectileWear
