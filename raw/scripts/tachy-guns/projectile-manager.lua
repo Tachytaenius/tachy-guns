@@ -142,8 +142,8 @@ function onProjItemCheckMovement(projectile)
 	if mainProjectileIsShell then
 		-- Hack into old projecitles-as-contained-items behaviour and add projectiles as contained items
 		local containedProjectileSubtypeName, containedProjectileCount = customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_CONTAINED_PROJECTILE")
-		local mat_type, mat_index = projectile.item.mat_type, projectile.item.mat_index
-		-- try to find improvement representing contained projectile's material
+		local mat_type, mat_index = projectile.item.mat_type, projectile.item.mat_index -- Default material to main projectile material
+		-- try to find improvement representing contained projectiles' material
 		for i, improvement in ipairs(projectile.item.improvements) do
 			if improvement._type == df.itemimprovement_itemspecificst then
 				if improvement.type == consts.ammoMaterialItemSpecificImprovementType then
@@ -237,11 +237,16 @@ function onProjItemCheckMovement(projectile)
 		end
 
 		-- Handle proper spent shell behaviour
+		local destroyItem
 		local newSubtypeName = customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_CONVERT_TO_UNFIREABLE")
-		changeSubtype(projectile.item, newSubtypeName)
-		local deltaWear = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_FIRE_WEAR")) or consts.itemWearStep
-		projectile.item:addWear(deltaWear, false, false)
-		local destroyItem = projectile.item:checkWearDestroy(false, false)
+		if newSubtypeName then
+			changeSubtype(projectile.item, newSubtypeName)
+			local deltaWear = tonumber(customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_FIRE_WEAR")) or consts.itemWearStep
+			projectile.item:addWear(deltaWear, false, false)
+			destroyItem = projectile.item:checkWearDestroy(false, false)
+		else
+			destroyItem = true
+		end
 		-- Cases where the following two behaviours break down have yet to be seen
 		if destroyItem then
 			-- Destroy the shell (no trace)
