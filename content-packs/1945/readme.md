@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-- Alchemy laboratory
+- Alchemy Laboratory
 - Barrels
 
 ## Cordite

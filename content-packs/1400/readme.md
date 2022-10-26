@@ -4,5 +4,5 @@ Implements guns adhering to Dwarf Fortress' 1400 technology cutoff point.
 
 ## Dependencies
 
-- Black gunpowder
+- Black Gunpowder
 - Barrels

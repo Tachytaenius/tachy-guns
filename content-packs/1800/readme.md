@@ -4,4 +4,5 @@ Implements a few more recent but still non-modern guns. TODO
 
 ## Dependencies
 
-- Black gunpowder
+- Black Gunpowder
+- Barrels
