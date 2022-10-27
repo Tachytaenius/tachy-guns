@@ -68,7 +68,8 @@ Guns often need one to two plant (wood) blocks as handles.
 - Revolver: small, semi-automatic
 - Submachine gun: small, automatic
 - Assault rifle: medium, automatic
-- Machine gun: medium, automatic
+- Light machine gun: medium, automatic
+- Heavy machine gun: large, automatic
 - Sniper rifle: large, manual
 - Pump-action shotgun: shell, manual
 - Double-barrel shotgun: shell, manual
