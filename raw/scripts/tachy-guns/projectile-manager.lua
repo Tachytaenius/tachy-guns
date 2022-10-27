@@ -99,7 +99,7 @@ function onProjItemCheckMovement(projectile)
 
 	-- Abort if the item fired is not Tachy Guns ammo
 	if projectile.item._type == df.item_ammost then
-		if not customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_GUN_AMMO") then
+		if not customRawTokens.getToken(projectile.item.subtype, "TACHY_GUNS_AMMO") then
 			return
 		end
 	else
