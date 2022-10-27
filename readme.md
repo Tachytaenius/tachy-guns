@@ -14,6 +14,7 @@
 - Delete `raw/init.d/init-tachy-guns.lua`.
 - Delete `raw/scripts/tachy-guns.lua`.
 - Delete `raw/scripts/tachy-guns/`.
+- Delete the lines from the `add-to-entity.txt` files from your entity definitions.
 
 ## Content Packs
 
