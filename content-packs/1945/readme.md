@@ -43,7 +43,7 @@ Guncotton is made from a cotton plant, a vial of sulphuric acid, and a vial of n
 This is all done at a metalsmith's forge (temporary) using the metalcraft labour.
 
 They require fuel to melt the metal bars.
-Small produces 9 and takes 10 dimension out of a cordite bar, medium 6/20, large 3/30, and shell 5/20.
+Small produces 50 and takes 10 dimension out of a cordite bar, medium 40/20, large 30/30, and shell 25/20.
 
 Ammo is made from two metal bars, one for the casings and one for the projectiles.
 The casing bar material determines the material of the fireable round and the projecile bar's material is saved on the resultant stack.
