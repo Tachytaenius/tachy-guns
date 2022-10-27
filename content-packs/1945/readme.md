@@ -64,7 +64,7 @@ Guns often need one to two plant (wood) blocks as handles.
 
 ## Guns
 
-- Pistol: small, semi-automatic
+- Magazine-fed pistol: small, semi-automatic
 - Revolver: small, semi-automatic
 - Submachine gun: small, automatic
 - Assault rifle: medium, automatic
