@@ -29,7 +29,7 @@ Guncotton is made from a cotton plant, a vial of sulphuric acid, and a vial of n
 
 - Casing
 - Projectile
-- Fireable round (splits into casing and projectile upon being fired)
+- Fireable round (splits into casing and projectile upon being fired), this is what you want to assign to your squads
 
 ## Gun component/ammo types
 
