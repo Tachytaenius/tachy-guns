@@ -37,6 +37,7 @@ These are packs that only exist to give functionality to other packs that use th
 - Black Gunpowder: Adds a classical gunpowder made from sulphur, saltpetre, and coke/charcoal.
 - Alchemy Laboratory: Adds a laboratory used to create propellants.
 - Barrels: Adds the barrels of various sizes used to make guns.
+	Its `add-to-entity.txt` is optional, check its readme.
 
 ## Notes
 
