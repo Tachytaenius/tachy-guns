@@ -3,7 +3,7 @@ item_tachy_guns_1400_ammo
 [OBJECT:ITEM]
 
 [ITEM_AMMO:ITEM_AMMO_HANDGONNE_CHARGE_SMALL_SINGLE_PROJECTILE]
-	[NAME:small handgonne charge:small handgonne charges]
+	[NAME:small single-ball handgonne charge:small single-ball handgonne charges]
 	[CLASS:HANDGONNE_CHARGE_SMALL]
 	[TACHY_GUNS_CONTAINED_PROJECTILE:ITEM_AMMO_HANDGONNE_BALL_SMALL:1]
 	[SIZE:50] 40 (projectile) + 10 (propellant)
@@ -14,7 +14,7 @@ item_tachy_guns_1400_ammo
 	(VALUE:2)
 
 [ITEM_AMMO:ITEM_AMMO_HANDGONNE_CHARGE_MEDIUM_SINGLE_PROJECTILE]
-	[NAME:medium handgonne charge:medium handgonne charges]
+	[NAME:medium single-ball handgonne charge:medium single-ball handgonne charges]
 	[CLASS:HANDGONNE_CHARGE_MEDIUM]
 	[TACHY_GUNS_CONTAINED_PROJECTILE:ITEM_AMMO_HANDGONNE_BALL_MEDIUM:1]
 	[SIZE:80] 60 (projectile) + 20 (propellant)
@@ -25,7 +25,7 @@ item_tachy_guns_1400_ammo
 	(VALUE:3)
 
 [ITEM_AMMO:ITEM_AMMO_HANDGONNE_CHARGE_LARGE_SINGLE_PROJECTILE]
-	[NAME:large handgonne charge:large handgonne charges]
+	[NAME:large single-ball handgonne charge:large single-ball handgonne charges]
 	[CLASS:HANDGONNE_CHARGE_LARGE]
 	[TACHY_GUNS_CONTAINED_PROJECTILE:ITEM_AMMO_HANDGONNE_BALL_LARGE:1]
 	[SIZE:110] 80 (projectile) + 30 (propellant)
