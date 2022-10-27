@@ -44,7 +44,7 @@ These are packs that only exist to give functionality to other packs that use th
 - Behaviour around the content added by the mod may break if the script is not on.
 	It will leave a message in the console ("Tachy Guns enabled!") when activated.
 - Lead doesn't work very well for projectiles (mostly bruising, though it is lethal) due to DF's own internal mechanics.
+- Projectiles all have edged attacks due to DF's internal mechanics making blunt not effective.
 - The reason dependency content packs exist is because their content is used by multiple content packs.
 - It is recommended to use `gui/workshop-job` to set the desired materials for production.
 - Guns use the crossbow skill.
-- Projectiles all have edged attacks due to DF's internal mechanics making blunt not effective.
