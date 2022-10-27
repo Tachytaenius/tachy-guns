@@ -8,6 +8,13 @@
 - In the content pack's directory, `add-to-entity.txt` contains raw text that you paste into the entity definition for the entity you want to be able to use guns, so don't forget that.
 - Check for any dependency content packs in the content pack's `readme.md` and install those too, recursively.
 
+## Uninstallation
+
+- Search for "tachy_guns" in your DF(Hack) installation's `raw/objects/` and delete the text files in there.
+- Delete `raw/init.d/init-tachy-guns.lua`.
+- Delete `raw/scripts/tachy-guns.lua`.
+- Delete `raw/scripts/tachy-guns/`.
+
 ## Content Packs
 
 ### Root Packs
