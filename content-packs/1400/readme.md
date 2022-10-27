@@ -35,3 +35,8 @@ Ammo is made from one or three metal bars depending on the charge type.
 This is all done at a craftsman's workshop (temporary) using the mechanic labour.
 
 It is simply a log of wood combined with a medium-length barrel of whichever size to create a handgonne.
+
+## Guns
+
+There is one type of handgonne for each size.
+Each one has a fire time of twice that of a crossbow (the think counter is multiplied by 2, so skill is factored in).
