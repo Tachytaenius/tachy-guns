@@ -26,7 +26,7 @@ building_tachy_guns_alchemy_laboratory
 	[BLOCK:2:1:0:1]
 	[BLOCK:3:0:0:0]
 
-	[TILE:0:1:177:' ':178]
+	[TILE:0:1:177:'#':178]
 	[TILE:0:2:177:13:13]
 	[TILE:0:3:' ':' ':' ']
 	[COLOR:0:1:MAT:0:0:0:MAT]
