@@ -64,13 +64,17 @@ Guns often need one to two plant (wood) blocks as handles.
 
 ## Guns
 
-- Magazine-fed pistol: small, semi-automatic
-- Revolver: small, semi-automatic
-- Submachine gun: small, automatic
-- Assault rifle: medium, automatic
-- Light machine gun: medium, automatic
-- Heavy machine gun: large, automatic
-- Sniper rifle: large, manual
-- Pump-action shotgun: shell, manual
-- Double-barrel shotgun: shell, manual
-- Sawn-off shotgun: shell, manual
+There are three types of fire time: add, replace, and multiply.
+They each affect the firer's timer until next action accordingly.
+Replace does not take skill into account.
+
+- Magazine-fed pistol: small, semi-automatic, fire time 20 (replace)
+- Revolver: small, semi-automatic, fire time 25 (replace)
+- Submachine gun: small, automatic, fire time 2 (replace)
+- Assault rifle: medium, automatic, fire time 2 (replace)
+- Light machine gun: medium, automatic fire time 1 (replace)
+- Heavy machine gun: large, automatic, fire time 1 (replace)
+- Sniper rifle: large, manual, fire time 0 (add) (same fire rate as crossbow)
+- Pump-action shotgun: shell, manual, fire time 0.25 (multiply)
+- Double-barrel shotgun: shell, manual, fire time 6 (add)
+- Sawn-off shotgun: shell, manual, fire time 3 (add)
