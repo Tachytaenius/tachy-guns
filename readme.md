@@ -7,6 +7,7 @@
 - Pick a content pack from below, find it in `content-packs/` and merge its `raw/` with your DF(Hack) installation's `raw/`.
 - In the content pack's directory, `add-to-entity.txt` contains raw text that you paste into the entity definition for the entity you want to be able to use guns, so don't forget that.
 - Check for any dependency content packs in the content pack's `readme.md` and install those too if not installed already, recursively.
+- Remove any duplicate `TOOL` tokens from your entity definition (i.e. if you installed the barrels content pack's `add-to-entity.txt` remove the barrel `TOOL` tokens added by the root content pack(s) you chose).
 
 ## Uninstallation
 
