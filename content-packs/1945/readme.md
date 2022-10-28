@@ -40,7 +40,7 @@ Guncotton is made from a cotton plant, a vial of sulphuric acid, and a vial of n
 
 ## Manufacturing Ammo
 
-This is all done at a metalsmith's forge (temporary) using the metalcraft labour.
+This is all done at an ammo manufacturing station using the metalcraft labour.
 
 They require fuel to melt the metal bars.
 Small produces 50 and takes 10 dimension out of a cordite bar, medium 40/20, large 30/30, and shell 25/20.
@@ -50,13 +50,13 @@ The casing bar material determines the material of the fireable round and the pr
 
 ## Manufacturing Receivers
 
-This is all done at a metalsmith's forge (temporary) using the metalcraft labour.
+This is all done at a gunsmith's workshop using the metalcraft labour.
 
 Automatic receivers take two mechanisms, manual receivers take one.
 
 ## Manufacturing Guns
 
-This is all done at a craftsman's workshop (temporary) using the mechanic labour.
+This is all done at a gunsmith's workshop using the mechanic labour.
 
 Semi-automatic guns use manual receivers.
 Non-manual guns require an extra mechanism in their manufacture.
