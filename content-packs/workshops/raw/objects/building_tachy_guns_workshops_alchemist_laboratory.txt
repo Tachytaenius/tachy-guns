@@ -1,9 +1,9 @@
-building_tachy_guns_alchemy_laboratory
+building_tachy_guns_workshops_alchemist_laboratory
 
 [OBJECT:BUILDING]
 
-[BUILDING_WORKSHOP:ALCHEMY_LABORATORY]
-	[NAME:Alchemy Laboratory]
+[BUILDING_WORKSHOP:ALCHEMIST_LABORATORY]
+	[NAME:Alchemist's Laboratory]
 	[NAME_COLOR:7:0:1]
 	[DIM:3:3]
 	[WORK_LOCATION:2:2]
@@ -29,7 +29,7 @@ building_tachy_guns_alchemy_laboratory
 	[TILE:0:1:177:'#':178]
 	[TILE:0:2:177:13:13]
 	[TILE:0:3:' ':' ':' ']
-	[COLOR:0:1:MAT:0:0:0:MAT]
+	[COLOR:0:1:MAT:MAT:MAT]
 	[COLOR:0:2:MAT:7:0:1:7:0:1]
 	[COLOR:0:3:0:0:1:0:0:0:7:0:0]
 

@@ -2,12 +2,12 @@
 
 ## Dependencies
 
-- Alchemy Laboratory
+- Workshops
 - Barrels
 
 ## Cordite
 
-All reactions in the production of cordite take place at an alchemy laboratory.
+All reactions in the production of cordite take place at an alchemist's laboratory.
 They use the alchemist labour.
 Sometimes reagents will be frozen at normal operating temperatures and the reaction won't be able to proceed, so consder doing work above magma or some other temperature control method.
 

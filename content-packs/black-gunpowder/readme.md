@@ -6,4 +6,4 @@ Each powder item is produced with a dimension of 150 and is used up like a bar o
 
 ## Dependencies
 
-- Alchemy laboratory
+- Workshops
