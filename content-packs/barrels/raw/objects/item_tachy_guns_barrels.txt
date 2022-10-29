@@ -5,8 +5,7 @@ item_tachy_guns_barrels
 small barrels
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_SMALL_SHORT]
-	[NAME:gun barrel:gun barrels]
-	[ADJECTIVE:short small]
+	[NAME:short small gun barrel:short small gun barrels]
 	[DESCRIPTION:A short firearm barrel with a small diameter.]
 	[TILE:'-']
 	[INCOMPLETE_ITEM]
@@ -16,8 +15,7 @@ small barrels
 	[VALUE:30]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_SMALL_MEDIUM]
-	[NAME:gun barrel:gun barrels]
-	[ADJECTIVE:medium-length small]
+	[NAME:medium-length small gun barrel:medium-length small gun barrels]
 	[DESCRIPTION:A firearm barrel with a small diameter.]
 	[TILE:'|']
 	[INCOMPLETE_ITEM]
@@ -27,8 +25,7 @@ small barrels
 	[VALUE:35]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_SMALL_LONG]
-	[NAME:gun barrel:gun barrels]
-	[ADJECTIVE:long small]
+	[NAME:long small gun barrel:long small gun barrels]
 	[DESCRIPTION:A long firearm barrel with a small diameter.]
 	[TILE:'|']
 	[INCOMPLETE_ITEM]
@@ -40,8 +37,7 @@ small barrels
 medium barrels
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_MEDIUM_SHORT]
-	[NAME:gun barrel:gun barrels]
-	[ADJECTIVE:short medium-diameter]
+	[NAME:short medium-diameter gun barrel:short medium-diameter gun barrels]
 	[DESCRIPTION:A short firearm barrel with a medium diameter.]
 	[TILE:'-']
 	[INCOMPLETE_ITEM]
@@ -51,8 +47,7 @@ medium barrels
 	[VALUE:35]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_MEDIUM_MEDIUM]
-	[NAME:gun barrel:gun barrels]
-	[ADJECTIVE:medium-length medium-diameter]
+	[NAME:medium-length medium-diameter gun barrel:medium-length medium-diameter gun barrels]
 	[DESCRIPTION:A firearm barrel with a medium diameter.]
 	[TILE:'|']
 	[INCOMPLETE_ITEM]
@@ -62,8 +57,7 @@ medium barrels
 	[VALUE:40]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_MEDIUM_LONG]
-	[NAME:gun barrel:gun barrels]
-	[ADJECTIVE:long medium-diameter]
+	[NAME:long medium-diameter gun barrel:long medium-diameter gun barrels]
 	[DESCRIPTION:A long firearm barrel with a medium diameter.]
 	[TILE:'|']
 	[INCOMPLETE_ITEM]
@@ -75,8 +69,7 @@ medium barrels
 large barrels
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_LARGE_SHORT]
-	[NAME:gun barrel:gun barrels]
-	[ADJECTIVE:short large]
+	[NAME:short large gun barrel:short large gun barrels]
 	[DESCRIPTION:A short firearm barrel with a large diameter.]
 	[TILE:'-']
 	[INCOMPLETE_ITEM]
@@ -86,8 +79,7 @@ large barrels
 	[VALUE:40]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_LARGE_MEDIUM]
-	[NAME:gun barrel:gun barrels]
-	[ADJECTIVE:medium-length large]
+	[NAME:medium-length large gun barrel:medium-length large gun barrels]
 	[DESCRIPTION:A firearm barrel with a large diameter.]
 	[TILE:'|']
 	[INCOMPLETE_ITEM]
@@ -97,8 +89,7 @@ large barrels
 	[VALUE:45]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_BARREL_LARGE_LONG]
-	[NAME:gun barrel:gun barrels]
-	[ADJECTIVE:long large]
+	[NAME:long large gun barrel:long large gun barrels]
 	[DESCRIPTION:A long firearm barrel with a large diameter.]
 	[TILE:'|']
 	[INCOMPLETE_ITEM]

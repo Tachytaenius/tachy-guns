@@ -3,8 +3,7 @@ item_tachy_guns_1400_weapons
 [OBJECT:ITEM]
 
 [ITEM_WEAPON:ITEM_WEAPON_HANDGONNE_SMALL]
-	[ADJECTIVE:small]
-	[NAME:handgonne:handgonnes]
+	[NAME:small handgonne:small handgonnes]
 	[SIZE:500]
 	[RANGED:CROSSBOW:HANDGONNE_CHARGE_SMALL]
 	[SHOOT_FORCE:5000]
@@ -24,8 +23,7 @@ item_tachy_guns_1400_weapons
 	(VALUE:50)
 
 [ITEM_WEAPON:ITEM_WEAPON_HANDGONNE_MEDIUM]
-	[ADJECTIVE:medium]
-	[NAME:handgonne:handgonnes]
+	[NAME:medium handgonne:medium handgonnes]
 	[SIZE:650]
 	[RANGED:CROSSBOW:HANDGONNE_CHARGE_MEDIUM]
 	[SHOOT_FORCE:6500]
@@ -45,8 +43,7 @@ item_tachy_guns_1400_weapons
 	(VALUE:75)
 
 [ITEM_WEAPON:ITEM_WEAPON_HANDGONNE_LARGE]
-	[ADJECTIVE:large]
-	[NAME:handgonne:handgonnes]
+	[NAME:large handgonne:large handgonnes]
 	[SIZE:800]
 	[RANGED:CROSSBOW:HANDGONNE_CHARGE_LARGE]
 	[SHOOT_FORCE:8000]

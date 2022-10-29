@@ -5,8 +5,7 @@ item_tachy_guns_1945_components
 manual receivers
 
 [ITEM_TOOL:ITEM_TOOL_GUN_RECEIVER_SMALL]
-	[NAME:receiver:receivers]
-	[ADJECTIVE:small]
+	[NAME:small receiver:small receivers]
 	[DESCRIPTION:The main component for a small firearm.]
 	[TILE:'=']
 	[INCOMPLETE_ITEM]
@@ -16,8 +15,7 @@ manual receivers
 	[VALUE:50]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_RECEIVER_MEDIUM]
-	[NAME:receiver:receivers]
-	[ADJECTIVE:medium]
+	[NAME:medium receiver:medium receivers]
 	[DESCRIPTION:The main component for a medium firearm.]
 	[TILE:'=']
 	[INCOMPLETE_ITEM]
@@ -27,8 +25,7 @@ manual receivers
 	[VALUE:55]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_RECEIVER_LARGE]
-	[NAME:receiver:receivers]
-	[ADJECTIVE:large]
+	[NAME:large receiver:large receivers]
 	[DESCRIPTION:The main component for a large firearm.]
 	[TILE:'=']
 	[INCOMPLETE_ITEM]
@@ -40,8 +37,7 @@ manual receivers
 automatic receivers
 
 [ITEM_TOOL:ITEM_TOOL_GUN_RECEIVER_SMALL_AUTOMATIC]
-	[NAME:automatic receiver:automatic receivers]
-	[ADJECTIVE:small]
+	[NAME:small automatic receiver:small automatic receivers]
 	[DESCRIPTION:The main component for a small automatic firearm.]
 	[TILE:'#']
 	[INCOMPLETE_ITEM]
@@ -51,8 +47,7 @@ automatic receivers
 	[VALUE:55]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_RECEIVER_MEDIUM_AUTOMATIC]
-	[NAME:automatic receiver:automatic receivers]
-	[ADJECTIVE:medium]
+	[NAME:medium automatic receiver:medium automatic receivers]
 	[DESCRIPTION:The main component for a medium automatic firearm.]
 	[TILE:'#']
 	[INCOMPLETE_ITEM]
@@ -62,8 +57,7 @@ automatic receivers
 	[VALUE:60]
 
 [ITEM_TOOL:ITEM_TOOL_GUN_RECEIVER_LARGE_AUTOMATIC]
-	[NAME:automatic receiver:automatic receivers]
-	[ADJECTIVE:large]
+	[NAME:large automatic receiver:large automatic receivers]
 	[DESCRIPTION:The main component for a large automatic firearm.]
 	[TILE:'#']
 	[INCOMPLETE_ITEM]

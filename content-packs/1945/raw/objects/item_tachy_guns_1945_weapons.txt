@@ -7,8 +7,7 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 Guns using small bullets
 
 [ITEM_WEAPON:ITEM_WEAPON_PISTOL_MAGAZINE-FED]
-	[ADJECTIVE:magazine-fed]
-	[NAME:pistol:pistols]
+	[NAME:magazine-fed pistol:magazine-fed pistols]
 	[SIZE:250]
 	[RANGED:CROSSBOW:BULLET_SMALL]
 	[SHOOT_FORCE:15000]
@@ -94,8 +93,7 @@ Guns using medium bullets
 	(VALUE:200)
 
 [ITEM_WEAPON:ITEM_WEAPON_MACHINE_GUN_LIGHT]
-	[ADJECTIVE:light]
-	[NAME:machine gun:machine guns]
+	[NAME:light machine gun:light machine guns]
 	[SIZE:1150]
 	[RANGED:CROSSBOW:BULLET_MEDIUM]
 	[SHOOT_FORCE:37500]
@@ -118,8 +116,7 @@ Guns using medium bullets
 Guns using large bullets
 
 [ITEM_WEAPON:ITEM_WEAPON_MACHINE_GUN_HEAVY]
-	[ADJECTIVE:heavy]
-	[NAME:machine gun:machine guns]
+	[NAME:heavy machine gun:heavy machine guns]
 	[SIZE:1500]
 	[RANGED:CROSSBOW:BULLET_LARGE]
 	[SHOOT_FORCE:40000]
