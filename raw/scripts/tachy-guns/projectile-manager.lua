@@ -185,7 +185,7 @@ function onProjItemCheckMovement(projectile)
 				local angle = math.atan(y, x) + perturbationAngle
 				x, y = math.cos(angle) * consts.perturbedVectorLength, math.sin(angle) * consts.perturbedVectorLength
 				-- Rewrite vector
-				tpos.x, tpos.y, tpos.z = math.floor(x) + opos.x, math.floor(y) + opos.y, math.floor(z) + opos.z
+				tpos.x, tpos.y, tpos.z = math.floor(x+0.5) + opos.x, math.floor(y+0.5) + opos.y, math.floor(z+0.5) + opos.z
 			end
 		end
 
