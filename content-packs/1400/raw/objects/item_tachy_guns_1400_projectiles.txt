@@ -6,7 +6,7 @@ item_tachy_guns_1400_projectiles
 	[NAME:small handgonne ball:small handgonne balls]
 	[SIZE:40]
 	[CLASS:NONE]
-	[ATTACK:EDGE:100:10000:poke:pokes:NO_SUB:1000]
+	[ATTACK:EDGE:100:1000:poke:pokes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[TACHY_GUNS_STUCK_IN_DAMAGE_MULTIPLIER:10]
 
@@ -14,7 +14,7 @@ item_tachy_guns_1400_projectiles
 	[NAME:medium handgonne ball:medium handgonne balls]
 	[SIZE:60]
 	[CLASS:NONE]
-	[ATTACK:EDGE:150:2000:poke:pokes:NO_SUB:2000]
+	[ATTACK:EDGE:150:1000:poke:pokes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[TACHY_GUNS_STUCK_IN_DAMAGE_MULTIPLIER:15]
 
@@ -22,6 +22,6 @@ item_tachy_guns_1400_projectiles
 	[NAME:large handgonne ball:large handgonne balls]
 	[SIZE:80]
 	[CLASS:NONE]
-	[ATTACK:EDGE:200:30000:poke:pokes:NO_SUB:3000]
+	[ATTACK:EDGE:200:1000:poke:pokes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[TACHY_GUNS_STUCK_IN_DAMAGE_MULTIPLIER:25]
