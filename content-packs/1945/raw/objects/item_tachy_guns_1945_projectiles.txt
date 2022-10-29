@@ -6,7 +6,7 @@ item_tachy_guns_1945_projectiles
 	[NAME:small bullet:small bullets]
 	[SIZE:20]
 	[CLASS:NONE]
-	[ATTACK:EDGE:1:1000:poke:pokes:NO_SUB:1000]
+	[ATTACK:EDGE:2:1000:poke:pokes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[TACHY_GUNS_STUCK_IN_DAMAGE_MULTIPLIER:2.5] cause extra havoc when lodged firmly in a wound
 
@@ -14,7 +14,7 @@ item_tachy_guns_1945_projectiles
 	[NAME:medium bullet:medium bullets]
 	[SIZE:30]
 	[CLASS:NONE]
-	[ATTACK:EDGE:1:1000:poke:pokes:NO_SUB:1000]
+	[ATTACK:EDGE:3:1000:poke:pokes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[TACHY_GUNS_STUCK_IN_DAMAGE_MULTIPLIER:7.5]
 
@@ -22,7 +22,7 @@ item_tachy_guns_1945_projectiles
 	[NAME:large bullet:large bullets]
 	[SIZE:40]
 	[CLASS:NONE]
-	[ATTACK:EDGE:1:1000:poke:pokes:NO_SUB:1000]
+	[ATTACK:EDGE:4:1000:poke:pokes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[TACHY_GUNS_STUCK_IN_DAMAGE_MULTIPLIER:25]
 
