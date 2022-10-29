@@ -7,7 +7,7 @@
 - Pick a content pack from below, find it in `content-packs/` and merge its `raw/` with your DF(Hack) installation's `raw/`.
 - In the content pack's directory, `add-to-entity.txt` contains raw text that you paste into the entity definition for the entity you want to be able to use guns, so don't forget that.
 - Check for any dependency content packs in the content pack's `readme.md` and install those too if not installed already, recursively.
-- Remove any duplicate `TOOL` tokens from your entity definition (i.e. if you installed the barrels content pack's `add-to-entity.txt` remove the barrel `TOOL` tokens added by the root content pack(s) you chose).
+- Remove any duplicate `TOOL` tokens from your entity definitions (i.e. if you installed the barrels content pack's `add-to-entity.txt` remove the barrel `TOOL` tokens added by the root content pack(s) you chose, or if you installed multiple root content packs remove any duplicate `TOOL` tokens).
 
 ## Uninstallation
 
@@ -22,11 +22,11 @@
 ### Root Packs
 
 These are pack you actually want to choose from and install.
-They don't conflict, you can install them all if you want.
-Make sure to read the readme for the one you choose.
+They don't conflict, you can install them all if you want, though don't forget to remove duplicate `TOOL` tokens from the text you add to entity definitions.
+Make sure to read the readme(s) for the one(s) you choose.
 
 - 1400: Recommended as it adheres to Dwarf Fortress' 1400 technology cutoff.
-	Adds some very old-timey weapons.
+	Adds some very old-timey weapons (handgonnes, little more than barrels on sticks).
 - 1800: Good if you want some (perhaps) more familiar weaponry to play with, while still being something classical.
 - 1945: A collection of modern-ish guns.
 	Uses a different propellant to 1800 and 1400.
