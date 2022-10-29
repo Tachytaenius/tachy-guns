@@ -160,11 +160,11 @@ function onProjItemCheckMovement(projectile)
 		containedProjectile:calculateWeight()
 		containedProjectile.maker, containedProjectile.maker_race = projectile.item.maker, projectile.item.maker_race
 		containedProjectile.quality, containedProjectile.skill_rating = projectile.item.quality, projectile.item.skill_rating
+		containedProjectile.temperature.whole, containedProjectile.temperature.fraction = projectile.temperature.whole, projectile.temperature.fraction
 		containedProjectile.flags.foreign = projectile.item.flags.foreign
 		containedProjectile.flags.trader = projectile.item.flags.trader
-		containedProjectile.flags.trader = projectile.item.flags.trader
 		containedProjectile.flags.forbid = projectile.item.flags.forbid
-		containedProjectile.flags.forbid = projectile.item.flags.forbid
+		containedProjectile.flags.on_fire = projectile.item.flags.on_fire
 		containedProjectile:setSharpness(containedProjectile.quality, 0)
 		assert(dfhack.items.moveToContainer(containedProjectile, projectile.item), "Failed to move projectile into shell.")
 	end
