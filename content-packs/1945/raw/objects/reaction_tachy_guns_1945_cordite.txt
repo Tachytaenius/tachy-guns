@@ -93,7 +93,7 @@ reaction_tachy_guns_1945_cordite
 	[NAME:make spirit of niter with saltpeter]
 	[BUILDING:ALCHEMIST_LABORATORY:NONE]
 	[SKILL:ALCHEMY]
-	[REAGENT:shale:1:BOULDER:NONE:INORGANIC:SALTPETER]
+	[REAGENT:saltpetre:1:BOULDER:NONE:INORGANIC:SALTPETER]
 	[REAGENT:sulphuric acid:150:LIQUID_MISC:NONE:INORGANIC:OIL_OF_VITRIOL]
 	[REAGENT:sulphuric acid container:1:FLASK:NONE:NONE:NONE]
 		[CONTAINS:sulphuric acid]
