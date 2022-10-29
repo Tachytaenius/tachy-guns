@@ -7,7 +7,7 @@ Adds the workshops used to create items from the mod.
 - Alchemist's laboratory: 3x3, made with 2 blocks, 3 vials, 1 barrel, and 1 bucket.
 	Keybinding is Alt-A.
 	Used to create propellants.
-- Ammo manufacturing station: 3x3, made with 4 blocks.
+- Ammo manufacturing station: 3x3, made with 2 blocks and a fire safe anvil.
 	Keybinding is Alt-M.
-- Gunsmith's workshop: 3x3, made with 6 blocks.
+- Gunsmith's workshop: 3x3, made with 2 blocks and a fire safe anvil.
 	Keybinding is Alt-W.
