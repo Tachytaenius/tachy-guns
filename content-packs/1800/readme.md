@@ -6,3 +6,4 @@ Implements a few more recent but still non-modern guns. TODO
 
 - Black Gunpowder
 - Barrels
+- Workshops

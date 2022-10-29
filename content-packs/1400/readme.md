@@ -6,6 +6,7 @@ Implements guns adhering to Dwarf Fortress' 1400 technology cutoff point.
 
 - Black Gunpowder
 - Barrels
+- Workshops
 
 ## Ammo item types
 
