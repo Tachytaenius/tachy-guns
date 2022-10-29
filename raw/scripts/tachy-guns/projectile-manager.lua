@@ -62,7 +62,7 @@ function onProjItemCheckMovement(projectile)
 		if fireTimeType == "ADD" then
 			firer.counters.think_counter = firer.counters.think_counter + fireTime
 		elseif fireTimeType == "MULTIPLY" then
-			firer.counters.think_counter = firer.counters.think_counter * fireTime
+			firer.counters.think_counter = math.floor(firer.counters.think_counter * fireTime)
 		elseif fireTimeType == "REPLACE" then
 			firer.counters.think_counter = fireTime
 		else

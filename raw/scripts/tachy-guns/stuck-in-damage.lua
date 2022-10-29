@@ -9,6 +9,6 @@ function onItemContaminateWound(item, unit, wound, a, b)
 		return
 	end
 	for _, part in ipairs(wound.parts) do
-		part.bleeding = part.bleeding * extraDamage
+		part.bleeding = math.floor(part.bleeding * extraDamage)
 	end
 end
