@@ -50,7 +50,7 @@ The casing bar material determines the material of the fireable round and the pr
 
 ## Manufacturing Receivers
 
-This is all done at a gunsmith's workshop using the metalcraft labour.
+This is all done at a gunsmith's workshop using the mechanic labour.
 
 Fuel is required to melt the metal bars.
 Automatic receivers take two mechanisms, manual receivers take one.
