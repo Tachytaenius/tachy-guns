@@ -1,7 +1,7 @@
 # Tachy Guns
 
 The current version is 0.0.0.
-Information about how to handle versions and releases is at the end of this file.
+Information about how to handle versions, releases, and the changelog is at the end of this file.
 
 ## Installation
 
@@ -57,12 +57,12 @@ These are packs that only exist to give functionality to other packs that use th
 - It is recommended to use `gui/workshop-job` to set the desired materials for production.
 - Guns use the crossbow skill for ranged and the hammer skill for melee.
 
-## Versioning
+## Versioning, Releasing, and Changelogging
 
 The version for the next release is stored in the `main` branch of the GitHub repository in `raw/scripts/consts.lua` and the top of this file, which is then packaged into releases.
 The version is incremented after release for use in the next release.
 
-## Releasing
+For every release, all root content packs are packaged with their dependencies as a ready-to-install single `raw/` directory, and added to the releases page along with a copy of the repository.
 
-As said above, the version is modified after release.
-All root content packs are packaged with their dependencies as a ready-to-install single `raw/` directory, and added to the releases page along with a copy of the repository.
+Changes between releases are added to the changelog under the future section.
+Every release, the future section is moved to a section labelled with the current version in code.
