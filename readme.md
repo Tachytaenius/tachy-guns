@@ -7,7 +7,16 @@ The current version is 0.0.0.
 The version for the next release is stored in the `main` branch of the GitHub repository in `raw/scripts/consts.lua` and above, which is then packaged into releases.
 The version is incremented after release for use in the next release.
 
+## Releasing
+
+As said above, the version is modified after release.
+All content packs are packaged with their dependencies as a ready-to-install single `raw/` directory, and added to the releases page along with a copy of the repository.
+
 ## Installation
+
+- Download a root content pack pre-packaged with its dependencies from the releases page, and merge its `raw/` with your DF(Hack) installation's `raw`/.
+
+Or
 
 - Merge `raw/` with your DF(Hack) installation's `raw/`.
 	This contains the scripts that actually give functionality to the content.
