@@ -63,6 +63,12 @@ These are packs that only exist to give functionality to other packs that use th
 The version for the next release is stored in the `main` branch of the GitHub repository in `raw/scripts/consts.lua` and the top of this file, which is then packaged into releases.
 The version is incremented after release for use in the next release.
 
+The version numbers are major, minor, and patch.
+Patch is incremented for non-breaking (i.e. does not remove/rename any entries from raws or other changes that could be considered breaking) changes.
+Minor is the main version that is incremented.
+Major is incremented whenever a really large or fundamental change is made or an important milestone is reached.
+The version is incremented according to the largest change in the release, so if there is both a patch-type and minor-type change, the minor number is incremented and patch is set to 0.
+
 For every release, all root content packs are packaged with their dependencies as a ready-to-install single `raw/` directory, and added to the releases page along with a copy of the repository.
 
 Changes between releases are added to the changelog under the future section.
