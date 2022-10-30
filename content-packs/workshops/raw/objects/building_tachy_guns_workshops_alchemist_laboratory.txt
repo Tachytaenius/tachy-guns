@@ -2,7 +2,7 @@ building_tachy_guns_workshops_alchemist_laboratory
 
 [OBJECT:BUILDING]
 
-[BUILDING_WORKSHOP:ALCHEMIST_LABORATORY]
+[BUILDING_WORKSHOP:ALCHEMIST]
 	[NAME:Alchemist's Laboratory]
 	[NAME_COLOR:7:0:1]
 	[DIM:3:3]

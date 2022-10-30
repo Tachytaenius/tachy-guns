@@ -2,7 +2,7 @@ building_tachy_guns_workshops_gunsmith_shop
 
 [OBJECT:BUILDING]
 
-[BUILDING_WORKSHOP:GUNSMITH_WORKSHOP]
+[BUILDING_WORKSHOP:GUNSMITH]
 	[NAME:Gunsmith's Workshop]
 	[NAME_COLOR:7:0:1]
 	[DIM:3:3]
