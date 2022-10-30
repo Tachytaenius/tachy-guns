@@ -1,16 +1,7 @@
 # Tachy Guns
 
-## Versioning
-
 The current version is 0.0.0.
-
-The version for the next release is stored in the `main` branch of the GitHub repository in `raw/scripts/consts.lua` and above, which is then packaged into releases.
-The version is incremented after release for use in the next release.
-
-## Releasing
-
-As said above, the version is modified after release.
-All root content packs are packaged with their dependencies as a ready-to-install single `raw/` directory, and added to the releases page along with a copy of the repository.
+Information about how to handle versions and releases is at the end of this file.
 
 ## Installation
 
@@ -65,3 +56,13 @@ These are packs that only exist to give functionality to other packs that use th
 - The reason dependency content packs exist is because their content is used by multiple content packs.
 - It is recommended to use `gui/workshop-job` to set the desired materials for production.
 - Guns use the crossbow skill.
+
+## Versioning
+
+The version for the next release is stored in the `main` branch of the GitHub repository in `raw/scripts/consts.lua` and the top of this file, which is then packaged into releases.
+The version is incremented after release for use in the next release.
+
+## Releasing
+
+As said above, the version is modified after release.
+All root content packs are packaged with their dependencies as a ready-to-install single `raw/` directory, and added to the releases page along with a copy of the repository.
