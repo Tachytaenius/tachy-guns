@@ -1,6 +1,7 @@
 # Tachy Guns
 
 The current version is 0.0.0.
+
 Information about how to handle versions, releases, and the changelog is at the end of this file.
 
 ## Installation
