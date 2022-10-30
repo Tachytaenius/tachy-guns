@@ -10,7 +10,7 @@ The version is incremented after release for use in the next release.
 ## Releasing
 
 As said above, the version is modified after release.
-All content packs are packaged with their dependencies as a ready-to-install single `raw/` directory, and added to the releases page along with a copy of the repository.
+All root content packs are packaged with their dependencies as a ready-to-install single `raw/` directory, and added to the releases page along with a copy of the repository.
 
 ## Installation
 
