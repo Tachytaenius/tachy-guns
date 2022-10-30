@@ -18,6 +18,7 @@ All content packs are packaged with their dependencies as a ready-to-install sin
 
 Or
 
+- Download the repository.
 - Merge `raw/` with your DF(Hack) installation's `raw/`.
 	This contains the scripts that actually give functionality to the content.
 - Pick a content pack from below, find it in `content-packs/` and merge its `raw/` with your DF(Hack) installation's `raw/`.
