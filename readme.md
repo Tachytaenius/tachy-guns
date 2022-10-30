@@ -1,5 +1,12 @@
 # Tachy Guns
 
+## Versioning
+
+The current version is 0.0.0.
+
+The version for the next release is stored in the `main` branch of the GitHub repository in `raw/scripts/consts.lua` and above, which is then packaged into releases.
+The version is incremented after release for use in the next release.
+
 ## Installation
 
 - Merge `raw/` with your DF(Hack) installation's `raw/`.

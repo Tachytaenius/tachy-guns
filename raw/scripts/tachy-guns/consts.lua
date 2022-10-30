@@ -1,5 +1,7 @@
 --@ module = true
 
+version = "0.0.0"
+
 ammoMaterialItemSpecificImprovementType = 100
 dropCasingsAsItems = false -- (damaged) items or broken projectiles?
 perturbedVectorLength = 5000 -- Due to integer-only target locations
