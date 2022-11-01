@@ -47,6 +47,7 @@ These are packs that only exist to give functionality to other packs that use th
 - Workshops: Adds the workshops used to make guns.
 - Barrels: Adds the barrels of various sizes used to make guns.
 	Its `add-to-entity.txt` is optional, check its readme.
+- Muzzle-Loaded Ammo: Adds round projectiles and projectile + gunpowder charges for muzzle-loading guns as ammo.
 
 ## Notes
 

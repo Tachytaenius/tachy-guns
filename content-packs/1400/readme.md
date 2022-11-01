@@ -7,29 +7,13 @@ Implements guns adhering to Dwarf Fortress' 1400 technology cutoff point.
 - Black Gunpowder
 - Barrels
 - Workshops
+- Muzzle-Loaded Ammo
 
-## Ammo item types
-
-- Ball
-- Single-ball charge
-- Multiple-ball charge (3)
-
-You want to assign charges to your squads, not balls.
-
-## Gun/ammo types
+## Gun types
 
 - Small
 - Medium
 - Large
-
-## Manufacturing Ammo
-
-This is all done at an ammo manufacturing station using the metalcraft labour.
-
-Fuel is required to melt the metal bars.
-Small produces 30 and takes 10 dimension out of a gunpowder item, medium 25/20, and large 20/30.
-
-Ammo is made from one or three metal bars depending on the charge type.
 
 # Manufacturing Guns
 

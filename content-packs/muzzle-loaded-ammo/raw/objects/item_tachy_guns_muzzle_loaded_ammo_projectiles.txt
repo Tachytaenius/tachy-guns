@@ -1,25 +1,25 @@
-item_tachy_guns_1400_projectiles
+item_tachy_guns_muzzle_loaded_ammo_projectiles
 
 [OBJECT:ITEM]
 
-[ITEM_AMMO:ITEM_AMMO_HANDGONNE_BALL_SMALL]
-	[NAME:small handgonne ball:small handgonne balls]
+[ITEM_AMMO:ITEM_AMMO_MUZZLE_LOADED_BALL_SMALL]
+	[NAME:small muzzle-loaded ball:small muzzle-loaded balls]
 	[SIZE:40]
 	[CLASS:NONE]
 	[ATTACK:EDGE:100:1000:poke:pokes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[TACHY_GUNS_STUCK_IN_DAMAGE_MULTIPLIER:10]
 
-[ITEM_AMMO:ITEM_AMMO_HANDGONNE_BALL_MEDIUM]
-	[NAME:medium handgonne ball:medium handgonne balls]
+[ITEM_AMMO:ITEM_AMMO_MUZZLE_LOADED_BALL_MEDIUM]
+	[NAME:medium muzzle-loaded ball:medium muzzle-loaded balls]
 	[SIZE:60]
 	[CLASS:NONE]
 	[ATTACK:EDGE:150:1000:poke:pokes:NO_SUB:1000]
 		[ATTACK_PREPARE_AND_RECOVER:3:3]
 	[TACHY_GUNS_STUCK_IN_DAMAGE_MULTIPLIER:15]
 
-[ITEM_AMMO:ITEM_AMMO_HANDGONNE_BALL_LARGE]
-	[NAME:large handgonne ball:large handgonne balls]
+[ITEM_AMMO:ITEM_AMMO_MUZZLE_LOADED_BALL_LARGE]
+	[NAME:large muzzle-loaded ball:large muzzle-loaded balls]
 	[SIZE:80]
 	[CLASS:NONE]
 	[ATTACK:EDGE:200:1000:poke:pokes:NO_SUB:1000]
