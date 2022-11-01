@@ -160,7 +160,7 @@ function onProjItemCheckMovement(projectile)
 		containedProjectile:calculateWeight()
 		containedProjectile.maker, containedProjectile.maker_race = projectile.item.maker, projectile.item.maker_race
 		containedProjectile.quality, containedProjectile.skill_rating = projectile.item.quality, projectile.item.skill_rating
-		containedProjectile.temperature.whole, containedProjectile.temperature.fraction = projectile.temperature.whole, projectile.temperature.fraction
+		containedProjectile.temperature.whole, containedProjectile.temperature.fraction = projectile.item.temperature.whole, projectile.item.temperature.fraction
 		containedProjectile.flags.foreign = projectile.item.flags.foreign
 		containedProjectile.flags.trader = projectile.item.flags.trader
 		containedProjectile.flags.forbid = projectile.item.flags.forbid
