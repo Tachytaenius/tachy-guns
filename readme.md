@@ -58,6 +58,8 @@ These are packs that only exist to give functionality to other packs that use th
 - The reason dependency content packs exist is because their content is used by multiple content packs.
 - It is recommended to use `gui/workshop-job` to set the desired materials for production.
 - Guns use the crossbow skill for ranged and the hammer skill for melee.
+- Don't mix incompatible guns and ammo in the same squad!
+	It can lead to, for example, units holding large handgonnes and small handgonne charges.
 
 ## Versioning, Releasing, and Changelogging
 
