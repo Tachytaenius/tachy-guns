@@ -9,12 +9,6 @@ Implements guns adhering to Dwarf Fortress' 1400 technology cutoff point.
 - Workshops
 - Muzzle-Loaded Ammo
 
-## Gun types
-
-- Small
-- Medium
-- Large
-
 # Manufacturing Guns
 
 This is all done at a gunsmith's workshop using the mechanic labour.
@@ -23,5 +17,5 @@ It is simply a log of wood combined with a medium-length barrel of whichever siz
 
 ## Guns
 
-There is one type of handgonne for each size.
+There is one type of handgonne for each size, and the sizes are small, medium, and large.
 Each one has a fire time of twice that of a crossbow (the think counter is multiplied by 2, so skill is factored in).
