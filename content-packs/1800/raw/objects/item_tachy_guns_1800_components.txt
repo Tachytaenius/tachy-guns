@@ -1,0 +1,21 @@
+item_tachy_guns_1800_components
+
+[OBJECT:ITEM]
+
+[ITEM_TOOL:ITEM_TOOL_FLINTLOCK_FLINT]
+	[NAME:flintlock flint:flintlock flints]
+	[DESCRIPTION:Strikes against the frizzen in a flintlock firearm to create a shower of sparks.]
+	[TILE:39] apostrophe
+	[INCOMPLETE_ITEM]
+	[SIZE:5]
+	[MATERIAL_SIZE:1]
+	[VALUE:2]
+
+[ITEM_TOOL:ITEM_TOOL_FRIZZEN]
+	[NAME:frizzen:frizzens]
+	[DESCRIPTION:Strikes against the flint in a flintlock firearm to create a shower of sparks.]
+	[TILE:39] apostrophe
+	[INCOMPLETE_ITEM]
+	[SIZE:10]
+	[MATERIAL_SIZE:1]
+	[VALUE:3]
