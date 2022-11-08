@@ -17,6 +17,7 @@ At a gunsmith's workshop you can create 10 flints per chert boulder and 10 frizz
 
 Making the guns themselves is also done at a gunsmith's workshop, and uses the mechanic labour.
 Flintlock guns require a flint (chert) and a frizzen (steel) but are faster to reload than matchlock guns.
+Matchlock guns require a serpentine (the lever) which, because it can be made from any metal, is added to entites as a tool, not a specific reaction.
 
 ## Guns
 

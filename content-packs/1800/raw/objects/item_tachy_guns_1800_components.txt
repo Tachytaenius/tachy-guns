@@ -19,3 +19,13 @@ item_tachy_guns_1800_components
 	[SIZE:10]
 	[MATERIAL_SIZE:1]
 	[VALUE:3]
+
+[ITEM_TOOL:ITEM_TOOL_MATCHLOCK_SERPENTINE]
+	[NAME:matchlock serpentine:matchlock serpentines]
+	[DESCRIPTION:Curved lever that holds the match in a matchlock firearm.]
+	[TILE:'~']
+	[INCOMPLETE_ITEM]
+	[SIZE:20]
+	[MATERIAL_SIZE:1]
+	[VALUE:3]
+	[METAL_MAT] Needs material-related tokens as this gets actually added to entities
