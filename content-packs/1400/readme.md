@@ -20,3 +20,4 @@ It is simply a log of wood combined with a medium-length barrel of whichever siz
 There is one type of handgonne for each size, and the sizes are small, medium, and large.
 Each one has a fire time of twice that of a crossbow (the think counter is multiplied by 2, so skill is factored in).
 All handgonnes use muzzle-loaded ammo.
+Due to random spin imparted on the projectile(s) upon firing, the handgonnes are less accurate than the bow/crossbow.
