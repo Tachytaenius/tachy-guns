@@ -2,6 +2,8 @@
 
 Implements a few more recent but still non-modern guns.
 
+You might want to consider giving matchlocks to one civilisation and flintlocks to another.
+
 ## Dependencies
 
 - Black Gunpowder
