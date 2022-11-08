@@ -9,7 +9,7 @@ Implements guns adhering to Dwarf Fortress' 1400 technology cutoff point.
 - Workshops
 - Muzzle-Loaded Ammo
 
-# Manufacturing Guns
+## Manufacturing Guns
 
 This is all done at a gunsmith's workshop using the mechanic labour.
 
