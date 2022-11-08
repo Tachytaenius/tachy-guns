@@ -63,6 +63,8 @@ These are packs that only exist to give functionality to other packs that use th
 
 ## Versioning, Releasing, and Changelogging
 
+You don't need to read this unless you're the maintainer.
+
 The version for the next release is stored in the `main` branch of the GitHub repository in `raw/scripts/consts.lua` and the top of this file, which is then packaged into releases.
 The version is incremented after release for use in the next release.
 
