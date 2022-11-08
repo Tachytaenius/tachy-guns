@@ -6,7 +6,7 @@ NOTE: Non-manual weapons should probably have a < 1 fire exhaustion multiplier a
 
 Guns using small bullets
 
-[ITEM_WEAPON:ITEM_WEAPON_PISTOL_MAGAZINE-FED]
+[ITEM_WEAPON:ITEM_WEAPON_PISTOL_MAGAZINE_FED]
 	[NAME:magazine-fed pistol:magazine-fed pistols]
 	[SIZE:250]
 	[RANGED:CROSSBOW:BULLET_SMALL]
