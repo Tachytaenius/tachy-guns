@@ -3,7 +3,7 @@ item_tachy_guns_muzzle_loaded_ammo_ammo
 [OBJECT:ITEM]
 
 [ITEM_AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_SMALL_SINGLE_PROJECTILE]
-	[NAME:small single-ball handgonne charge:small single-ball handgonne charges]
+	[NAME:small single-ball muzzle-loaded charge:small single-ball muzzle-loaded charges]
 	[CLASS:MUZZLE_LOADED_CHARGE_SMALL]
 	[TACHY_GUNS_CONTAINED_PROJECTILE:ITEM_AMMO_MUZZLE_LOADED_BALL_SMALL:1]
 	[SIZE:50] 40 (projectile) + 10 (propellant)
@@ -14,7 +14,7 @@ item_tachy_guns_muzzle_loaded_ammo_ammo
 	(VALUE:2)
 
 [ITEM_AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_MEDIUM_SINGLE_PROJECTILE]
-	[NAME:medium single-ball handgonne charge:medium single-ball handgonne charges]
+	[NAME:medium single-ball muzzle-loaded charge:medium single-ball muzzle-loaded charges]
 	[CLASS:MUZZLE_LOADED_CHARGE_MEDIUM]
 	[TACHY_GUNS_CONTAINED_PROJECTILE:ITEM_AMMO_MUZZLE_LOADED_BALL_MEDIUM:1]
 	[SIZE:80] 60 (projectile) + 20 (propellant)
@@ -25,7 +25,7 @@ item_tachy_guns_muzzle_loaded_ammo_ammo
 	(VALUE:3)
 
 [ITEM_AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_LARGE_SINGLE_PROJECTILE]
-	[NAME:large single-ball handgonne charge:large single-ball handgonne charges]
+	[NAME:large single-ball muzzle-loaded charge:large single-ball muzzle-loaded charges]
 	[CLASS:MUZZLE_LOADED_CHARGE_LARGE]
 	[TACHY_GUNS_CONTAINED_PROJECTILE:ITEM_AMMO_MUZZLE_LOADED_BALL_LARGE:1]
 	[SIZE:110] 80 (projectile) + 30 (propellant)
@@ -36,7 +36,7 @@ item_tachy_guns_muzzle_loaded_ammo_ammo
 	(VALUE:4)
 
 [ITEM_AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_SMALL_MULTIPLE_PROJECTILES]
-	[NAME:small multi-ball handgonne charge:small multi-ball handgonne charges]
+	[NAME:small multi-ball muzzle-loaded charge:small multi-ball muzzle-loaded charges]
 	[CLASS:MUZZLE_LOADED_CHARGE_SMALL]
 	[TACHY_GUNS_CONTAINED_PROJECTILE:ITEM_AMMO_MUZZLE_LOADED_BALL_SMALL:3]
 	[SIZE:130] 40 * 3 (projectiles) + 10 (propellant)
@@ -47,7 +47,7 @@ item_tachy_guns_muzzle_loaded_ammo_ammo
 	(VALUE:4) 1 * 3 + 1
 
 [ITEM_AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_MEDIUM_MULTIPLE_PROJECTILES]
-	[NAME:medium multi-ball handgonne charge:medium multi-ball handgonne charges]
+	[NAME:medium multi-ball muzzle-loaded charge:medium multi-ball muzzle-loaded charges]
 	[CLASS:MUZZLE_LOADED_CHARGE_MEDIUM]
 	[TACHY_GUNS_CONTAINED_PROJECTILE:ITEM_AMMO_MUZZLE_LOADED_BALL_MEDIUM:3]
 	[SIZE:200] 60 * 3 (projectiles) + 20 (propellant)
@@ -58,7 +58,7 @@ item_tachy_guns_muzzle_loaded_ammo_ammo
 	(VALUE:7) 2 * 3 + 1
 
 [ITEM_AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_LARGE_MULTIPLE_PROJECTILES]
-	[NAME:large multi-ball handgonne charge:large multi-ball handgonne charges]
+	[NAME:large multi-ball muzzle-loaded charge:large multi-ball muzzle-loaded charges]
 	[CLASS:MUZZLE_LOADED_CHARGE_LARGE]
 	[TACHY_GUNS_CONTAINED_PROJECTILE:ITEM_AMMO_MUZZLE_LOADED_BALL_LARGE:3]
 	[SIZE:270] 80 * 3 (projectiles) + 30 (propellant)

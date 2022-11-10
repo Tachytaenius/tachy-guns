@@ -3,7 +3,7 @@ reaction_tachy_guns_muzzle_loaded_ammo
 [OBJECT:REACTION]
 
 [REACTION:MAKE_SMALL_SINGLE_PROJECTILE_MUZZLE_LOADED_CHARGES]
-	[NAME:make small single-ball handgonne charges]
+	[NAME:make small single-ball muzzle-loaded charges]
 	[BUILDING:AMMO_MANUFACTURING:NONE]
 	[SKILL:METALCRAFT]
 	[FUEL]
@@ -18,7 +18,7 @@ reaction_tachy_guns_muzzle_loaded_ammo
 	[PRODUCT:100:30:AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_SMALL_SINGLE_PROJECTILE:GET_MATERIAL_FROM_REAGENT:bar:NONE]
 
 [REACTION:MAKE_MEDIUM_SINGLE_PROJECTILE_MUZZLE_LOADED_CHARGES]
-	[NAME:make medium single-ball handgonne charges]
+	[NAME:make medium single-ball muzzle-loaded charges]
 	[BUILDING:AMMO_MANUFACTURING:NONE]
 	[SKILL:METALCRAFT]
 	[FUEL]
@@ -33,7 +33,7 @@ reaction_tachy_guns_muzzle_loaded_ammo
 	[PRODUCT:100:25:AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_MEDIUM_SINGLE_PROJECTILE:GET_MATERIAL_FROM_REAGENT:bar:NONE]
 
 [REACTION:MAKE_LARGE_SINGLE_PROJECTILE_MUZZLE_LOADED_CHARGES]
-	[NAME:make large single-ball handgonne charges]
+	[NAME:make large single-ball muzzle-loaded charges]
 	[BUILDING:AMMO_MANUFACTURING:NONE]
 	[SKILL:METALCRAFT]
 	[FUEL]
@@ -48,7 +48,7 @@ reaction_tachy_guns_muzzle_loaded_ammo
 	[PRODUCT:100:20:AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_LARGE_SINGLE_PROJECTILE:GET_MATERIAL_FROM_REAGENT:bar:NONE]
 
 [REACTION:MAKE_SMALL_MULTIPLE_PROJECTILE_MUZZLE_LOADED_CHARGES]
-	[NAME:make small multi-ball handgonne charges]
+	[NAME:make small multi-ball muzzle-loaded charges]
 	[BUILDING:AMMO_MANUFACTURING:NONE]
 	[SKILL:METALCRAFT]
 	[FUEL]
@@ -63,7 +63,7 @@ reaction_tachy_guns_muzzle_loaded_ammo
 	[PRODUCT:100:30:AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_SMALL_MULTIPLE_PROJECTILES:GET_MATERIAL_FROM_REAGENT:bar:NONE]
 
 [REACTION:MAKE_MEDIUM_MULTIPLE_PROJECTILE_MUZZLE_LOADED_CHARGES]
-	[NAME:make medium multi-ball handgonne charges]
+	[NAME:make medium multi-ball muzzle-loaded charges]
 	[BUILDING:AMMO_MANUFACTURING:NONE]
 	[SKILL:METALCRAFT]
 	[FUEL]
@@ -78,7 +78,7 @@ reaction_tachy_guns_muzzle_loaded_ammo
 	[PRODUCT:100:25:AMMO:ITEM_AMMO_MUZZLE_LOADED_CHARGE_MEDIUM_MULTIPLE_PROJECTILES:GET_MATERIAL_FROM_REAGENT:bar:NONE]
 
 [REACTION:MAKE_LARGE_MULTIPLE_PROJECTILE_MUZZLE_LOADED_CHARGES]
-	[NAME:make large multi-ball handgonne charges]
+	[NAME:make large multi-ball muzzle-loaded charges]
 	[BUILDING:AMMO_MANUFACTURING:NONE]
 	[SKILL:METALCRAFT]
 	[FUEL]
