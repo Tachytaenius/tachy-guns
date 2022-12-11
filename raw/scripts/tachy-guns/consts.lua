@@ -1,6 +1,7 @@
 --@ module = true
 
 version = "0.0.0"
+DFVersion = "0.47.05"
 
 ammoMaterialItemSpecificImprovementType = 100
 dropCasingsAsItems = false -- (damaged) items or broken projectiles?

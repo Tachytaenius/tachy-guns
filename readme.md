@@ -1,6 +1,6 @@
 # Tachy Guns
 
-The current version is 0.0.0.
+The current version is 0.0.0, for Dwarf Fortress version 0.47.05.
 
 Information about how to handle versions, releases, and the changelog is at the end of this file.
 
@@ -78,3 +78,5 @@ For every release, all root content packs are packaged with their dependencies a
 
 Changes between releases are added to the changelog under the future section.
 Every release, the future section is moved to a section labelled with the current version in code.
+
+The Dwarf Fortress version this mod is for is stored at the top of this file and in `raw/scripts/consts.lua`.

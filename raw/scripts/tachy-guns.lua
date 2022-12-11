@@ -10,6 +10,9 @@ disable tachy-guns
 
 local eventful = require("plugins.eventful")
 local repeatUtil = require("repeat-util")
+local dialogs = require("gui.dialogs")
+
+local consts = dfhack.reqscript("tachy-guns/consts") -- Used here to get the mod's DF version for a check
 
 local projectileManager = dfhack.reqscript("tachy-guns/projectile-manager") -- Proper casing firing behaviour
 local typeTransform = dfhack.reqscript("tachy-guns/type-transform") -- Making sawn-off shotguns
@@ -28,7 +31,28 @@ if not dfhack_flags.enable then
 	return
 end
 
+local function disable()
+	eventful.onProjItemCheckMovement[modId] = nil
+	eventful.onJobCompleted[modId] = nil
+	eventful.onReactionComplete[modId] = nil
+	eventful.onItemContaminateWound[modId] = nil
+
+	print("Tachy Guns disabled. Behaviour may break.")
+	enabled = false
+end
+
 if dfhack_flags.enable_state then
+	local currentDFVersion = dfhack.getDFVersion():sub(2, -1):gsub(" .+$", "") -- Remove v and OS, leaving only the numbers
+	if consts.DFVersion == currentDFVersion then
+		dialogs.showMessage("Error",
+			"This version of Tachy Guns is for DF version " .. consts.DFVersion .. ",\n" ..
+			"current DF version is " .. currentDFVersion .. ". The script will now disable.\n" ..
+			"Behaviour may break."
+		)
+		disable()
+		return
+	end
+
 	exhaustionRecord.onLoad()
 
 	eventful.onProjItemCheckMovement[modId] = function(...)
@@ -56,11 +80,5 @@ if dfhack_flags.enable_state then
 	print("Tachy Guns enabled!")
 	enabled = true
 else
-	eventful.onProjItemCheckMovement[modId] = nil
-	eventful.onJobCompleted[modId] = nil
-	eventful.onReactionComplete[modId] = nil
-	eventful.onItemContaminateWound[modId] = nil
-
-	print("Tachy Guns disabled. Behaviour may break.")
-	enabled = false
+	disable()
 end
