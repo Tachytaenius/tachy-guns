@@ -6,7 +6,7 @@ Information about how to handle versions, releases, and the changelog is at the 
 
 ## Installation
 
-- Download a root content pack pre-packaged with its dependencies from the releases page, and merge its `raw/` with your DF(Hack) installation's `raw`/.
+- Download a root content pack pre-packaged with its dependencies from the releases page, and merge its `raw/` with your DF(Hack) installation's `raw/`.
 
 Or
 
