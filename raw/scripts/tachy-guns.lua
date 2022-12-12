@@ -43,7 +43,7 @@ end
 
 if dfhack_flags.enable_state then
 	local currentDFVersion = dfhack.getDFVersion():sub(2, -1):gsub(" .+$", "") -- Remove v and OS, leaving only the numbers
-	if consts.DFVersion == currentDFVersion then
+	if consts.DFVersion ~= currentDFVersion then
 		dialogs.showMessage("Error",
 			"This version of Tachy Guns is for DF version " .. consts.DFVersion .. ",\n" ..
 			"current DF version is " .. currentDFVersion .. ". The script will now disable.\n" ..
