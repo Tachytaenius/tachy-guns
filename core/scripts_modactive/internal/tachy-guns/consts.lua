@@ -1,10 +1,10 @@
 --@ module = true
 
 version = "0.0.0"
-DFVersion = "0.47.05"
+DFVersion = "0.50.07"
 
 ammoMaterialItemSpecificImprovementType = 100
-dropCasingsAsItems = false -- (damaged) items or broken projectiles?
+dropCasingsAsItems = true -- (damaged) items or broken projectiles? Edit: broken projectiles appear to have been removed from the game, so when this is false the casings are just deleted
 perturbedVectorLength = 5000 -- Due to integer-only target locations
 skipProcessingProjectileFlagKey = 31
 smokeEffectDistanceFromFirer = 1

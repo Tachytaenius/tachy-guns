@@ -10,8 +10,8 @@
 local utils = require("utils")
 local customRawTokens = require("custom-raw-tokens")
 
-local consts = dfhack.reqscript("tachy-guns/consts")
-local exhaustionRecord = dfhack.reqscript("tachy-guns/exhaustion-record")
+local consts = dfhack.reqscript("internal/tachy-guns/consts")
+local exhaustionRecord = dfhack.reqscript("internal/tachy-guns/exhaustion-record")
 
 local function getSubtypeItemDefByName(subtypeName)
 	local defs = df.global.world.raws.itemdefs.all

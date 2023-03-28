@@ -2,7 +2,7 @@
 
 local customRawTokens = require("custom-raw-tokens")
 
-local consts = dfhack.reqscript("tachy-guns/consts")
+local consts = dfhack.reqscript("internal/tachy-guns/consts")
 
 function onReactionComplete(reaction, reactionProduct, unit, inputItems, inputReagents, outputItems)
 	if not customRawTokens.getToken(reaction, "TACHY_GUNS_STORE_PROJECTILE_MATERIAL") then return end

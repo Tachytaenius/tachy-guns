@@ -1,0 +1,6 @@
+entity_tachy_guns_black_gunpowder_patch
+
+[OBJECT:ENTITY]
+
+[SELECT_ENTITY:MOUTAIN]
+	[PERMITTED_REACTION:MAKE_GUNPOWDER_BLACK]
