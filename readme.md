@@ -1,7 +1,10 @@
 # Tachy Guns
 
 ***GRAPHICS ARE TODO! You'll have to use Dwarf Fortress classic mode for now.***
-***RELEASES ARE TODO! There has not been a Steam Workshop release or an install-it-yourself zip file release yet.*** 
+
+***RELEASES ARE TODO! There has not been a Steam Workshop release or an install-it-yourself zip file release yet.***
+
+***ENTITY VARIATION IS TODO! Currently it just adds content to MOUNTAIN (dwarves), but a system to add to entities of any name is planned.***
 
 Tachy Guns is a set of mods, or perhaps a modular mod, for adding DFHack-improved guns to Dwarf Fortress.
 It has a core mod containing the DFHack scripts (the `core/` directory in this repository) and various content packs containing DF raws (with custom raw tokens to interact with the scripts) (each subfolder in `content-packs/` is a mod).
