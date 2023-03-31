@@ -6,5 +6,4 @@
 [AUTHOR:Tachytaenius]
 [NAME:Tachy Guns Black Gunpowder Content Pack]
 [DESCRIPTION:Adds black gunpowder to a Tachy Guns install.]
-[REQUIRES_ID:tachy_guns_core]
 [REQUIRES_ID_BEFORE_ME:tachy_guns_workshops]

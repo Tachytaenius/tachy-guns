@@ -6,4 +6,3 @@
 [AUTHOR:Tachytaenius]
 [NAME:Tachy Guns Workshops Content Pack]
 [DESCRIPTION:Adds workshops for making guns etc. to a Tachy Guns install.]
-[REQUIRES_ID:tachy_guns_core]
