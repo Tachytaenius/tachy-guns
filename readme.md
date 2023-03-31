@@ -42,6 +42,7 @@ These are packs that only exist to give functionality to other packs that use th
 - Workshops: Adds the workshops used to make guns.
 - Barrels: Adds the barrels of various sizes used to make guns.
 - Muzzle-Loaded Ammo: Adds round projectiles and projectile + gunpowder charges for muzzle-loading guns as ammo.
+- Cordite: adds a more modern gun propellant made from guncotton (which is made frmo nitric acid, sulphuric acid, and cotton) and nitroglycerin (which is made from nitric acid, sulphuric acid, and glycerol).
 
 ## Notes
 
@@ -49,7 +50,7 @@ These are packs that only exist to give functionality to other packs that use th
 	It will leave a message in the console ("Tachy Guns enabled") when activated.
 - Lead doesn't work very well for projectiles (mostly bruising, though it is lethal) due to DF's own internal mechanics.
 - Projectiles all have edged attacks due to DF's internal mechanics making blunt not effective.
-- The reason dependency content packs exist is because their content is used by multiple content packs.
+- The reason dependency content packs exist is because their content is used by multiple content packs, or intended for use in custom content packs.
 - It is recommended to use `gui/workshop-job` to set the desired materials for production.
 - Guns use the crossbow skill for ranged and the hammer skill for melee.
 - Don't mix incompatible guns and ammo in the same squad!

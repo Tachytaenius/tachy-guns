@@ -1,4 +1,4 @@
-reaction_tachy_guns_1945_cordite
+reaction_tachy_guns_cordite
 
 [OBJECT:REACTION]
 

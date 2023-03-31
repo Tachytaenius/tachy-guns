@@ -9,3 +9,4 @@
 [REQUIRES_ID:tachy_guns_core]
 [REQUIRES_ID_BEFORE_ME:tachy_guns_workshops]
 [REQUIRES_ID_BEFORE_ME:tachy_guns_barrels]
+[REQUIRES_ID_BEFORE_ME:tachy_guns_cordite]
