@@ -5,4 +5,4 @@
 [EARLIEST_COMPATIBLE_DISPLAYED_VERSION:0.0.0]
 [AUTHOR:Tachytaenius]
 [NAME:Tachy Guns Core]
-[DESCRIPTION:Core mod for a Tachy Guns install.]
+[DESCRIPTION:Core mod for a Tachy Guns install. This mod requires DFHack.]
