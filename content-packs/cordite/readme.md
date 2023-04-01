@@ -7,7 +7,7 @@
 ## Cordite
 
 All reactions in the production of cordite take place at an alchemist's laboratory.
-They use the alchemist labour.
+They use the soap maker labour and mod skill 1.
 Sometimes reagents will be frozen at normal operating temperatures and the reaction won't be able to proceed, so consider doing work above magma or some other temperature control method.
 
 Cordite bars are the propellant.

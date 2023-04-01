@@ -7,7 +7,7 @@ building_tachy_guns_workshops_alchemist_laboratory
 	[NAME_COLOR:7:0:1]
 	[DIM:3:3]
 	[WORK_LOCATION:2:2]
-	[BUILD_LABOR:ALCHEMIST]
+	[BUILD_LABOR:SOAP_MAKER] was ALCHEMIST
 	[BUILD_KEY:CUSTOM_ALT_A]
 
 	[BUILD_ITEM:2:BLOCKS:NONE:NONE:NONE]
