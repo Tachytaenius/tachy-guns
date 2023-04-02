@@ -7,13 +7,13 @@ tachy-guns
 
 Tags: gameplay | military
 
-Contains modules for handling behaviour in Tachy Guns content packs
+Contains modules for handling behaviour in Tachy Guns content packs.
 
 Usage
 -----
 
-	enable tachy-guns
-	disable tachy-guns
+    enable tachy-guns
+    disable tachy-guns
 ]====]
 
 local repeatUtil = require("repeat-util")
