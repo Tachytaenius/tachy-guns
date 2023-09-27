@@ -80,3 +80,4 @@ The Dwarf Fortress version this mod is for is stored near the top of this file a
 
 Prefix every released zip on GitHub with "tachy-guns-[version-using-hyphens]-".
 The readmes stay in the released mods.
+Use `zip-releases.sh` with the version number (with hyphens instead of dots) as an argument to get zip files for releases in the (`.gitignore`d) `release-zips/` folder.
