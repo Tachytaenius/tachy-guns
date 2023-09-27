@@ -1,4 +1,4 @@
-# Muzzle-Loaded Ammo
+# Tachy Guns Muzzle-Loaded Ammo
 
 Implements muzzle-loaded ammunition.
 

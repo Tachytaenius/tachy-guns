@@ -1,4 +1,4 @@
-# 1945 Content Pack
+# Tachy Guns 1945 Content Pack
 
 ## Dependencies
 

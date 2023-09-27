@@ -1,4 +1,4 @@
-# Black Gunowder Content Pack
+# Tachy Guns Black Gunowder Content Pack
 
 Just implements black gunpowder.
 Each powder item requries a bag.

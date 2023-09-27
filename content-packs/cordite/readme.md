@@ -1,4 +1,4 @@
-# Cordite Content Pack
+# Tachy Guns Cordite Content Pack
 
 ## Dependencies
 

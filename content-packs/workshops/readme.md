@@ -1,4 +1,4 @@
-# Workshops Content Pack
+# Tachy Guns Workshops Content Pack
 
 Adds the workshops used to create items from the mod.
 
