@@ -40,6 +40,7 @@ end
 dfhack.onStateChange[GLOBAL_KEY] = function(stateChange)
 	if stateChange == SC_MAP_UNLOADED then
 		dfhack.run_command("disable", "tachy-guns")
+		dfhack.onStateChange[GLOBAL_KEY] = nil
 		return
 	end
 	if stateChange ~= SC_MAP_LOADED or df.global.gamemode ~= df.game_mode.DWARF then
