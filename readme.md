@@ -13,13 +13,13 @@ It has a core mod containing the DFHack scripts (the `core/` directory in this r
 
 You can make your own content packs that rely on the core mod through custom raw tokens, if, say the 1945 content pack's "magazine-fed pistols" etc. are too general for you and you want something more specific.
 
-The current version subject to development is 0.0.0, for Dwarf Fortress version 0.50.07 (that format is what is returned from DFHack's version getting function).
+The current version subject to development is 0.0.0, for Dwarf Fortress version 0.50.10 (as seen with the numbers extracted from DFHack's version-getting function).
 
 Information about how to handle versions, releases, and the changelog is at the end of this file.
 
 ## Installation/Uninstallation
 
-Either use Steam Workshop or the zip files in releases.
+Either use Steam Workshop (Dwarf Fortress File Depot is planned) or the zip files in releases.
 
 ## Content Packs
 
@@ -76,6 +76,6 @@ Changes between releases are added to the changelog under the future section.
 Every release, the future section is moved to a section labelled with the current version in code, before the version increment.
 If the changelog is packaged with anything, it should be packaged with the future -> current version change.
 
-The Dwarf Fortress version this mod is for is stored at the top of this file and in `core/scripts_modactive/internal/tachy-guns/consts.lua`.
+The Dwarf Fortress version this mod is for is stored near the top of this file and in `core/scripts_modactive/internal/tachy-guns/consts.lua`.
 
 Prefix every released zip with "tachy-guns-".

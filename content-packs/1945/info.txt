@@ -10,3 +10,8 @@
 [REQUIRES_ID_BEFORE_ME:tachy_guns_workshops]
 [REQUIRES_ID_BEFORE_ME:tachy_guns_barrels]
 [REQUIRES_ID_BEFORE_ME:tachy_guns_cordite]
+
+[STEAM_TITLE:Tachy Guns 1945 Content Pack]
+[STEAM_DESCRIPTION:Adds guns from the year 1945 to a Tachy Guns install.]
+[STEAM_TAG:reaction]
+[STEAM_TAG:item]

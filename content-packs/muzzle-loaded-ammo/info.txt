@@ -9,3 +9,8 @@
 [REQUIRES_ID:tachy_guns_core]
 [REQUIRES_ID_BEFORE_ME:tachy_guns_black_gunpowder]
 [REQUIRES_ID_BEFORE_ME:tachy_guns_workshops]
+
+[STEAM_TITLE:Tachy Guns Muzzle-Loaded Ammo Content Pack]
+[STEAM_DESCRIPTION:Adds muzzle-loaded ammo to a Tachy Guns install.]
+[STEAM_TAG:item]
+[STEAM_TAG:reaction]

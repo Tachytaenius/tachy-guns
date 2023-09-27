@@ -6,3 +6,7 @@
 [AUTHOR:Tachytaenius]
 [NAME:Tachy Guns Barrels Content Pack]
 [DESCRIPTION:Adds gun barrels to a Tachy Guns install.]
+
+[STEAM_TITLE:Tachy Guns Barrels Content Pack]
+[STEAM_DESCRIPTION:Adds gun barrels to a Tachy Guns install.]
+[STEAM_TAG:item]

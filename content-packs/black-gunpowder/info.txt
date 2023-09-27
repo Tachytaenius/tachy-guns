@@ -7,3 +7,9 @@
 [NAME:Tachy Guns Black Gunpowder Content Pack]
 [DESCRIPTION:Adds black gunpowder to a Tachy Guns install.]
 [REQUIRES_ID_BEFORE_ME:tachy_guns_workshops]
+
+[STEAM_TITLE:Tachy Guns Black Gunpowder Content Pack]
+[STEAM_DESCRIPTION:Adds black gunpowder to a Tachy Guns install.]
+[STEAM_TAG:inorganic]
+[STEAM_TAG:material]
+[STEAM_TAG:reaction]

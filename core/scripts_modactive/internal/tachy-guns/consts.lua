@@ -1,7 +1,7 @@
 --@ module = true
 
 version = "0.0.0"
-DFVersion = "0.50.07"
+DFVersion = "0.50.10"
 
 ammoMaterialItemSpecificImprovementType = 100
 dropCasingsAsItems = true -- (damaged) items or broken projectiles? Edit: broken projectiles appear to have been removed from the game, so when this is false the casings are just deleted

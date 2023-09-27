@@ -5,4 +5,8 @@
 [EARLIEST_COMPATIBLE_DISPLAYED_VERSION:0.0.0]
 [AUTHOR:Tachytaenius]
 [NAME:Tachy Guns Workshops Content Pack]
-[DESCRIPTION:Adds workshops for making guns etc. to a Tachy Guns install.]
+[DESCRIPTION:Adds workshops for making guns etc to a Tachy Guns install.]
+
+[STEAM_TITLE:Tachy Guns Workshops Content Pack]
+[STEAM_DESCRIPTION:Adds workshops for making guns etc to a Tachy Guns install.]
+[STEAM_TAG:building]
