@@ -78,4 +78,5 @@ If the changelog is packaged with anything, it should be packaged with the futur
 
 The Dwarf Fortress version this mod is for is stored near the top of this file and in `core/scripts_modactive/internal/tachy-guns/consts.lua`.
 
-Prefix every released zip with "tachy-guns-[version-using-hyphens]-".
+Prefix every released zip on GitHub with "tachy-guns-[version-using-hyphens]-".
+The readmes stay in the released mods.
