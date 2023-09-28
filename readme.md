@@ -55,6 +55,9 @@ These are packs that only exist to give functionality to other packs that use th
 - Guns use the crossbow skill for ranged and the hammer skill for melee.
 - Don't mix incompatible guns and ammo in the same squad!
 	It can lead to, for example, units holding large handgonnes and small handgonne charges.
+- You'll need to run `enable tachy-guns` to get it working in arena mode.
+- You can only fire ammo that says "fireable".
+	Other ammo is just shells or projectiles.
 
 ## Versioning, Releasing, and Changelogging
 
