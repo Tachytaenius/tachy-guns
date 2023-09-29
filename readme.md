@@ -63,20 +63,21 @@ These are packs that only exist to give functionality to other packs that use th
 
 You don't need to read this unless you're the maintainer.
 
-The version for the next release (i.e. the version being developed) is stored in the `main` branch of the GitHub repository in `core/scripts_modactive/internal/tachy-guns/consts.lua` and the top of this file, which is then packaged into releases.
+The version from the previous release is stored in the `main` branch of the GitHub repository in `core/scripts_modactive/internal/tachy-guns/consts.lua` and near the top of this file.
+Just before releases, it is incremented according to the changes in the changelog (along with the versions in the `info.txt` files), and then packaged into releases.
 It is also stored in every mod `info.txt` file.
 The only change in a content pack may sometimes just be the displayed version and numeric version in the `info.txt` file being incremented, if that's the case, package it in the releases but don't update it on Steam Workshop.
 The numeric version in `info.txt` files is just incremented as a single number.
-The version is incremented after release for use in the next release.
+The version is incremented before release for use in the upcoming release.
 
 The version numbers are major, minor, and patch.
-Patch is incremented for small non-breaking changes such as bugfixes.
+Patch is incremented for small non-breaking changes such as non-breaking bugfixes.
 Minor is the main version that is incremented, including not-so-small non-breaking changes.
 Major is incremented whenever a really large or fundamental change is made or an important milestone is reached.
-The version is incremented according to the largest change in the release, so if there is both a patch-type and minor-type change, the minor number is incremented and patch is set to 0.
+The version is incremented according to the largest change in the upcoming release, so if there is both a patch-type and minor-type change, the minor number is incremented and patch is set to 0.
 
 Changes between releases are added to the changelog under the future section.
-Every release, the future section is moved to a section labelled with the current version in code, before the version increment.
+Every release, the future section is moved to a section labelled with the current version in code, after the version increment.
 If the changelog is packaged with anything, it should be packaged with the future -> current version change.
 
 The Dwarf Fortress version this mod is for is stored near the top of this file and in `core/scripts_modactive/internal/tachy-guns/consts.lua`.
