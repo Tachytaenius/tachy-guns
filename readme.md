@@ -65,8 +65,8 @@ These are packs that only exist to give functionality to other packs that use th
 You don't need to read this unless you're the maintainer.
 
 The version from the previous release is stored in the `main` branch of the GitHub repository in `core/scripts_modactive/internal/tachy-guns/consts.lua` and near the top of this file.
-Just before releases, it is incremented according to the changes in the changelog (along with the versions in the `info.txt` files), and then packaged into releases.
 It is also stored in every mod `info.txt` file.
+Just before a release, it is incremented according to the changes in the changelog (along with the versions in the `info.txt` files), and then packaged into the release.
 The only change in a content pack may sometimes just be the displayed version and numeric version in the `info.txt` file being incremented, if that's the case, package it in the releases but don't update it on Steam Workshop.
 The numeric version in `info.txt` files is just incremented as a single number.
 The version is incremented before release for use in the upcoming release.
