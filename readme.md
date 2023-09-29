@@ -13,7 +13,8 @@ It has a core mod containing the DFHack scripts (the `core/` directory in this r
 
 You can make your own content packs that rely on the core mod through custom raw tokens, if, say the 1945 content pack's "magazine-fed pistols" etc. are too general for you and you want something more specific.
 
-The current version subject to development is 0.0.0, for Dwarf Fortress version 0.50.10 (as seen with the numbers extracted from DFHack's version-getting function).
+The version that was last released is 0.0.0.
+The Dwarf Fortress version this mod is currently for is 0.50.10 (as seen with the numbers extracted from DFHack's version-getting function).
 
 Information about how to handle versions, releases, and the changelog is at the end of this file.
 
