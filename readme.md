@@ -2,7 +2,7 @@
 
 ***GRAPHICS ARE TODO! You'll have to use Dwarf Fortress classic mode for now.***
 
-***RELEASES ARE TODO! There has not been a Steam Workshop release or an install-it-yourself zip file release yet.***
+***STEAM WORKSHOP AND DWARF FORTRESS FILE DEPOT RELEASES ARE TODO!***
 
 ***ENTITY VARIATION IS TODO! Currently it just adds content to MOUNTAIN (dwarves), but a system to add to entities of any name is planned.***
 
