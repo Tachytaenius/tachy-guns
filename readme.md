@@ -17,6 +17,7 @@ The version that was last released is 0.0.0.
 The Dwarf Fortress version this mod is currently for is 0.50.10 (as seen with the numbers extracted from DFHack's version-getting function).
 
 Information about how to handle versions, releases, and the changelog is at the end of this file.
+When developing, be wary of DF not incorporating your changes due to versions and it thinking your mod is already installed as it should be; delete from installed_mods when making changes and not bumping versions.
 
 ## Installation/Uninstallation
 
@@ -57,8 +58,8 @@ These are packs that only exist to give functionality to other packs that use th
 - Don't mix incompatible guns and ammo in the same squad!
 	It can lead to, for example, units holding large handgonnes and small handgonne charges.
 - You'll need to run `enable tachy-guns` to get it working in arena mode.
-- You can only fire ammo that says "fireable".
-	Other ammo is just shells or projectiles.
+- In the case of bullets and shotgun shells, you can only fire ammo that says "fireable"-- other ammo is just shells or projectiles.
+	In the case of muzzle-loaded ammo, charges are what you fire and balls are the projectiles (there are no casings).
 
 ## Versioning, Releasing, and Changelogging
 
