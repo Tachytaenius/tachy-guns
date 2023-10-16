@@ -4,6 +4,8 @@
 
 ***ENTITY VARIATION IS TODO! Currently it just adds content to MOUNTAIN (dwarves), but a system to add to entities of any name is planned.***
 
+***THERE IS CURRENTLY NO WAY TO SELECT AMMO FOR SQUADS IN DF! This mod is (currently!) useless because of that.***
+
 This project relies on DFHack!
 
 Tachy Guns is a set of mods, or perhaps a modular mod, for adding DFHack-improved guns to Dwarf Fortress.
@@ -53,8 +55,9 @@ These are packs that only exist to give functionality to other packs that use th
 - The reason dependency content packs exist is because their content is used by multiple content packs, or intended for use in custom content packs.
 - It is recommended to use `gui/workshop-job` to set the desired materials for production.
 - Guns use the crossbow skill for ranged and the hammer skill for melee.
-- Don't mix incompatible guns and ammo in the same squad!
-	It can lead to, for example, units holding large handgonnes and small handgonne charges.
+- There is currently no way to select ammo for squads, it all doesn't work, it's all broken.
+	(For the old ammo system, I said: don't mix incompatible guns and ammo in the same squad!
+	It can lead to, for example, units holding large handgonnes and small handgonne charges.)
 - You'll need to run `enable tachy-guns` to get it working in arena mode.
 - In the case of bullets and shotgun shells, you can only fire ammo that says "fireable"-- other ammo is just shells or projectiles.
 	In the case of muzzle-loaded ammo, charges are what you fire and balls are the projectiles (there are no casings).
